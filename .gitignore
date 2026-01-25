@@ -1,0 +1,23 @@
+node_modules
+
+.next
+.next/dev
+out
+build
+dist
+*.log
+
+# OS files
+.DS_Store
+*.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Large video files (exclude for faster git push)
+public/videos/*.mp4
+public/videos/*.MP4
+public/videos/*.mov
+public/videos/*.MOV

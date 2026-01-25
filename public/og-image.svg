@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5B21B6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="100" r="200" fill="white" fill-opacity="0.1"/>
+  <circle cx="100" cy="530" r="150" fill="white" fill-opacity="0.1"/>
+  <circle cx="900" cy="500" r="100" fill="white" fill-opacity="0.05"/>
+  
+  <!-- Heart icon -->
+  <g transform="translate(100, 180)">
+    <path d="M80 150 C20 100 0 50 40 20 C70 0 80 30 80 30 C80 30 90 0 120 20 C160 50 140 100 80 150" fill="white" fill-opacity="0.9"/>
+  </g>
+  
+  <!-- Main text -->
+  <text x="300" y="250" font-family="Georgia, serif" font-size="96" font-weight="bold" fill="white">
+    HIVY
+  </text>
+  <text x="300" y="320" font-family="Georgia, serif" font-size="36" fill="white" fill-opacity="0.9">
+    Place for Celebrations
+  </text>
+  
+  <!-- Location badge -->
+  <rect x="300" y="350" width="180" height="50" rx="25" fill="white"/>
+  <text x="330" y="385" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#5B21B6">
+    📍 SURAT
+  </text>
+  
+  <!-- Tagline -->
+  <text x="300" y="460" font-family="Arial, sans-serif" font-size="28" fill="white" fill-opacity="0.95">
+    Romantic Candlelight Dinners &amp; Celebrations
+  </text>
+  
+  <!-- Stats -->
+  <g transform="translate(300, 500)">
+    <text font-family="Arial, sans-serif" font-size="20" fill="white" fill-opacity="0.9">
+      <tspan>✓ Premium Experiences</tspan>
+      <tspan x="280">✓ Unique Setups</tspan>
+      <tspan x="480">✓ 100% Private</tspan>
+    </text>
+  </g>
+  
+  <!-- Services -->
+  <g transform="translate(300, 550)">
+    <text font-family="Arial, sans-serif" font-size="22" fill="white" fill-opacity="0.85">
+      🎂 Birthday  •  💍 Proposal  •  💕 Anniversary  •  🕯️ Candlelight Dinner
+    </text>
+  </g>
+  
+  <!-- Website URL -->
+  <rect x="850" y="550" width="220" height="45" rx="8" fill="white" fill-opacity="0.15"/>
+  <text x="870" y="582" font-family="Arial, sans-serif" font-size="24" fill="white" font-weight="bold">
+    hivy.co.in
+  </text>
+</svg>

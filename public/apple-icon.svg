@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="hivyGradApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#78716C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CA8A04;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sparkleGradApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="url(#hivyGradApple)"/>
+  <!-- Celebration Sparkle/Star Burst -->
+  <!-- Main 4-pointed star -->
+  <path d="M90 36 L95.5 79 L139 90 L95.5 101 L90 144 L84.5 101 L41 90 L84.5 79 Z" fill="white" opacity="0.95"/>
+  <!-- Diagonal sparkles -->
+  <path d="M58 58 L63 83 L83 63 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
+  <path d="M122 58 L117 83 L97 63 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
+  <path d="M58 122 L63 97 L83 117 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
+  <path d="M122 122 L117 97 L97 117 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
+  <!-- Center accent -->
+  <circle cx="90" cy="90" r="7" fill="#CA8A04"/>
+  <!-- Small accent dots -->
+  <circle cx="50" cy="50" r="4" fill="white" opacity="0.7"/>
+  <circle cx="130" cy="50" r="4" fill="white" opacity="0.7"/>
+  <circle cx="50" cy="130" r="4" fill="white" opacity="0.7"/>
+  <circle cx="130" cy="130" r="4" fill="white" opacity="0.7"/>
+</svg>

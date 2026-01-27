@@ -289,16 +289,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google Ads (gtag.js) */}
+        {/* Google Tag Manager (gtag.js) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11390931743"
+          src="https://www.googletagmanager.com/gtag/js?id=GT-PHWHQV4L"
           strategy="afterInteractive"
         />
-        <Script id="google-ads" strategy="afterInteractive">
+        <Script id="google-tags" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'GT-PHWHQV4L');
             gtag('config', 'AW-11390931743');
           `}
         </Script>

@@ -172,10 +172,51 @@ const jsonLd = {
         "https://www.instagram.com/hivy_placeforcelebration/",
         "https://www.facebook.com/p/Hivy-placeforcelebration-61553052747625/"
       ],
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Priya S."
+          },
+          "reviewBody": "Amazing experience! The romantic setup was perfect for our anniversary celebration. Highly recommend HIVY for couples."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Rahul M."
+          },
+          "reviewBody": "Best place in Surat for birthday surprises. The team went above and beyond to make my wife's birthday special."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Neha P."
+          },
+          "reviewBody": "Perfect candlelight dinner experience. The ambiance, food, and service were all top-notch."
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "100",
+        "reviewCount": "150",
         "bestRating": "5",
         "worstRating": "1"
       },

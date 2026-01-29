@@ -632,7 +632,7 @@ export default function FFCHomePage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/about/menu.webp" 
+                  src="/images/Food hivy.webp" 
                   alt="HIVY - Place for Celebrations Menu - Romantic Dining Experience" 
                   width={600} 
                   height={600} 

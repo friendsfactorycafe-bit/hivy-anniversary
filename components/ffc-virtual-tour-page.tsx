@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Camera, Play, ChevronRight } from 'lucide-react';
+import { Camera, Play, Pause, ChevronRight, Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,30 +13,29 @@ import { packages } from '@/lib/ffc-config';
 
 export default function FFCVirtualTourPage() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showPlayButton, setShowPlayButton] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+  const [showControls, setShowControls] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handlePlayClick = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-      setShowPlayButton(false);
-    }
-  };
-
-  const handleVideoClick = () => {
+  const handlePlayPause = () => {
     if (videoRef.current) {
       if (videoRef.current.paused) {
         videoRef.current.play();
         setIsPlaying(true);
-        setShowPlayButton(false);
       } else {
         videoRef.current.pause();
         setIsPlaying(false);
-        setShowPlayButton(true);
       }
     }
   };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <FFCHeader />
@@ -66,44 +65,60 @@ export default function FFCVirtualTourPage() {
             </div>
             
             {/* Vertical Video */}
-            <div className="aspect-[9/16] bg-gradient-to-br from-stone-800 to-stone-900 rounded-2xl overflow-hidden shadow-2xl relative">
+            <div 
+              className="aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl relative group"
+              onMouseEnter={() => setShowControls(true)}
+              onMouseLeave={() => setShowControls(isPlaying ? false : true)}
+            >
               <video 
                 ref={videoRef}
-                className="w-full h-full object-cover cursor-pointer"
-                muted
+                className="w-full h-full object-cover"
+                muted={isMuted}
                 loop
                 playsInline
-                preload="auto"
-                onClick={handleVideoClick}
-                onPlay={() => { setIsPlaying(true); setShowPlayButton(false); }}
-                onPause={() => { setIsPlaying(false); setShowPlayButton(true); }}
+                preload="metadata"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
               >
                 <source src="/videos/virtual-tour.mp4" type="video/mp4" />
                 <source src="/videos/InShot_20250111_162317353.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
-              {/* Play Button Overlay - Always visible when not playing */}
-              {showPlayButton && (
+              {/* Custom Controls Overlay */}
+              <div 
+                className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 ${
+                  showControls || !isPlaying ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                {/* Play/Pause Button */}
                 <button
-                  onClick={handlePlayClick}
-                  className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-black/40 via-black/20 to-black/40 hover:from-black/50 hover:via-black/30 hover:to-black/50 transition-all cursor-pointer z-10"
+                  onClick={handlePlayPause}
+                  className="w-20 h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
                 >
-                  {/* HIVY Branding */}
-                  <div className="mb-6 text-center">
-                    <div className="text-3xl font-bold text-white font-serif tracking-wider">HIVY</div>
-                    <div className="text-sm text-white/80 mt-1">Place for Celebrations</div>
-                    <div className="text-yellow-400 text-sm mt-2 font-medium">✨ Virtual Tour ✨</div>
-                  </div>
-                  
-                  {/* Play Button */}
-                  <div className="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white transition-all duration-300 border-4 border-yellow-600/30">
+                  {isPlaying ? (
+                    <Pause className="w-10 h-10 text-yellow-800" fill="currentColor" />
+                  ) : (
                     <Play className="w-10 h-10 text-yellow-800 ml-1" fill="currentColor" />
-                  </div>
-                  
-                  <p className="text-white/90 text-sm mt-4 font-medium">Tap to explore our romantic spaces</p>
+                  )}
                 </button>
-              )}
+                
+                {!isPlaying && (
+                  <p className="text-white text-sm mt-4 font-medium drop-shadow-lg">Tap to play</p>
+                )}
+              </div>
+
+              {/* Mute Button - Bottom Right */}
+              <button
+                onClick={toggleMute}
+                className="absolute bottom-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-all z-20"
+              >
+                {isMuted ? (
+                  <VolumeX className="w-5 h-5 text-white" />
+                ) : (
+                  <Volume2 className="w-5 h-5 text-white" />
+                )}
+              </button>
             </div>
           </div>
         </div>

@@ -8,15 +8,15 @@ const keyword = service.keywords.find(k => k.slug === "anniversary-venues-surat"
 export const metadata: Metadata = {
   title: keyword.metaTitle,
   description: keyword.metaDescription,
-  keywords: [keyword.title, "anniversary venues", "celebration venues", "Surat", "HIVY"],
-  alternates: { canonical: `https://hivy.co.in/${keyword.slug}` },
+  keywords: [keyword.title, "anniversary venues", "anniversary celebration venues", "Surat", "HIVY"],
+  alternates: { canonical: `https://anniversary.hivy.co.in/${keyword.slug}` },
   openGraph: {
     title: keyword.metaTitle,
     description: keyword.metaDescription,
-    url: `https://hivy.co.in/${keyword.slug}`,
+    url: `https://anniversary.hivy.co.in/${keyword.slug}`,
     type: "website",
     locale: "en_IN",
-    siteName: "HIVY - Place for Celebrations",
+    siteName: "HIVY Anniversary",
   },
 };
 

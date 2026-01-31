@@ -1,5 +1,5 @@
-// HIVY - Place for Celebrations - Surat Configuration
-// Main configuration file for the HIVY website
+// HIVY ANNIVERSARY - Premium Anniversary Celebration Venue in Surat
+// Main configuration file for the HIVY Anniversary website
 
 export interface SetupPackage {
   id: string;
@@ -9,12 +9,12 @@ export interface SetupPackage {
   shortDescription: string;
   fullDescription: string;
   price: number;
-  cakeIncluded: boolean; // true for Setup 1-3, false for Setup 4-8 (extra cost)
+  cakeIncluded: boolean;
   features: string[];
   perfectFor: string[];
   thumbnail: string;
   images: string[];
-  hidden?: boolean; // If true, package won't show on website but data is preserved
+  hidden?: boolean;
 }
 
 export interface ServiceCategory {
@@ -42,27 +42,27 @@ export interface AreaConfig {
 
 // ==================== SITE CONFIG ====================
 export const siteConfig = {
-  name: "HIVY - Place for Celebrations",
-  tagline: "Where Every Occasion Turns Into a Forever Memory",
-  description: "Premium romantic celebration venue in Surat for couples. Birthday surprises, candlelight dinners, anniversary celebrations, proposals, pre-wedding shoots & more.",
+  name: "HIVY Anniversary",
+  tagline: "Celebrate Every Year of Love Together",
+  description: "Surat's premier anniversary celebration venue. Luxury anniversary dinners, romantic rooftop experiences, milestone celebrations & surprise anniversary parties for couples.",
   phone: "09727027278",
   whatsapp: "919727027278",
-  email: "hello@hivy.co.in",
+  email: "anniversary@hivy.co.in",
   address: "252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road, Adajan, Pal Gam, Surat, Gujarat 394510",
   city: "Surat",
-  website: "https://hivy.co.in",
+  website: "https://anniversary.hivy.co.in",
   colors: {
-    primary: "#78716C", // Warm Stone
-    secondary: "#CA8A04", // Golden
-    accent: "#A16207",
-    gradient: "from-stone-700 to-yellow-700",
-    gradientHover: "from-stone-800 to-yellow-800",
-    lightBg: "bg-stone-100",
-    darkBg: "bg-stone-800",
-    text: "text-stone-700"
+    primary: "#722F37", // Deep Burgundy/Wine
+    secondary: "#B76E79", // Rose Gold
+    accent: "#C9A050", // Champagne Gold
+    gradient: "from-rose-800 to-rose-600",
+    gradientHover: "from-rose-900 to-rose-700",
+    lightBg: "bg-rose-50",
+    darkBg: "bg-rose-900",
+    text: "text-rose-900"
   },
   socialLinks: {
-    instagram: "https://www.instagram.com/hivy_placeforcelebration/?hl=en",
+    instagram: "https://www.instagram.com/hivy_anniversary/?hl=en",
     facebook: "https://www.facebook.com/p/Hivy-placeforcelebration-61553052747625/",
     youtube: ""
   }

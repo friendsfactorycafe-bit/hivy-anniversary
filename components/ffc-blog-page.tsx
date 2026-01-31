@@ -3,16 +3,17 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Tag, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat } from '@/components/ffc-booking-form';
-import { siteConfig, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
+import { siteConfig, BlogPost } from '@/lib/ffc-config';
+import { getAllAnniversaryBlogs } from '@/lib/anniversary-blogs';
 
 export default function FFCBlogPage() {
-  const posts = getAllBlogPosts();
+  const posts = getAllAnniversaryBlogs();
   const featuredPost = posts[0];
   const recentPosts = posts.slice(1);
 
@@ -23,18 +24,18 @@ export default function FFCBlogPage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge className="bg-stone-200 text-stone-900 mb-4">
-              Our Blog
+            <Badge className="bg-rose-200 text-rose-900 mb-4">
+              <Heart className="w-3 h-3 mr-1" /> Anniversary Blog
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Celebration Ideas & Inspiration
+              Anniversary Celebration Ideas & Tips
             </h1>
             <p className="text-lg text-gray-600">
-              Discover tips, guides, and ideas for planning the perfect celebration in Surat. 
-              From birthday surprises to romantic proposals, we've got you covered.
+              Discover expert tips, milestone guides, and romantic ideas for planning the perfect anniversary celebration in Surat. 
+              From first anniversaries to golden jubilees, we've got you covered.
             </p>
           </div>
         </div>
@@ -44,14 +45,14 @@ export default function FFCBlogPage() {
       <section className="py-6 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
-            <Badge variant="outline" className="cursor-pointer hover:bg-stone-100 px-4 py-2">
+            <Badge variant="outline" className="cursor-pointer hover:bg-rose-100 px-4 py-2">
               All Posts
             </Badge>
             {categories.map((category) => (
               <Badge 
                 key={category} 
                 variant="outline" 
-                className="cursor-pointer hover:bg-stone-100 px-4 py-2"
+                className="cursor-pointer hover:bg-rose-100 px-4 py-2"
               >
                 {category}
               </Badge>
@@ -73,15 +74,15 @@ export default function FFCBlogPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-4 left-4 bg-stone-1000">
+                  <Badge className="absolute top-4 left-4 bg-rose-700">
                     Featured
                   </Badge>
                 </div>
                 <CardContent className="p-8 flex flex-col justify-center">
-                  <Badge variant="outline" className="w-fit mb-4">
+                  <Badge variant="outline" className="w-fit mb-4 border-rose-300 text-rose-700">
                     {featuredPost.category}
                   </Badge>
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-yellow-800 transition-colors">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-rose-800 transition-colors">
                     {featuredPost.title}
                   </h2>
                   <p className="text-gray-600 mb-6 line-clamp-3">
@@ -101,7 +102,7 @@ export default function FFCBlogPage() {
                       {featuredPost.readTime} read
                     </span>
                   </div>
-                  <Button className="w-fit bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800">
+                  <Button className="w-fit bg-gradient-to-r from-rose-700 to-rose-600 hover:from-rose-800 hover:to-rose-700">
                     Read Article <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </CardContent>
@@ -124,19 +125,19 @@ export default function FFCBlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-yellow-800 to-yellow-700">
+      <section className="py-16 bg-gradient-to-r from-rose-700 to-rose-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Plan Your Celebration?
+            Ready to Plan Your Anniversary Celebration?
           </h2>
-          <p className="text-stone-200 mb-8 max-w-2xl mx-auto">
-            Turn your special moments into unforgettable memories at HIVY - Place for Celebrations, 
-            Surat's premier rooftop celebration venue.
+          <p className="text-rose-100 mb-8 max-w-2xl mx-auto">
+            Turn your special anniversary into unforgettable memories at HIVY Anniversary, 
+            Surat's premier rooftop anniversary celebration venue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-yellow-800 hover:bg-stone-100"
+              className="bg-white text-rose-700 hover:bg-rose-50"
               asChild
             >
               <Link href="/packages">View Packages</Link>
@@ -172,12 +173,12 @@ function BlogCard({ post }: { post: BlogPost }) {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <Badge className="absolute top-3 left-3 bg-stone-1000">
+          <Badge className="absolute top-3 left-3 bg-rose-700">
             {post.category}
           </Badge>
         </div>
         <CardContent className="p-5">
-          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-yellow-800 transition-colors">
+          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-rose-700 transition-colors">
             {post.title}
           </h3>
           <p className="text-sm text-gray-600 mb-4 line-clamp-2">

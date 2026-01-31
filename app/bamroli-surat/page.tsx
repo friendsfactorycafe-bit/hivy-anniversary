@@ -7,15 +7,15 @@ const area = getAreaBySlug("bamroli-surat")!;
 export const metadata: Metadata = {
   title: area.metaTitle,
   description: area.metaDescription,
-  keywords: [area.name, "celebration venue", "romantic dining", "Surat", "HIVY"],
-  alternates: { canonical: `https://hivy.co.in/${area.slug}` },
+  keywords: [area.name, "anniversary celebration venue", "romantic anniversary dinner", "Surat", "HIVY"],
+  alternates: { canonical: `https://anniversary.hivy.co.in/${area.slug}` },
   openGraph: {
     title: area.metaTitle,
     description: area.metaDescription,
-    url: `https://hivy.co.in/${area.slug}`,
+    url: `https://anniversary.hivy.co.in/${area.slug}`,
     type: "website",
     locale: "en_IN",
-    siteName: "HIVY - Place for Celebrations",
+    siteName: "HIVY Anniversary",
   },
 };
 

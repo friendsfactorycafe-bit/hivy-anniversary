@@ -1,54 +1,54 @@
 /**
- * MAIN PAGE - HIVY - PLACE FOR CELEBRATIONS SURAT
- * The main home page for HIVY - Surat
+ * MAIN PAGE - HIVY ANNIVERSARY - SURAT'S PREMIER ANNIVERSARY CELEBRATION VENUE
+ * The main home page for HIVY Anniversary - Surat
  */
 
 import { Metadata } from "next";
 import FFCHomePage from "@/components/ffc-home-page";
 import { siteConfig } from "@/lib/ffc-config";
 
-// Dynamic metadata for HIVY
+// Dynamic metadata for HIVY Anniversary
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `${siteConfig.name} | Best Candlelight Dinner & Romantic Celebration Venue in Surat`,
-    description: `${siteConfig.tagline}. Surat's #1 couples-only celebration venue. Book candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, romantic date nights & private rooftop dining. 100% private venue with 4.9★ rating.`,
+    title: `${siteConfig.name} | Best Anniversary Celebration Venue in Surat`,
+    description: `${siteConfig.tagline}. Surat's #1 anniversary celebration venue. Book romantic anniversary dinners, surprise anniversary parties, milestone celebrations & private rooftop dining for couples. 100% private venue with 4.9★ rating.`,
     keywords: [
-      'hivy surat',
-      'candlelight dinner surat',
-      'romantic dinner surat',
-      'birthday surprise surat',
       'anniversary celebration surat',
-      'proposal setup surat',
-      'couples only cafe surat',
-      'rooftop dinner surat',
-      'private dining surat',
-      'romantic restaurant surat',
-      'birthday party venues surat',
+      'wedding anniversary surat',
       'anniversary dinner surat',
-      'romantic date surat',
-      'surprise birthday party surat',
-      'candlelight dinner for couples surat',
-      'best romantic places surat',
-      'private celebration venue surat',
-      'romantic rooftop cafe surat',
-      'couple friendly restaurants surat',
-      'birthday room decoration surat',
-      'marriage proposal venue surat',
-      'romantic candlelight dinner near me',
+      'anniversary surprise surat',
+      'anniversary venues surat',
+      'anniversary restaurants surat',
+      'first anniversary celebration surat',
+      '25th anniversary celebration surat',
+      'silver jubilee celebration surat',
+      'golden anniversary surat',
+      'anniversary decoration surat',
+      'romantic anniversary dinner surat',
+      'anniversary planners surat',
+      'anniversary party surat',
+      'anniversary surprise for wife surat',
+      'anniversary surprise for husband surat',
+      'rooftop anniversary dinner surat',
+      'private anniversary celebration surat',
+      'luxury anniversary celebration surat',
+      'intimate anniversary dinner surat',
+      'anniversary photoshoot surat',
+      'milestone anniversary surat',
+      'couples anniversary celebration surat',
+      'anniversary date night surat',
       'best anniversary restaurant surat',
-      'couple date night surat',
-      'romantic places for couples surat',
-      'birthday surprise for girlfriend surat',
-      'birthday surprise for boyfriend surat',
-      'engagement proposal surat',
-      'valentine dinner surat',
-      'romantic ambiance restaurant surat'
+      '10th anniversary celebration surat',
+      '50th anniversary celebration surat',
+      'anniversary weekend surat',
+      'budget anniversary celebration surat',
+      'anniversary celebration for parents surat'
     ],
     alternates: {
       canonical: siteConfig.website,
     },
     openGraph: {
-      title: `${siteConfig.name} | Romantic Celebrations`,
+      title: `${siteConfig.name} | Anniversary Celebrations`,
       description: siteConfig.tagline,
       url: siteConfig.website,
       type: "website",

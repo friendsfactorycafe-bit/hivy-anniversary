@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   title: keyword.metaTitle,
   description: keyword.metaDescription,
   keywords: [keyword.title, "anniversary decoration", "romantic decor", "Surat", "HIVY"],
-  alternates: { canonical: `https://hivy.co.in/${keyword.slug}` },
+  alternates: { canonical: `https://anniversary.hivy.co.in/${keyword.slug}` },
   openGraph: {
     title: keyword.metaTitle,
     description: keyword.metaDescription,
-    url: `https://hivy.co.in/${keyword.slug}`,
+    url: `https://anniversary.hivy.co.in/${keyword.slug}`,
     type: "website",
     locale: "en_IN",
-    siteName: "HIVY - Place for Celebrations",
+    siteName: "HIVY Anniversary",
   },
 };
 

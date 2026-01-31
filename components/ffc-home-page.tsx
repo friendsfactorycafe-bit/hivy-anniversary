@@ -17,93 +17,93 @@ import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form'
 import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig, getVisiblePackages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
 
-// Experience features
+// Experience features - Anniversary focused
 const experienceFeatures = [
   {
     icon: Clock,
-    title: "3-Hour Private Booking",
-    description: "Enjoy three exclusive hours at our private rooftop venue for your candlelight dinner or celebration"
+    title: "3-Hour Private Celebration",
+    description: "Enjoy three exclusive hours at our private rooftop venue for your anniversary dinner or milestone celebration"
   },
   {
     icon: Gift,
-    title: "Celebration Cake Included",
-    description: "Complimentary birthday/anniversary cake & non-alcoholic champagne with every package"
+    title: "Anniversary Cake Included",
+    description: "Complimentary anniversary celebration cake & non-alcoholic champagne with every package"
   },
   {
     icon: Camera,
     title: "Instagram-Worthy Setup",
-    description: "Professional balloon decorations, fairy lights & romantic photo-ready ambiance"
+    description: "Professional anniversary decorations, fairy lights & romantic photo-ready ambiance"
   },
   {
     icon: Music,
-    title: "Romantic Ambiance",
-    description: "Soft romantic music, candlelight setting & complete privacy for couples"
+    title: "Romantic Anniversary Ambiance",
+    description: "Soft romantic music, candlelight setting & complete privacy for couples celebrating their love"
   }
 ];
 
-// FAQ items
+// FAQ items - Anniversary focused
 const faqs = [
   {
-    question: "What is HIVY and where is it located in Surat?",
-    answer: "HIVY is Surat's premier couples-only private celebration venue—the best spot for candlelight dinners, romantic rooftop dining, birthday surprises, and anniversary celebrations in Surat, Gujarat."
+    question: "What is HIVY Anniversary and where is it located in Surat?",
+    answer: "HIVY Anniversary is Surat's premier private anniversary celebration venue—the best spot for romantic anniversary dinners, milestone celebrations, rooftop dining, and surprise anniversary parties in Surat, Gujarat."
   },
   {
-    question: "How do I book a candlelight dinner or birthday surprise at HIVY?",
-    answer: `Simply WhatsApp ${siteConfig.phone} or call directly. Share your occasion (candlelight dinner, birthday surprise, anniversary celebration, proposal), preferred date, and number of guests. We'll confirm your booking instantly with a custom quote for your romantic celebration.`
+    question: "How do I book an anniversary celebration at HIVY?",
+    answer: `Simply WhatsApp ${siteConfig.phone} or call directly. Share your anniversary type (1st, 10th, 25th, 50th or any milestone), preferred date, and number of guests. We'll confirm your booking instantly with a custom quote for your romantic anniversary celebration.`
   },
   {
-    question: "What are the prices for candlelight dinner packages in Surat?",
-    answer: "Our romantic celebration packages start from affordable rates and include premium rooftop setup, welcome drinks, decorations, and gourmet dining. Contact us for current pricing on candlelight dinner packages, birthday surprise setups, and anniversary celebration deals."
+    question: "What are the prices for anniversary celebration packages in Surat?",
+    answer: "Our romantic anniversary packages start from affordable rates and include premium rooftop setup, welcome drinks, anniversary decorations, and gourmet dining. Contact us for current pricing on all anniversary celebration deals."
   },
   {
-    question: "Can I book HIVY for a marriage proposal or engagement?",
-    answer: "Absolutely! HIVY is Surat's most popular proposal venue. Our romantic proposal setups feature heart arches, fairy lights, rose petals, and champagne—perfect for creating an unforgettable 'yes' moment. We've hosted 3000+ successful proposals and engagements."
+    question: "Can I celebrate milestone anniversaries like 25th or 50th at HIVY?",
+    answer: "Absolutely! HIVY Anniversary specializes in milestone celebrations including Silver Jubilee (25th), Golden Anniversary (50th), and Diamond Anniversary (60th). Our elegant setups are perfect for these special occasions with family or intimate couple celebrations."
   },
   {
-    question: "What occasions can I celebrate at HIVY Surat?",
-    answer: "We specialize in candlelight dinners, birthday surprises (for boyfriend, girlfriend, husband, wife), anniversary celebrations (1st, 10th, 25th), marriage proposals, engagement parties, Valentine's Day dinners, pre-wedding shoots, pregnancy announcements, and romantic date nights."
+    question: "What anniversary celebrations can I host at HIVY Surat?",
+    answer: "We specialize in all wedding anniversaries: First Anniversary (Paper), 5th (Wood), 10th (Tin), 15th (Crystal), 25th (Silver), 50th (Golden), and every anniversary in between. Perfect for couples, parents' anniversaries, and in-laws' celebrations."
   },
   {
-    question: "What are the time slots available for candlelight dinner booking?",
-    answer: "Our romantic celebration time slots are from 6 PM to 11 PM. Weekend slots for candlelight dinners and birthday surprises book fast—we recommend advance booking to secure your preferred date at Surat's best romantic restaurant."
+    question: "What are the time slots available for anniversary dinner booking?",
+    answer: "Our romantic anniversary celebration time slots are from 6 PM to 11 PM. Weekend slots for anniversary dinners book fast—we recommend advance booking to secure your preferred date at Surat's best anniversary restaurant."
   },
   {
-    question: "Can I customize the decorations for my birthday surprise or anniversary?",
-    answer: "Yes! All our celebration packages are fully customizable. Choose from balloon decorations, flower arrangements, themed backdrops, personalized messages, cakes, and more for your birthday room decoration, anniversary setup, or proposal arrangement."
+    question: "Can I customize the decorations for my anniversary celebration?",
+    answer: "Yes! All our anniversary packages are fully customizable. Choose from flower arrangements, themed backdrops (silver, gold, rose themes), personalized messages, anniversary cakes, and more for your special milestone celebration."
   },
   {
-    question: "Is HIVY a private venue for couples only?",
-    answer: "Yes, HIVY is 100% private and exclusively for couples. You'll have complete privacy during your booking slot—no other guests. It's the safest, most romantic, and couple-friendly celebration venue in Surat with a 4.9★ rating."
+    question: "Is HIVY Anniversary a private venue for couples only?",
+    answer: "Yes, HIVY Anniversary is 100% private and exclusively for couples celebrating their love journey. You'll have complete privacy during your booking slot—no other guests. It's the most romantic and couple-friendly anniversary venue in Surat with a 4.9★ rating."
   },
   {
-    question: "What areas in Surat does HIVY serve for romantic celebrations?",
-    answer: "We welcome couples from all Surat areas including Vesu, Adajan, Athwa, Piplod, City Light, Althan, Varachha, Pal, Dumas Road, and more. HIVY is centrally located as the best candlelight dinner restaurant serving all of Surat."
+    question: "What areas in Surat does HIVY Anniversary serve?",
+    answer: "We welcome couples from all Surat areas including Vesu, Adajan, Athwa, Piplod, City Light, Althan, Varachha, Pal, Dumas Road, and more. HIVY Anniversary is centrally located as the best anniversary celebration venue serving all of Surat."
   },
   {
-    question: "What is the cancellation and rescheduling policy?",
-    answer: "Rescheduling must be informed at least one day prior. Your candlelight dinner or birthday surprise booking can be rescheduled within one month, subject to availability. Please note: No Refund Policy Applicable."
+    question: "Can I plan a surprise anniversary party for my spouse or parents?",
+    answer: "Yes! Surprise anniversary parties are our specialty. We help plan secret celebrations for spouses, parents, and in-laws. Our team coordinates decorations, timing, and special requests to create an unforgettable surprise moment."
   }
 ];
 
-// Gallery items data - Optimized for faster loading (reduced to 16 items)
+// Gallery items data - Anniversary focused - Optimized for faster loading (reduced to 16 items)
 const galleryItems = [
-  // Featured Images from packages
-  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
-  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
+  // Featured Images from packages - Anniversary celebrations
+  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Anniversary Celebration Setup Surat', title: 'Anniversary Setup', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'Wedding Anniversary Dinner Surat', title: 'Anniversary Dinner', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Romantic Anniversary Venue Surat', title: 'Romantic Venue', featured: false },
+  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Moments', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Silver Anniversary Setup Surat', title: 'Milestone Celebration', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Anniversary Date Night Surat', title: 'Date Night', featured: false },
   { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
-  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
-  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Intimate Anniversary Dinner Surat', title: 'Intimate Dining', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Golden Anniversary Celebration Surat', title: 'Golden Setup', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic Anniversary Decoration Surat', title: 'Anniversary Décor', featured: false },
+  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop Anniversary Reel Surat', title: 'Rooftop Celebration', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Private Anniversary Celebration Surat', title: 'Private Setup', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night Anniversary Setup Surat', title: 'Evening Magic', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Luxury Anniversary Venue Surat', title: 'Luxury Setup', featured: false },
+  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Anniversary Surprise Reel Surat', title: 'Surprise Reel', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Couple Anniversary Celebration Surat', title: 'Couple Celebration', featured: false },
 ];
 
 // Gallery Section Component

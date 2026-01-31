@@ -1,19 +1,19 @@
 /**
- * HIVY - PLACE FOR CELEBRATIONS - SEO OPTIMIZED ROBOTS.TXT
- * Domain: hivy.co.in
+ * HIVY ANNIVERSARY - SEO OPTIMIZED ROBOTS.TXT
+ * Domain: anniversary.hivy.co.in
  * 
  * Configuration for search engine crawlers:
- * - Allow all public pages including service keywords & area pages
+ * - Allow all public pages including anniversary keywords & area pages
  * - Block admin, API, and private routes
  * - Specify sitemap location
- * - Optimized for maximum SEO visibility
+ * - Optimized for maximum SEO visibility for anniversary celebrations
  * 
- * Total Indexable Pages: ~202
- * - Homepage, Static pages, Service categories
- * - 113 Service keyword pages
+ * Total Indexable Pages: ~100
+ * - Homepage, Static pages
+ * - 35 Anniversary keyword pages
  * - 40 Surat area pages  
  * - 6 Package pages
- * - 25 Blog posts
+ * - 24 Anniversary blog posts
  * 
  * Last Updated: January 2026
  */
@@ -21,7 +21,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://hivy.co.in";
+  const baseUrl = "https://anniversary.hivy.co.in";
   
   return {
     rules: [
@@ -46,45 +46,30 @@ export default function robots(): MetadataRoute.Robots {
           // Blog pages
           "/blog",
           "/blog/*",
-          // Service keyword pages (birthday, anniversary, proposal, etc.)
-          "/birthday-*",
+          // Anniversary keyword pages
           "/anniversary-*",
-          "/proposal-*",
-          "/candlelight-*",
-          "/surprise-*",
-          "/pre-wedding-*",
-          "/pregnancy-*",
-          "/baby-*",
-          "/valentines-*",
+          "/first-*",
+          "/2nd-*",
+          "/5th-*",
+          "/10th-*",
+          "/15th-*",
+          "/20th-*",
+          "/25th-*",
+          "/50th-*",
+          "/silver-*",
+          "/golden-*",
+          "/diamond-*",
+          "/wedding-*",
           "/romantic-*",
           "/couple-*",
-          "/dinner-*",
-          "/engagement-*",
-          "/maternity-*",
-          "/gender-reveal-*",
-          "/godh-bharai-*",
-          "/rose-day-*",
-          "/propose-day-*",
-          "/chocolate-day-*",
-          "/teddy-day-*",
-          "/promise-day-*",
-          "/hug-day-*",
-          "/kiss-day-*",
-          "/marriage-*",
+          "/surprise-*",
           "/private-*",
           "/intimate-*",
-          "/special-*",
-          "/unique-*",
-          "/midnight-*",
-          "/best-*",
+          "/luxury-*",
+          "/budget-*",
+          "/rooftop-*",
           "/outdoor-*",
-          "/indoor-*",
-          "/night-*",
-          "/first-*",
-          "/10th-*",
-          "/25th-*",
-          "/wedding-*",
-          "/expecting-*",
+          "/last-minute-*",
           // Surat area pages
           "/adajan-surat",
           "/athwa-surat",

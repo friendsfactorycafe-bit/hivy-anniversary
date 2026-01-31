@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import FFCBlogPage from '@/components/ffc-blog-page';
 
 export const metadata: Metadata = {
-  title: 'Blog | Celebration Ideas & Tips | HIVY - Place for Celebrations Surat',
-  description: 'Discover celebration tips, romantic date ideas, birthday surprise guides, and more. Get inspired for your next special occasion at HIVY - Place for Celebrations Surat.',
-  keywords: 'celebration blog, birthday ideas surat, romantic date tips, proposal ideas, anniversary celebration guide',
+  title: 'Anniversary Blog | Celebration Ideas & Tips | HIVY Anniversary Surat',
+  description: 'Discover anniversary celebration tips, romantic date ideas, milestone anniversary guides, and gift inspiration. Get expert advice for your next anniversary at HIVY Anniversary Surat.',
+  keywords: 'anniversary blog surat, wedding anniversary ideas, romantic anniversary tips, anniversary celebration guide, milestone anniversary planning, anniversary gift ideas surat',
 };
 
 export default function BlogPage() {

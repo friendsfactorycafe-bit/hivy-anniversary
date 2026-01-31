@@ -147,7 +147,7 @@ export function FFCFooter() {
   const [showAllAreas, setShowAllAreas] = useState(false);
   
   // Get all keywords from all service categories
-  const allKeywords = serviceCategories.flatMap(category => 
+  const allKeywords = anniversaryServiceCategories.flatMap(category => 
     category.keywords.map(keyword => ({
       slug: keyword.slug,
       title: keyword.title,

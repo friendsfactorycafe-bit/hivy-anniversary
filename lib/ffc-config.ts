@@ -137,7 +137,7 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Instagram-worthy Setup 📸"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Valentine's Day"],
-    thumbnail: "/packages/thumbnails/Tent of Romance @ 6500_- only.webp",
+    thumbnail: "/hivy-images/6500/cover.webp",
     images: [
       "/hivy-images/6500/cover.webp",
       "/hivy-images/6500/2.webp",
@@ -215,7 +215,7 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Perfect for Proposals 💍"
     ],
     perfectFor: ["Marriage Proposal", "Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot"],
-    thumbnail: "/packages/thumbnails/Fairy Tale Proposals.webp",
+    thumbnail: "/hivy-images/6300/Cover.webp",
     images: [
       "/hivy-images/6300/Cover.webp",
       "/hivy-images/6300/2.webp",
@@ -292,7 +292,7 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Instagram-worthy Photo Spots 📸"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Date Night"],
-    thumbnail: "/packages/thumbnails/Swing of LOVE @ 5100.webp",
+    thumbnail: "/hivy-images/5100/Cover photo.webp",
     images: [
       "/hivy-images/5100/Cover photo.webp",
       "/hivy-images/5100/2.webp",
@@ -369,7 +369,7 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Open Roof Experience with Wind 🌙"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Boho Theme Party"],
-    thumbnail: "/packages/thumbnails/BoHo Chic @ 5700.webp",
+    thumbnail: "/hivy-images/5700/Cover.webp",
     images: [
       "/hivy-images/5700/Cover.webp",
       "/hivy-images/5700/2.webp",
@@ -450,7 +450,7 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Open Roof with Gentle Breeze 🌙"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Couple Date Night"],
-    thumbnail: "/packages/thumbnails/TwinHeart @ 4700_- only.webp",
+    thumbnail: "/hivy-images/6500/cover.webp",
     images: [
       "/hivy-images/6500/cover.webp",
       "/hivy-images/6500/2.webp",
@@ -533,7 +533,7 @@ Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary
       "⚠️ Food NOT included in this package"
     ],
     perfectFor: ["Marriage Proposal", "Birthday Celebration", "Bride-to-Be Party", "Anniversary Surprise", "Personal Milestones", "Pre-Wedding Photoshoot"],
-    thumbnail: "/packages/thumbnails/Elite Group Setup.webp",
+    thumbnail: "/hivy-images/5400/2.webp",
     images: [
       "/hivy-images/5400/2.webp",
       "/hivy-images/5400/3.webp",

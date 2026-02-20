@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { 
   Phone, MessageCircle, MapPin, Clock, Star, Check, ChevronRight, ChevronLeft,
   Heart, Users, Shield, Award, Calendar, Gift, Sparkles, 
-  ArrowRight, Camera, Music, Utensils, Wine, Play, ImageIcon
+  ArrowRight, Camera, Music, Utensils, Wine, ImageIcon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -88,135 +88,64 @@ const faqs = [
 // Gallery items data - Anniversary focused - Optimized for faster loading (reduced to 16 items)
 const galleryItems = [
   // Featured Images from packages - Anniversary celebrations
-  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Anniversary Celebration Setup Surat', title: 'Anniversary Setup', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'Wedding Anniversary Dinner Surat', title: 'Anniversary Dinner', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Romantic Anniversary Venue Surat', title: 'Romantic Venue', featured: false },
-  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Silver Anniversary Setup Surat', title: 'Milestone Celebration', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Anniversary Date Night Surat', title: 'Date Night', featured: false },
-  { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Intimate Anniversary Dinner Surat', title: 'Intimate Dining', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Golden Anniversary Celebration Surat', title: 'Golden Setup', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic Anniversary Decoration Surat', title: 'Anniversary Décor', featured: false },
-  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop Anniversary Reel Surat', title: 'Rooftop Celebration', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Private Anniversary Celebration Surat', title: 'Private Setup', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night Anniversary Setup Surat', title: 'Evening Magic', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Luxury Anniversary Venue Surat', title: 'Luxury Setup', featured: false },
-  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Anniversary Surprise Reel Surat', title: 'Surprise Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Couple Anniversary Celebration Surat', title: 'Couple Celebration', featured: false },
+  { type: 'image', src: '/hivy-images/5100/Cover photo.webp', alt: 'Anniversary Celebration Setup Surat', title: 'Anniversary Setup', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/hivy-images/5700/Cover.webp', alt: 'Wedding Anniversary Dinner Surat', title: 'Anniversary Dinner', featured: false },
+  { type: 'image', src: '/hivy-images/6300/Cover.webp', alt: 'Romantic Anniversary Venue Surat', title: 'Romantic Venue', featured: false },
+  { type: 'image', src: '/hivy-images/6500/cover.webp', alt: 'Anniversary celebration tent setup Surat', title: 'Anniversary Moments', featured: false },
+  { type: 'image', src: '/hivy-images/6500/2.webp', alt: 'Silver Anniversary Setup Surat', title: 'Milestone Celebration', featured: false },
+  { type: 'image', src: '/hivy-images/5100/2.webp', alt: 'Anniversary Date Night Surat', title: 'Date Night', featured: false },
+  { type: 'image', src: '/hivy-images/5700/4.webp', alt: 'Boho anniversary dinner decoration Surat', title: 'Boho Anniversary', featured: false },
+  { type: 'image', src: '/hivy-images/5700/6.webp', alt: 'Intimate Anniversary Dinner Surat', title: 'Intimate Dining', featured: false },
+  { type: 'image', src: '/hivy-images/6300/3.webp', alt: 'Golden Anniversary Celebration Surat', title: 'Golden Setup', featured: false },
+  { type: 'image', src: '/hivy-images/6500/4.webp', alt: 'Romantic Anniversary Decoration Surat', title: 'Anniversary Décor', featured: false },
+  { type: 'image', src: '/hivy-images/5100/5.webp', alt: 'Rooftop anniversary celebration Surat', title: 'Rooftop Celebration', featured: false },
+  { type: 'image', src: '/hivy-images/5100/6.webp', alt: 'Private Anniversary Celebration Surat', title: 'Private Setup', featured: false },
+  { type: 'image', src: '/hivy-images/5700/8.webp', alt: 'Night Anniversary Setup Surat', title: 'Evening Magic', featured: false },
+  { type: 'image', src: '/hivy-images/6300/5.webp', alt: 'Luxury Anniversary Venue Surat', title: 'Luxury Setup', featured: false },
+  { type: 'image', src: '/hivy-images/6500/8.webp', alt: 'Anniversary surprise tent decoration Surat', title: 'Surprise Setup', featured: false },
+  { type: 'image', src: '/hivy-images/5400/3.webp', alt: 'Couple Anniversary Celebration Surat', title: 'Couple Celebration', featured: false },
 ];
 
 // Gallery Section Component
 function GallerySection() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'photos' | 'videos'>('all');
-  
-  const filteredItems = galleryItems.filter(item => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === 'photos') return item.type === 'image';
-    if (activeFilter === 'videos') return item.type === 'video';
-    return true;
-  });
-
-  const photoCount = galleryItems.filter(item => item.type === 'image').length;
-  const videoCount = galleryItems.filter(item => item.type === 'video').length;
-
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-100 via-white to-stone-50">
+    <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+          <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
             <ImageIcon className="h-4 w-4 mr-2" /> Romantic Celebration Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
             Candlelight Dinners & Celebrations at HIVY Surat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Real moments from birthday surprises, anniversary dinners, marriage proposals & romantic date nights at Surat's best couples-only celebration venue.
+            Real moments from anniversary surprises, romantic dinners, marriage proposals & milestone celebrations at Surat&apos;s best couples-only celebration venue.
           </p>
-        </div>
-
-        {/* Filter Tabs */}
-        <div className="flex justify-center gap-2 mb-10">
-          <Button
-            variant={activeFilter === 'all' ? 'default' : 'outline'}
-            onClick={() => setActiveFilter('all')}
-            className={activeFilter === 'all' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
-          >
-            <Sparkles className="h-4 w-4 mr-2" />
-            All ({galleryItems.length})
-          </Button>
-          <Button
-            variant={activeFilter === 'photos' ? 'default' : 'outline'}
-            onClick={() => setActiveFilter('photos')}
-            className={activeFilter === 'photos' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
-          >
-            <ImageIcon className="h-4 w-4 mr-2" />
-            Photos ({photoCount})
-          </Button>
-          <Button
-            variant={activeFilter === 'videos' ? 'default' : 'outline'}
-            onClick={() => setActiveFilter('videos')}
-            className={activeFilter === 'videos' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
-          >
-            <Play className="h-4 w-4 mr-2" />
-            Videos ({videoCount})
-          </Button>
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredItems.map((item, index) => (
+          {galleryItems.map((item, index) => (
             <div 
               key={`${item.src}-${index}`}
               className={`relative group overflow-hidden rounded-2xl ${
-                item.featured && activeFilter === 'all' ? 'col-span-2 row-span-2' : 'aspect-square'
+                item.featured ? 'col-span-2 row-span-2' : 'aspect-square'
               }`}
             >
-              {item.type === 'image' ? (
-                <>
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={item.featured ? 600 : 300}
-                    height={item.featured ? 600 : 300}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className={`absolute ${item.featured ? 'bottom-4 left-4' : 'bottom-3 left-3'} text-white`}>
-                      <p className={`font-${item.featured ? 'semibold' : 'medium'} ${item.featured ? '' : 'text-sm'}`}>{item.title}</p>
-                      {item.subtitle && <p className="text-sm text-white/80">{item.subtitle}</p>}
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <video
-                    src={item.src}
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover bg-stone-200"
-                    onMouseEnter={(e) => e.currentTarget.play()}
-                    onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
-                    onLoadedData={(e) => { e.currentTarget.currentTime = 0.5; }}
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
-                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="h-5 w-5 text-yellow-800 ml-1" fill="currentColor" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-sm font-medium">{item.title}</p>
-                  </div>
-                </>
-              )}
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={item.featured ? 600 : 300}
+                height={item.featured ? 600 : 300}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className={`absolute ${item.featured ? 'bottom-4 left-4' : 'bottom-3 left-3'} text-white`}>
+                  <p className={`font-${item.featured ? 'semibold' : 'medium'} ${item.featured ? '' : 'text-sm'}`}>{item.title}</p>
+                  {item.subtitle && <p className="text-sm text-white/80">{item.subtitle}</p>}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -224,7 +153,7 @@ function GallerySection() {
         {/* View More Button */}
         <div className="text-center mt-10">
           <Link href="/virtual-tour">
-            <Button className="bg-gradient-to-r from-stone-1000 to-stone-500 hover:from-yellow-800 hover:to-yellow-700 text-white px-8 py-6 text-lg">
+            <Button className="bg-gradient-to-r from-purple-900 to-violet-700 hover:from-purple-800 hover:to-violet-600 text-white px-8 py-6 text-lg">
               <Camera className="h-5 w-5 mr-2" />
               View Virtual Tour
               <ArrowRight className="h-5 w-5 ml-2" />
@@ -244,7 +173,7 @@ function BlogSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+          <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
             Romantic Celebration Blog
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -259,20 +188,21 @@ function BlogSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 group border-stone-200">
+              <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 group border-purple-100">
                 <div className="relative h-48">
                   <Image
                     src={post.coverImage}
                     alt={post.title}
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-3 left-3 bg-stone-1000 text-white">
+                  <Badge className="absolute top-3 left-3 bg-purple-900 text-white">
                     {post.category}
                   </Badge>
                 </div>
                 <CardContent className="p-5">
-                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-yellow-800 transition-colors">
+                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-purple-800 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2">
@@ -300,7 +230,7 @@ function BlogSection() {
         {/* View More Button */}
         <div className="text-center">
           <Link href="/blog">
-            <Button className="bg-gradient-to-r from-stone-1000 to-stone-500 hover:from-yellow-800 hover:to-yellow-700 text-white px-8 py-6 text-lg">
+            <Button className="bg-gradient-to-r from-purple-900 to-violet-700 hover:from-purple-800 hover:to-violet-600 text-white px-8 py-6 text-lg">
               View More Articles
               <ArrowRight className="h-5 w-5 ml-2" />
             </Button>
@@ -316,8 +246,8 @@ export default function FFCHomePage() {
   
   // Hero slider images
   const heroSlides = [
-    { src: '/images/hero/slider2.png', alt: 'Rooftop Celebration Setup with Fairy Lights Surat' },
-    { src: '/images/hero/slider1.png', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
+    { src: '/images/hero/slider2.webp', alt: 'Rooftop Celebration Setup with Fairy Lights Surat' },
+    { src: '/images/hero/slider1.webp', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
   ];
 
   // Auto-slide effect
@@ -333,7 +263,7 @@ export default function FFCHomePage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white overflow-hidden">
         {/* Background Image Slider */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
@@ -373,27 +303,27 @@ export default function FFCHomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-1">
-                <Sparkles className="h-4 w-4 mr-2" /> Couples Only Experience in Surat
+                <Sparkles className="h-4 w-4 mr-2" /> Exclusively for Couples in Surat
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight font-serif">
-                HIVY - Place for Celebrations
+                Your Love Story Deserves a Grand Celebration
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-white/90 max-w-2xl">
                 {siteConfig.tagline}
               </p>
               <p className="text-lg mb-8 text-white/80 max-w-xl">
-                Surat's premier private rooftop venue for romantic candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals & intimate date nights. 100% private, couples-only experience.
+                Surat&apos;s most exclusive private rooftop venue — where anniversaries become timeless memories. Candlelight dinners, milestone celebrations, surprise parties & intimate date nights crafted with devotion.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/packages">
-                  <Button size="lg" className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6 w-full sm:w-auto">
+                  <Button size="lg" className="bg-white text-purple-800 hover:bg-purple-50 text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
                     <Gift className="h-5 w-5 mr-2" />
                     View Packages
                   </Button>
                 </Link>
-                <a href={`tel:${siteConfig.phone}`}>
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 w-full sm:w-auto">
+                <a href={`tel:${siteConfig.phoneTel}`}>
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
                     <Phone className="h-5 w-5 mr-2" />
                     {siteConfig.phone}
                   </Button>
@@ -422,17 +352,17 @@ export default function FFCHomePage() {
       </section>
 
       {/* Mobile Booking Form */}
-      <section className="lg:hidden bg-stone-100 py-8">
+      <section className="lg:hidden bg-purple-50 py-8">
         <div className="container mx-auto px-4">
           <FFCBookingForm />
         </div>
       </section>
 
       {/* Packages Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-stone-100 to-white">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-purple-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               Candlelight Dinner & Celebration Packages
             </Badge>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-serif">
@@ -446,26 +376,26 @@ export default function FFCHomePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
             {getVisiblePackages().map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-stone-200 group overflow-hidden">
-                  <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
+                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-purple-100 group overflow-hidden">
+                  <div className="aspect-square bg-gradient-to-br from-purple-100 to-slate-50 relative overflow-hidden">
                     <Image
                       src={pkg.thumbnail}
                       alt={pkg.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <Badge className="absolute top-2 left-2 bg-yellow-800 text-white text-xs">
+                    <Badge className="absolute top-2 left-2 bg-purple-800 text-white text-xs">
                       Setup {index + 1}
                     </Badge>
                   </div>
                   <CardContent className="p-2 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-yellow-800 transition-colors line-clamp-2">
+                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-purple-800 transition-colors line-clamp-2">
                       {pkg.name}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-2 mb-2 hidden md:block">
                       {pkg.shortDescription}
                     </p>
-                    <p className="text-base md:text-xl font-bold text-yellow-800">
+                    <p className="text-base md:text-xl font-bold text-purple-800">
                       {formatPrice(pkg.price)}
                     </p>
                   </CardContent>
@@ -476,7 +406,7 @@ export default function FFCHomePage() {
           
           <div className="text-center mt-6 md:mt-10">
             <Link href="/packages">
-              <Button size="lg" className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-purple-800 to-violet-700 hover:from-purple-900 hover:to-violet-800 text-white">
                 View All Packages <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
@@ -488,7 +418,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               Romantic Celebration Services in Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -501,7 +431,7 @@ export default function FFCHomePage() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {serviceCategories.map((service) => (
-              <Card key={service.slug} className="h-full border-stone-200 group">
+              <Card key={service.slug} className="h-full border-purple-100 group">
                 <CardContent className="p-4 md:p-6 text-center">
                   <div className="text-3xl md:text-4xl mb-3 md:mb-4">{service.emoji}</div>
                   <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2">
@@ -521,7 +451,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               Why Couples Choose HIVY Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -535,8 +465,8 @@ export default function FFCHomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {experienceFeatures.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-stone-200 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-yellow-800" />
+                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-8 w-8 text-purple-800" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -551,7 +481,7 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-stone-1000/20 text-yellow-300 border-stone-1000/30">
+              <Badge className="mb-4 bg-purple-900/20 text-amber-300 border-purple-900/30">
                 Romantic Dinner Menu
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
@@ -563,8 +493,8 @@ export default function FFCHomePage() {
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Wine className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-purple-900/20 flex items-center justify-center flex-shrink-0">
+                    <Wine className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Welcome Drink</h4>
@@ -573,8 +503,8 @@ export default function FFCHomePage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Utensils className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-purple-900/20 flex items-center justify-center flex-shrink-0">
+                    <Utensils className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Cheese Fondue</h4>
@@ -583,8 +513,8 @@ export default function FFCHomePage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Gift className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-purple-900/20 flex items-center justify-center flex-shrink-0">
+                    <Gift className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Dessert with Chocolate Bite</h4>
@@ -594,7 +524,7 @@ export default function FFCHomePage() {
               </div>
               
               <Link href="/menu" className="inline-block mt-8">
-                <Button size="lg" className="bg-stone-1000 hover:bg-yellow-800 text-white">
+                <Button size="lg" className="bg-purple-900 hover:bg-purple-800 text-white">
                   View Full Menu <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
@@ -607,6 +537,7 @@ export default function FFCHomePage() {
                   alt="HIVY - Place for Celebrations Menu - Romantic Dining Experience" 
                   width={600} 
                   height={600} 
+                  loading="lazy"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -616,10 +547,10 @@ export default function FFCHomePage() {
       </section>
 
       {/* Areas We Serve */}
-      <section className="py-20 bg-stone-100">
+      <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               <MapPin className="h-4 w-4 mr-2" /> Candlelight Dinner & Celebrations Near You
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -635,7 +566,7 @@ export default function FFCHomePage() {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
-                className="px-4 py-2 bg-white rounded-full text-gray-700 hover:bg-yellow-800 hover:text-white transition-colors border border-stone-300"
+                className="px-4 py-2 bg-white rounded-full text-gray-700 hover:bg-purple-800 hover:text-white transition-colors border border-purple-200"
               >
                 {area.name}
               </Link>
@@ -654,10 +585,10 @@ export default function FFCHomePage() {
       <BlogSection />
 
       {/* FAQ Section */}
-      <section className="py-20 bg-stone-100">
+      <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               FAQ - Candlelight Dinner & Celebrations
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -670,7 +601,7 @@ export default function FFCHomePage() {
           
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-purple-100 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
@@ -684,7 +615,7 @@ export default function FFCHomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-800 to-yellow-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-800 to-violet-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
             Book Your Candlelight Dinner or Birthday Surprise Today
@@ -699,7 +630,7 @@ export default function FFCHomePage() {
                 WhatsApp Us
               </Button>
             </a>
-            <a href={`tel:${siteConfig.phone}`}>
+            <a href={`tel:${siteConfig.phoneTel}`}>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6">
                 <Phone className="h-5 w-5 mr-2" />
                 {siteConfig.phone}

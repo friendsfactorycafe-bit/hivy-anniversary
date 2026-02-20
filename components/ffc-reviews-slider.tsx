@@ -10,14 +10,14 @@ const reviews = [
   {
     name: "Yoma Patel",
     initial: "Y",
-    color: "bg-yellow-600",
+    color: "bg-purple-600",
     date: "1 month ago",
     review: "Cutest set up and amazing food service."
   },
   {
     name: "Krishn Sharma",
     initial: "K",
-    color: "bg-stone-600",
+    color: "bg-violet-600",
     date: "2 months ago",
     review: "Best candlelight dinner experience in Surat! The decoration was stunning and staff was very helpful. Proposed here and she said YES! 💍"
   },
@@ -80,11 +80,11 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
   };
 
   return (
-    <section className={`py-12 ${compact ? 'bg-stone-50' : 'bg-stone-100'}`}>
+    <section className={`py-12 ${compact ? 'bg-purple-50/50' : 'bg-purple-50'}`}>
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-8">
-            <Badge className="mb-3 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-3 bg-purple-100 text-purple-900 border-purple-200">
               <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" /> Google Reviews
             </Badge>
             <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">
@@ -165,7 +165,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
             href="https://www.google.com/maps/place/HIVY+-+Place+For+Celebration/@21.1895149,72.7828283,17z/data=!4m8!3m7!1s0x3be04d4fc7b5dbb9:0xb1aa92785a2443b8!8m2!3d21.1895149!4d72.7854032!9m1!1b1!16s%2Fg%2F11y3glr3jq"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-yellow-700 hover:text-yellow-800 font-medium text-sm"
+            className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-800 font-medium text-sm"
           >
             <GoogleIcon />
             Review Us on Google →

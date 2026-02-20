@@ -21,4 +21,6 @@ public/videos/*.mp4
 public/videos/*.MP4
 public/videos/*.mov
 public/videos/*.MOV
+# Exception: keep virtual tour video (only 4MB)
+!public/videos/virtual-tour.mp4
 public.zip

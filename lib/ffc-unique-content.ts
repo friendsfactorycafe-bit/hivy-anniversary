@@ -519,6 +519,22 @@ Each ${kwLower} package includes 3 hours of private venue access, welcome drinks
     {
       question: `What is the cancellation policy for ${kwLower} bookings?`,
       answer: `You can reschedule free of charge up to 48 hours before your ${kwLower} slot. Cancellations made 48+ hours in advance receive a refund minus processing fees.`
+    },
+    {
+      question: `What time slots are available for ${kwLower}?`,
+      answer: `We offer flexible time slots for your ${kwLower}: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Each slot gives you 3 full hours of private celebration.`
+    },
+    {
+      question: `How many guests can attend the ${kwLower}?`,
+      answer: `Our ${kwLower} venue is designed for intimate couple celebrations. Most packages are ideal for 2 people. For small group celebrations (parents' anniversary, etc.), please discuss with our team and we'll recommend the best setup.`
+    },
+    {
+      question: `Is parking available at the ${kwLower} venue?`,
+      answer: `Yes, ample free parking is available on-site. You can drive to our venue worry-free for your ${kwLower} experience.`
+    },
+    {
+      question: `What makes HIVY different from other ${kwLower} venues in ${city}?`,
+      answer: `HIVY stands out because we're a 100% couples-only, private celebration venue. Unlike restaurants or shared spaces, your ${kwLower} experience is exclusively yours. We offer themed decorations, gourmet food, romantic ambiance, and over 3,000 successful celebrations — rated 4.9★ on Google.`
     }
   ];
 

@@ -24,10 +24,10 @@ export default function FFCBlogPage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge className="bg-rose-200 text-rose-900 mb-4">
+            <Badge className="bg-violet-200 text-violet-900 mb-4">
               <Heart className="w-3 h-3 mr-1" /> Anniversary Blog
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -45,14 +45,14 @@ export default function FFCBlogPage() {
       <section className="py-6 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
-            <Badge variant="outline" className="cursor-pointer hover:bg-rose-100 px-4 py-2">
+            <Badge variant="outline" className="cursor-pointer hover:bg-violet-100 px-4 py-2">
               All Posts
             </Badge>
             {categories.map((category) => (
               <Badge 
                 key={category} 
                 variant="outline" 
-                className="cursor-pointer hover:bg-rose-100 px-4 py-2"
+                className="cursor-pointer hover:bg-violet-100 px-4 py-2"
               >
                 {category}
               </Badge>
@@ -74,15 +74,15 @@ export default function FFCBlogPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-4 left-4 bg-rose-700">
+                  <Badge className="absolute top-4 left-4 bg-violet-700">
                     Featured
                   </Badge>
                 </div>
                 <CardContent className="p-8 flex flex-col justify-center">
-                  <Badge variant="outline" className="w-fit mb-4 border-rose-300 text-rose-700">
+                  <Badge variant="outline" className="w-fit mb-4 border-violet-300 text-violet-700">
                     {featuredPost.category}
                   </Badge>
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-rose-800 transition-colors">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-violet-800 transition-colors">
                     {featuredPost.title}
                   </h2>
                   <p className="text-gray-600 mb-6 line-clamp-3">
@@ -102,7 +102,7 @@ export default function FFCBlogPage() {
                       {featuredPost.readTime} read
                     </span>
                   </div>
-                  <Button className="w-fit bg-gradient-to-r from-rose-700 to-rose-600 hover:from-rose-800 hover:to-rose-700">
+                  <Button className="w-fit bg-gradient-to-r from-violet-700 to-purple-600 hover:from-violet-800 hover:to-purple-700">
                     Read Article <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </CardContent>
@@ -125,19 +125,19 @@ export default function FFCBlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-rose-700 to-rose-600">
+      <section className="py-16 bg-gradient-to-r from-violet-700 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Plan Your Anniversary Celebration?
           </h2>
-          <p className="text-rose-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-violet-100 mb-8 max-w-2xl mx-auto">
             Turn your special anniversary into unforgettable memories at HIVY Anniversary, 
             Surat's premier rooftop anniversary celebration venue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-rose-700 hover:bg-rose-50"
+              className="bg-white text-violet-700 hover:bg-violet-50"
               asChild
             >
               <Link href="/packages">View Packages</Link>
@@ -173,12 +173,12 @@ function BlogCard({ post }: { post: BlogPost }) {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <Badge className="absolute top-3 left-3 bg-rose-700">
+          <Badge className="absolute top-3 left-3 bg-violet-700">
             {post.category}
           </Badge>
         </div>
         <CardContent className="p-5">
-          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-rose-700 transition-colors">
+          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-violet-700 transition-colors">
             {post.title}
           </h3>
           <p className="text-sm text-gray-600 mb-4 line-clamp-2">

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, Star, Check, Phone, MessageCircle, MapPin, Heart, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,20 +27,20 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
       <FFCHeader />
       
       {/* Breadcrumb */}
-      <div className="bg-rose-50 py-4">
+      <div className="bg-violet-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-rose-700">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-violet-700">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/areas" className="text-gray-500 hover:text-rose-700">Areas</Link>
+            <Link href="/areas" className="text-gray-500 hover:text-violet-700">Areas</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-rose-700 font-medium">{area.name}</span>
+            <span className="text-violet-700 font-medium">{area.name}</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rose-700 via-rose-600 to-rose-800 text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-violet-700 via-purple-600 to-violet-800 text-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
@@ -56,9 +57,9 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <FFCBookNowButton 
                   pageTitle={`${area.name} Area Page`} 
-                  className="bg-white text-rose-700 hover:bg-rose-50 text-lg px-8 py-6" 
+                  className="bg-white text-violet-700 hover:bg-violet-50 text-lg px-8 py-6" 
                 />
-                <a href={`tel:${siteConfig.phone}`}>
+                <a href={`tel:${siteConfig.phoneTel}`}>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
                     <Phone className="h-5 w-5 mr-2" />
                     {siteConfig.phone}
@@ -92,6 +93,13 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
         </div>
       </section>
 
+      {/* Mobile Booking Form - Above Fold */}
+      <section className="lg:hidden bg-violet-50 py-8">
+        <div className="container mx-auto px-4">
+          <FFCBookingForm pageTitle={`${area.name} Area`} />
+        </div>
+      </section>
+
       {/* Services in This Area */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -107,10 +115,10 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {anniversaryServiceCategories.flatMap(cat => cat.keywords).slice(0, 8).map((keyword) => (
               <Link key={keyword.slug} href={`/${keyword.slug}`}>
-                <Card className="h-full hover:shadow-lg transition-all border-rose-200 group text-center">
+                <Card className="h-full hover:shadow-lg transition-all border-violet-200 group text-center">
                   <CardContent className="p-4 md:p-6">
                     <span className="text-4xl md:text-5xl mb-3 md:mb-4 block">{keyword.emoji}</span>
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2 group-hover:text-rose-700 transition-colors line-clamp-2">
+                    <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2 group-hover:text-violet-700 transition-colors line-clamp-2">
                       {keyword.name}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-1 hidden md:block">
@@ -125,7 +133,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
       </section>
 
       {/* Content & Booking */}
-      <section className="py-16 bg-rose-50">
+      <section className="py-16 bg-violet-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
@@ -136,16 +144,20 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </h2>
                 
                 <p className="text-gray-600 mb-6">
-                  Are you looking for the perfect anniversary celebration venue near {area.name}, Surat? HIVY Anniversary is your destination for creating unforgettable anniversary memories with your loved one.
+                  Are you looking for the perfect anniversary celebration venue near {area.name}, Surat? HIVY Anniversary is your destination for creating unforgettable anniversary memories with your loved one. Couples from {area.name} trust us as Surat's premier private celebration venue, and for good reason — every detail of your anniversary experience is carefully crafted to ensure a magical evening.
                 </p>
 
                 <p className="text-gray-600 mb-6">
-                  Whether you're celebrating your first anniversary, silver jubilee, golden anniversary, or any milestone in between, our venue offers stunning rooftop setups and elegant glass houses that provide the perfect romantic ambiance for your anniversary celebration.
+                  Whether you're celebrating your first anniversary, silver jubilee, golden anniversary, or any milestone in between, our venue offers stunning rooftop setups and elegant private spaces that provide the perfect romantic ambiance for your anniversary celebration. From the moment you step in, our team handles every element — decorations, gourmet dining, soft romantic music, and a photo-ready ambiance — so you can focus entirely on your partner and the love you share.
+                </p>
+
+                <p className="text-gray-600 mb-6">
+                  HIVY Anniversary has served over 3,000 happy couples from across Surat, including many from {area.name}. Our 4.9★ Google rating speaks to the consistently exceptional experiences we deliver. Whether it's a candlelight dinner for two or a private anniversary party for your parents or in-laws, we customize each celebration to match your vision and budget.
                 </p>
 
                 <div className="bg-white rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Gift className="h-5 w-5 text-rose-700" />
+                    <Gift className="h-5 w-5 text-violet-700" />
                     Anniversary Services in {area.name}
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -160,7 +172,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                       "Custom Anniversary Experiences"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-rose-700 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-violet-700 flex-shrink-0" />
                         <span className="text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -168,27 +180,78 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </div>
 
                 <h3 className="text-xl font-bold mb-4">
+                  What's Included in Your Anniversary Celebration
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Every HIVY Anniversary package for {area.name} couples includes a comprehensive celebration experience. You get 3 mesmerizing hours of exclusive private access, a beautifully decorated venue with fairy lights, romantic flowers, and themed decorations tailored to your anniversary milestone. Our welcome drink greets you upon arrival, followed by a gourmet café-style dinner featuring cheese fondue with cheese balls, wedges and nachos, signature mocktails, and a decadent dessert with chocolate brownie. A complimentary anniversary cake, soft romantic music, and an Instagram-worthy photo backdrop complete the package.
+                </p>
+
+                <h3 className="text-xl font-bold mb-4">
+                  Anniversary Celebration Ideas for {area.name} Couples
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Planning the perfect anniversary celebration from {area.name}? Here are some popular ideas our couples love:
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Surprise Anniversary Dinner:</strong> Plan a secret celebration for your partner. Our team helps {area.name} residents coordinate timing, decorations, and the big reveal for a truly memorable surprise.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Milestone Year Celebration:</strong> Whether it's your 1st, 5th, 10th, 25th or 50th anniversary, we create themed setups that honor the significance of each milestone.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Parents' Anniversary Gift:</strong> Surprise your parents or in-laws with a romantic anniversary dinner. Many {area.name} families book us for their parents' celebration.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Anniversary Photoshoot:</strong> Capture beautiful memories at our venue with multiple photo-ready spots. Bring your own photographer or enjoy the ambiance together.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Weekend Anniversary Getaway:</strong> Make your anniversary special with an evening escape from {area.name} to our rooftop paradise.</span>
+                  </li>
+                </ul>
+
+                <h3 className="text-xl font-bold mb-4">
                   Why Couples in {area.name} Choose Us for Anniversaries
                 </h3>
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
-                    <span className="text-rose-700 font-bold">•</span>
-                    <span><strong>Convenient Location:</strong> Easy access from {area.name} and all parts of Surat.</span>
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Convenient Location:</strong> Easy access from {area.name} and all parts of Surat. Our venue is centrally located making it a quick drive for {area.name} residents.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-rose-700 font-bold">•</span>
-                    <span><strong>100% Privacy:</strong> Your anniversary celebration is completely private with exclusive booking.</span>
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>100% Privacy:</strong> Your anniversary celebration is completely private with exclusive booking. No other guests or distractions — just you and your partner.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-rose-700 font-bold">•</span>
-                    <span><strong>6 Romantic Setups:</strong> Choose from rooftop and glass house experiences.</span>
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>6 Romantic Setups:</strong> Choose from premium rooftop and private space experiences. Each setup is uniquely designed with its own theme and ambiance.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-rose-700 font-bold">•</span>
-                    <span><strong>All-Inclusive Packages:</strong> Gourmet dinner, decorations, music, and more included.</span>
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>All-Inclusive Packages:</strong> Gourmet dinner, decorations, anniversary cake, music, and dedicated service all included. No hidden costs.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Couples-Only Venue:</strong> HIVY is exclusively for couples, ensuring a romantic atmosphere that restaurants and public venues simply cannot match.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-violet-700 font-bold">•</span>
+                    <span><strong>Affordable Luxury:</strong> Premium anniversary experiences starting from just ₹5,100. Exceptional value for {area.name} couples who deserve the best.</span>
                   </li>
                 </ul>
+
+                <h3 className="text-xl font-bold mb-4">
+                  How to Book Your Anniversary from {area.name}
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Booking your anniversary celebration is incredibly simple. Just WhatsApp us at {siteConfig.phone} or fill out the booking form on this page. Share your anniversary date, preferred time slot (we offer lunch, evening, and dinner slots from 12 PM to 11 PM), number of guests, and any special requests. Our team will confirm your booking instantly and help you choose the perfect package for your milestone. Advance booking is recommended, especially for weekends and special dates. Couples from {area.name} can reach our venue comfortably with ample parking available on-site.
+                </p>
               </article>
 
               {/* Packages */}
@@ -200,18 +263,24 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {getVisiblePackages().slice(0, 4).map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-rose-200 group bg-white">
-                        <div className="aspect-video bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center">
-                          <span className="text-5xl">{pkg.emoji}</span>
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-violet-200 group bg-white">
+                        <div className="aspect-video bg-gradient-to-br from-violet-100 to-purple-50 relative overflow-hidden">
+                          <Image
+                            src={pkg.thumbnail}
+                            alt={pkg.name}
+                            fill
+                            loading="lazy"
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
                         </div>
                         <CardContent className="p-4">
-                          <h3 className="font-semibold mb-1 group-hover:text-rose-700 transition-colors">
+                          <h3 className="font-semibold mb-1 group-hover:text-violet-700 transition-colors">
                             {pkg.name}
                           </h3>
                           <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                             {pkg.shortDescription}
                           </p>
-                          <p className="text-lg font-bold text-rose-700">
+                          <p className="text-lg font-bold text-violet-700">
                             {formatPrice(pkg.price)}
                           </p>
                         </CardContent>
@@ -222,7 +291,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 
                 <div className="text-center mt-6">
                   <Link href="/packages">
-                    <Button className="bg-rose-700 hover:bg-rose-800">
+                    <Button className="bg-violet-700 hover:bg-violet-800">
                       View All Packages <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
@@ -275,14 +344,14 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               <Link 
                 key={nearbyArea.slug}
                 href={`/${nearbyArea.slug}`}
-                className="px-4 py-2 bg-rose-50 rounded-full text-gray-700 hover:bg-rose-700 hover:text-white transition-colors border border-rose-200"
+                className="px-4 py-2 bg-violet-50 rounded-full text-gray-700 hover:bg-violet-700 hover:text-white transition-colors border border-violet-200"
               >
                 {nearbyArea.name}
               </Link>
             ))}
             <Link 
               href="/areas"
-              className="px-4 py-2 bg-rose-700 rounded-full text-white hover:bg-rose-800 transition-colors"
+              className="px-4 py-2 bg-violet-700 rounded-full text-white hover:bg-violet-800 transition-colors"
             >
               View All Areas
             </Link>
@@ -291,7 +360,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-rose-50">
+      <section className="py-16 bg-violet-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold mb-4 font-serif">
@@ -303,22 +372,46 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
             {[
               {
                 question: `How do couples from ${area.name} reach HIVY Anniversary?`,
-                answer: `HIVY Anniversary is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions.`
+                answer: `HIVY Anniversary is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions from ${area.name}.`
               },
               {
                 question: "What anniversary packages do you offer?",
-                answer: `We offer a variety of anniversary celebration packages including first anniversary, silver jubilee, golden anniversary, and custom milestone celebrations. Each package includes dinner, decorations, and exclusive venue access.`
+                answer: `We offer 5 unique anniversary celebration packages starting from ₹5,100, including Swing of Love, Boho Chic, Fairy Tale Proposals, Tent of Romance, and more. Each package includes dinner, decorations, cake, and exclusive venue access.`
               },
               {
-                question: "What are the booking options available?",
-                answer: `Couples from ${area.name} can book via WhatsApp, phone call, or our online form. We recommend booking 2-3 days in advance for your preferred slot.`
+                question: `What are the booking options available for ${area.name} residents?`,
+                answer: `Couples from ${area.name} can book via WhatsApp at ${siteConfig.phone}, phone call, or our online booking form. We recommend booking 2-3 days in advance for your preferred slot.`
               },
               {
                 question: "Is the venue private for anniversary celebrations?",
-                answer: "Yes! Your anniversary celebration is 100% private. No other guests will be present during your booking slot, ensuring an intimate romantic experience."
+                answer: "Yes! Your anniversary celebration is 100% private. No other guests will be present during your booking slot, ensuring an intimate romantic experience for you and your partner."
+              },
+              {
+                question: `What food is included in the anniversary dinner?`,
+                answer: "Our anniversary packages include welcome drinks, cheese fondue with accompaniments, signature mocktails, delicious main course items, and a dessert with chocolate brownie. A complimentary anniversary cake is also included."
+              },
+              {
+                question: `Can I plan a surprise anniversary for my spouse from ${area.name}?`,
+                answer: `Absolutely! We specialize in surprise anniversary celebrations. Our team helps ${area.name} couples with coordination, timing, and keeping the secret until the big reveal. Just WhatsApp us with your plan and we'll handle the rest.`
+              },
+              {
+                question: "What time slots are available for anniversary celebrations?",
+                answer: "We offer flexible time slots: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Each slot includes 3 hours of private access."
+              },
+              {
+                question: "Can I customize the anniversary decoration theme?",
+                answer: "Yes! All our setups are customizable. You can choose specific color themes, add personalized messages, request special flowers, include photos from your journey together, or select a milestone-specific theme (silver, gold, etc.)."
+              },
+              {
+                question: `Is HIVY Anniversary good for parents' anniversary celebrations?`,
+                answer: `Many ${area.name} families book us for parents' and in-laws' anniversary celebrations. We create elegant, age-appropriate setups that honor the couple's journey. It's a wonderful gift for your parents' milestone anniversary.`
+              },
+              {
+                question: "What is the cancellation policy?",
+                answer: "You can reschedule free of charge up to 48 hours before your slot. Cancellations made 48+ hours in advance receive a refund minus processing fees. We try to be as flexible as possible for our couples."
               }
             ].map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-rose-200 px-6">
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-violet-200 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>

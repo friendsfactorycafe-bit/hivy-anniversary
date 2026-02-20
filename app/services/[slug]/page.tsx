@@ -63,12 +63,12 @@ export async function generateMetadata({
       ...service.keywords.slice(0, 5).map(k => k.slug.replace(/-/g, ' '))
     ],
     alternates: {
-      canonical: `https://hivy.co.in/services/${service.slug}`,
+      canonical: `https://anniversary.hivy.co.in/services/${service.slug}`,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `https://hivy.co.in/services/${service.slug}`,
+      url: `https://anniversary.hivy.co.in/services/${service.slug}`,
       type: "website",
       locale: "en_IN",
       siteName: siteConfig.name,
@@ -418,7 +418,7 @@ export default async function ServiceCategoryPage({
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className="h-6 w-6 text-yellow-800" />
-                    <a href={`tel:${siteConfig.phone}`} className="text-gray-700 hover:text-yellow-800 font-medium">
+                    <a href={`tel:${siteConfig.phoneTel}`} className="text-gray-700 hover:text-yellow-800 font-medium">
                       {siteConfig.phone}
                     </a>
                   </div>

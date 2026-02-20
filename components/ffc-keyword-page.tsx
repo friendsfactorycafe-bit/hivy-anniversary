@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, Star, Check, Phone, MessageCircle, MapPin, Gift, Clock, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -33,22 +34,22 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       <FFCHeader />
       
       {/* Breadcrumb */}
-      <div className="bg-stone-100 py-4">
+      <div className="bg-purple-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm flex-wrap">
-            <Link href="/" className="text-gray-500 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-purple-800">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/services" className="text-gray-500 hover:text-yellow-800">Services</Link>
+            <Link href="/services" className="text-gray-500 hover:text-purple-800">Services</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href={`/services/${service.slug}`} className="text-gray-500 hover:text-yellow-800">{service.name}</Link>
+            <Link href={`/services/${service.slug}`} className="text-gray-500 hover:text-purple-800">{service.name}</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-yellow-800 font-medium">{keyword.title}</span>
+            <span className="text-purple-800 font-medium">{keyword.title}</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
@@ -65,9 +66,9 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <FFCBookNowButton 
                   pageTitle={keyword.title} 
-                  className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6" 
+                  className="bg-white text-purple-800 hover:bg-purple-50 text-lg px-8 py-6" 
                 />
-                <a href={`tel:${siteConfig.phone}`}>
+                <a href={`tel:${siteConfig.phoneTel}`}>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
                     <Phone className="h-5 w-5 mr-2" />
                     {siteConfig.phone}
@@ -98,6 +99,13 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
         </div>
       </section>
 
+      {/* Mobile Booking Form - Above Fold */}
+      <section className="lg:hidden bg-purple-50 py-8">
+        <div className="container mx-auto px-4">
+          <FFCBookingForm pageTitle={keyword.title} />
+        </div>
+      </section>
+
       {/* Main Content */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -114,9 +122,9 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                   {uniqueContent.introduction}
                 </div>
 
-                <div className="bg-stone-100 rounded-xl p-6 mb-8">
+                <div className="bg-purple-50 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Gift className="h-5 w-5 text-yellow-800" />
+                    <Gift className="h-5 w-5 text-purple-800" />
                     What's Included
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -131,7 +139,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                       "Panoramic City Views"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-yellow-800 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-purple-800 flex-shrink-0" />
                         <span className="text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -155,7 +163,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 <ul className="space-y-3 mb-8">
                   {uniqueContent.whyChooseUs.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-yellow-800 font-bold">•</span>
+                      <span className="text-purple-800 font-bold">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -163,7 +171,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
                 <div className="bg-gray-50 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-yellow-800" />
+                    <Clock className="h-5 w-5 text-purple-800" />
                     Available Time Slots
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -187,7 +195,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 </div>
 
                 {/* Testimonials */}
-                <div className="bg-stone-100 rounded-xl p-6 mb-8">
+                <div className="bg-purple-50 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4">💬 What Couples Say</h3>
                   <div className="text-gray-600 italic whitespace-pre-line">
                     {uniqueContent.testimonialContent}
@@ -204,18 +212,24 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {relatedPackages.map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-stone-200 group">
-                        <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 flex items-center justify-center">
-                          <span className="text-5xl">{pkg.emoji}</span>
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-purple-100 group">
+                        <div className="aspect-video bg-gradient-to-br from-purple-100 to-slate-50 relative overflow-hidden">
+                          <Image
+                            src={pkg.thumbnail}
+                            alt={pkg.name}
+                            fill
+                            loading="lazy"
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
                         </div>
                         <CardContent className="p-4">
-                          <h3 className="font-semibold mb-1 group-hover:text-yellow-800 transition-colors">
+                          <h3 className="font-semibold mb-1 group-hover:text-purple-800 transition-colors">
                             {pkg.name}
                           </h3>
                           <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                             {pkg.shortDescription}
                           </p>
-                          <p className="text-lg font-bold text-yellow-800">
+                          <p className="text-lg font-bold text-purple-800">
                             {formatPrice(pkg.price)}
                           </p>
                         </CardContent>
@@ -226,7 +240,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 
                 <div className="text-center mt-6">
                   <Link href="/packages">
-                    <Button variant="outline" className="border-yellow-800 text-yellow-800 hover:bg-stone-100">
+                    <Button variant="outline" className="border-purple-800 text-purple-800 hover:bg-purple-50">
                       View All Packages <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
@@ -266,7 +280,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       </section>
 
       {/* Related Keywords */}
-      <section className="py-16 bg-stone-100">
+      <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold mb-4 font-serif">
@@ -280,11 +294,11 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 key={kw.slug}
                 href={`/services/${service.slug}/${kw.slug}`}
               >
-                <Card className="border-stone-200 hover:border-yellow-200 hover:shadow-md transition-all group">
+                <Card className="border-purple-100 hover:border-purple-200 hover:shadow-md transition-all group">
                   <CardContent className="p-4">
-                    <h3 className="font-medium group-hover:text-yellow-800 transition-colors flex items-center justify-between">
+                    <h3 className="font-medium group-hover:text-purple-800 transition-colors flex items-center justify-between">
                       {kw.title}
-                      <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-yellow-800" />
+                      <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-purple-800" />
                     </h3>
                   </CardContent>
                 </Card>
@@ -298,7 +312,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
               <MapPin className="h-4 w-4 mr-2" /> Service Areas
             </Badge>
             <h2 className="text-2xl font-bold mb-4 font-serif">
@@ -311,7 +325,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
-                className="px-4 py-2 bg-stone-100 rounded-full text-gray-700 hover:bg-yellow-800 hover:text-white transition-colors border border-stone-300 text-sm"
+                className="px-4 py-2 bg-purple-50 rounded-full text-gray-700 hover:bg-purple-800 hover:text-white transition-colors border border-purple-200 text-sm"
               >
                 {area.name}
               </Link>
@@ -321,7 +335,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-stone-100">
+      <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold mb-4 font-serif">
@@ -331,7 +345,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
           
           <Accordion type="single" collapsible className="space-y-4">
             {uniqueContent.faqContent.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-purple-100 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
@@ -345,7 +359,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-yellow-800 to-yellow-700 text-white">
+      <section className="py-16 bg-gradient-to-br from-purple-800 to-violet-700 text-white">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif">
             Ready for Your {keyword.title}?
@@ -356,9 +370,9 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FFCBookNowButton 
               pageTitle={keyword.title} 
-              className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6" 
+              className="bg-white text-purple-800 hover:bg-purple-50 text-lg px-8 py-6" 
             />
-            <a href={`tel:${siteConfig.phone}`}>
+            <a href={`tel:${siteConfig.phoneTel}`}>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
                 <Phone className="h-5 w-5 mr-2" />
                 Call Now: {siteConfig.phone}

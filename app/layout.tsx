@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hivy.co.in"),
+  metadataBase: new URL("https://anniversary.hivy.co.in"),
   title: {
     default: "HIVY - Place for Celebrations Surat | Best Romantic Celebration Venue | Candlelight Dinners & Birthday Surprises",
     template: "%s | HIVY - Place for Celebrations Surat",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     "anniversary dinner surat",
     "valentines day surat"
   ],
-  authors: [{ name: "HIVY - Place for Celebrations", url: "https://hivy.co.in" }],
+  authors: [{ name: "HIVY - Place for Celebrations", url: "https://anniversary.hivy.co.in" }],
   creator: "HIVY - Place for Celebrations",
   publisher: "HIVY - Place for Celebrations",
   formatDetection: {
@@ -66,14 +66,14 @@ export const metadata: Metadata = {
     telephone: true,
   },
   alternates: {
-    canonical: "https://hivy.co.in",
+    canonical: "https://anniversary.hivy.co.in",
   },
   category: "Restaurant",
   classification: "Romantic Celebration Venue",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://hivy.co.in",
+    url: "https://anniversary.hivy.co.in",
     siteName: "HIVY - Place for Celebrations",
     title: "HIVY - Place for Celebrations Surat | Best Romantic Celebration Venue",
     description: "Best romantic celebration venue in Surat. Birthday surprises, candlelight dinners, anniversaries, proposals. Premium private experiences.",
@@ -134,18 +134,18 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://hivy.co.in/#business",
+      "@id": "https://anniversary.hivy.co.in/#business",
       "name": "HIVY - Place for Celebrations",
       "alternateName": "HIVY Surat",
       "description": "Best romantic celebration venue in Surat, Gujarat. Birthday surprises, candlelight dinners, anniversary celebrations, proposals, pre-wedding shoots. Premium private experiences.",
-      "url": "https://hivy.co.in",
+      "url": "https://anniversary.hivy.co.in",
       "telephone": "+91-9727027278",
       "email": "hello@hivy.co.in",
       "priceRange": "₹₹₹",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, UPI, GPay, PhonePe",
       "image": [
-        "https://hivy.co.in/images/og-image.jpg"
+        "https://anniversary.hivy.co.in/images/og-image.jpg"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -256,30 +256,30 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://hivy.co.in/#website",
-      "url": "https://hivy.co.in",
+      "@id": "https://anniversary.hivy.co.in/#website",
+      "url": "https://anniversary.hivy.co.in",
       "name": "HIVY - Place for Celebrations",
       "description": "Best romantic celebration venue in Surat",
       "publisher": {
-        "@id": "https://hivy.co.in/#business"
+        "@id": "https://anniversary.hivy.co.in/#business"
       },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://hivy.co.in/services?q={search_term_string}"
+          "urlTemplate": "https://anniversary.hivy.co.in/services?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://hivy.co.in/#organization",
+      "@id": "https://anniversary.hivy.co.in/#organization",
       "name": "HIVY - Place for Celebrations",
-      "url": "https://hivy.co.in",
+      "url": "https://anniversary.hivy.co.in",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hivy.co.in/icon.svg",
+        "url": "https://anniversary.hivy.co.in/icon.svg",
         "width": "512",
         "height": "512"
       },
@@ -293,25 +293,71 @@ const jsonLd = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://hivy.co.in/#breadcrumb",
+      "@id": "https://anniversary.hivy.co.in/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://hivy.co.in"
+          "item": "https://anniversary.hivy.co.in"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://hivy.co.in/services"
+          "item": "https://anniversary.hivy.co.in/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Packages",
-          "item": "https://hivy.co.in/packages"
+          "item": "https://anniversary.hivy.co.in/packages"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://anniversary.hivy.co.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is HIVY Anniversary and where is it located in Surat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HIVY Anniversary is Surat's premier private anniversary celebration venue — the best spot for romantic anniversary dinners, milestone celebrations, rooftop dining, and surprise anniversary parties in Surat, Gujarat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book an anniversary celebration at HIVY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply WhatsApp +91 9727027278 or call directly. Share your anniversary type, preferred date, and number of guests. We'll confirm your booking instantly with a custom quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the prices for anniversary celebration packages in Surat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our romantic anniversary packages range from ₹5,100 to ₹6,500 and include premium rooftop setup, welcome drinks, anniversary decorations, gourmet dining, cake, and 3 hours of private access."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I celebrate milestone anniversaries like 25th or 50th at HIVY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! HIVY Anniversary specializes in milestone celebrations including Silver Jubilee (25th), Golden Anniversary (50th), and Diamond Anniversary (60th). Our elegant setups are perfect for these special occasions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is HIVY Anniversary a private venue for couples only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, HIVY Anniversary is 100% private and exclusively for couples. You'll have complete privacy during your booking slot — no other guests. It's the most romantic and couple-friendly anniversary venue in Surat with a 4.9★ rating."
+          }
         }
       ]
     }

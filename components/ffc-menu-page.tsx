@@ -17,7 +17,7 @@ export default function FFCMenuPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-4 bg-stone-1000/20 text-yellow-300 border-stone-1000/30">
+          <Badge className="mb-4 bg-purple-900/20 text-amber-300 border-purple-900/30">
             <Utensils className="h-4 w-4 mr-2" /> Dining Experience
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
@@ -42,7 +42,7 @@ export default function FFCMenuPage() {
             
             <div className="space-y-6">
               {menuItems.starters.map((item, index) => (
-                <Card key={index} className="border-stone-200 hover:shadow-lg transition-shadow">
+                <Card key={index} className="border-purple-100 hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <span className="text-4xl">{item.emoji}</span>
@@ -66,7 +66,7 @@ export default function FFCMenuPage() {
             
             <div className="space-y-6">
               {menuItems.desserts.map((item, index) => (
-                <Card key={index} className="border-stone-200 hover:shadow-lg transition-shadow">
+                <Card key={index} className="border-purple-100 hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <span className="text-4xl">{item.emoji}</span>
@@ -90,12 +90,12 @@ export default function FFCMenuPage() {
             
             <div className="grid md:grid-cols-2 gap-6">
               {menuItems.addOns.map((item, index) => (
-                <Card key={index} className="border-stone-200 bg-stone-100">
+                <Card key={index} className="border-purple-100 bg-purple-50">
                   <CardContent className="p-6 text-center">
                     <span className="text-5xl mb-4 block">{item.emoji}</span>
                     <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
                     <p className="text-gray-600 mb-2">{item.description}</p>
-                    <p className="text-yellow-800 font-bold text-lg">{item.price}</p>
+                    <p className="text-purple-800 font-bold text-lg">{item.price}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -105,7 +105,7 @@ export default function FFCMenuPage() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-16 bg-gradient-to-br from-stone-100 to-stone-50">
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-slate-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-serif mb-2">✨ The Complete Experience</h2>
@@ -114,11 +114,11 @@ export default function FFCMenuPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* 3 Hours */}
-            <Card className="border-stone-300">
+            <Card className="border-purple-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-yellow-800" />
+                  <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-purple-800" />
                   </div>
                   <h3 className="text-xl font-bold">3 Mesmerizing Hours</h3>
                 </div>
@@ -129,29 +129,29 @@ export default function FFCMenuPage() {
             </Card>
 
             {/* Tent Decoration */}
-            <Card className="border-stone-300">
+            <Card className="border-purple-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center">
-                    <Heart className="h-6 w-6 text-yellow-800" />
+                  <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                    <Heart className="h-6 w-6 text-purple-800" />
                   </div>
                   <h3 className="text-xl font-bold">Romantic Tent Decoration</h3>
                 </div>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Trending Tent Setup for romantic evenings
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Curtains, Flowers & Twinkling Lights
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Unique Props & Lower Seating
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Soft Candle Glow Ambiance
                   </li>
                 </ul>
@@ -159,25 +159,25 @@ export default function FFCMenuPage() {
             </Card>
 
             {/* Dining Experience */}
-            <Card className="border-stone-300">
+            <Card className="border-purple-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center">
-                    <Utensils className="h-6 w-6 text-yellow-800" />
+                  <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                    <Utensils className="h-6 w-6 text-purple-800" />
                   </div>
                   <h3 className="text-xl font-bold">Dining Experience</h3>
                 </div>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Mouth-Watering Dishes
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Romantic Background Music
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-yellow-800" />
+                    <Check className="h-4 w-4 text-purple-800" />
                     Perfect mood setting
                   </li>
                 </ul>
@@ -185,18 +185,18 @@ export default function FFCMenuPage() {
             </Card>
 
             {/* Cancellation Policy */}
-            <Card className="border-stone-300">
+            <Card className="border-purple-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center">
-                    <Gift className="h-6 w-6 text-yellow-800" />
+                  <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                    <Gift className="h-6 w-6 text-purple-800" />
                   </div>
                   <h3 className="text-xl font-bold">Cancellation Policy</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
                   Rescheduling must be informed at least one day prior. Event can be rescheduled within one month, subject to availability.
                 </p>
-                <p className="text-yellow-800 font-semibold">
+                <p className="text-purple-800 font-semibold">
                   * No Refund Policy Applicable
                 </p>
               </CardContent>
@@ -206,7 +206,7 @@ export default function FFCMenuPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-yellow-800 to-yellow-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-purple-800 to-violet-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
             Ready to Book Your Romantic Dining Experience?
@@ -215,8 +215,8 @@ export default function FFCMenuPage() {
             Reserve your table and let us create magical moments for you
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FFCBookNowButton pageTitle="Menu Page" className="text-lg px-8 py-6 bg-white text-yellow-800 hover:bg-stone-100" />
-            <a href={`tel:${siteConfig.phone}`}>
+            <FFCBookNowButton pageTitle="Menu Page" className="text-lg px-8 py-6 bg-white text-purple-800 hover:bg-purple-50" />
+            <a href={`tel:${siteConfig.phoneTel}`}>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6">
                 Call {siteConfig.phone}
               </Button>

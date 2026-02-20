@@ -41,7 +41,7 @@ export default function TermsConditionsPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">1. Acceptance of Terms</h2>
             <p className="text-gray-600 mb-6">
-              By accessing our website hivy.com or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
+              By accessing our website anniversary.hivy.co.in or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">2. Our Services</h2>
@@ -161,7 +161,7 @@ export default function TermsConditionsPage() {
             <div className="bg-amber-50 p-6 rounded-lg border border-amber-200 mb-8">
               <p className="text-gray-700 mb-2"><strong>HIVY - Place for Celebrations</strong></p>
               <p className="text-gray-600 mb-1">{siteConfig.address}</p>
-              <p className="text-gray-600 mb-1">Phone: <a href={`tel:${siteConfig.phone}`} className="text-amber-600 hover:text-amber-700">{siteConfig.phone}</a></p>
+              <p className="text-gray-600 mb-1">Phone: <a href={`tel:${siteConfig.phoneTel}`} className="text-amber-600 hover:text-amber-700">{siteConfig.phone}</a></p>
               <p className="text-gray-600">WhatsApp: <a href={`https://wa.me/${siteConfig.whatsapp}`} className="text-amber-600 hover:text-amber-700">{siteConfig.phone}</a></p>
             </div>
 

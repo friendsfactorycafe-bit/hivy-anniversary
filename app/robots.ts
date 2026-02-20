@@ -1,6 +1,6 @@
 /**
  * HIVY ANNIVERSARY - SEO OPTIMIZED ROBOTS.TXT
- * Domain: anniversary.hivy.co.in
+ * Domain: anniversarydinnersurat.com
  * 
  * Configuration for search engine crawlers:
  * - Allow all public pages including anniversary keywords & area pages
@@ -21,7 +21,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://anniversary.hivy.co.in";
+  const baseUrl = "https://anniversarydinnersurat.com";
   
   return {
     rules: [

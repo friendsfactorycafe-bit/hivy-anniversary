@@ -1,6 +1,6 @@
 /**
  * HIVY ANNIVERSARY - SEO OPTIMIZED SITEMAP
- * Domain: anniversary.hivy.co.in
+ * Domain: anniversarydinnersurat.com
  * 
  * Total Pages: Anniversary-focused sitemap including:
  * - 1 Homepage (priority 1.0)
@@ -23,7 +23,7 @@ import { anniversaryServiceCategories } from "@/lib/anniversary-config";
 import { anniversaryBlogPosts } from "@/lib/anniversary-blogs";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://anniversary.hivy.co.in";
+  const baseUrl = "https://anniversarydinnersurat.com";
   const currentDate = new Date().toISOString();
   
   const entries: MetadataRoute.Sitemap = [];

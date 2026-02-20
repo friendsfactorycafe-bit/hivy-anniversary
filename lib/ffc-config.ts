@@ -51,7 +51,7 @@ export const siteConfig = {
   email: "anniversary@hivy.co.in",
   address: "252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road, Adajan, Pal Gam, Surat, Gujarat 394510",
   city: "Surat",
-  website: "https://anniversary.hivy.co.in",
+  website: "https://anniversarydinnersurat.com",
   colors: {
     primary: "#722F37", // Deep Burgundy/Wine
     secondary: "#B76E79", // Rose Gold

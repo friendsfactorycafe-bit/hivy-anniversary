@@ -41,7 +41,7 @@ export default function TermsConditionsPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">1. Acceptance of Terms</h2>
             <p className="text-gray-600 mb-6">
-              By accessing our website anniversary.hivy.co.in or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
+              By accessing our website anniversarydinnersurat.com or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">2. Our Services</h2>

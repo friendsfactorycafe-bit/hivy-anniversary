@@ -63,12 +63,12 @@ export async function generateMetadata({
       ...service.keywords.slice(0, 5).map(k => k.slug.replace(/-/g, ' '))
     ],
     alternates: {
-      canonical: `https://anniversary.hivy.co.in/services/${service.slug}`,
+      canonical: `https://anniversarydinnersurat.com/services/${service.slug}`,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `https://anniversary.hivy.co.in/services/${service.slug}`,
+      url: `https://anniversarydinnersurat.com/services/${service.slug}`,
       type: "website",
       locale: "en_IN",
       siteName: siteConfig.name,

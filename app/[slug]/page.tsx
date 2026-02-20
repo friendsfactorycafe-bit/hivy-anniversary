@@ -88,12 +88,12 @@ export async function generateMetadata({
         `private dining ${area.name}`
       ],
       alternates: {
-        canonical: `https://anniversary.hivy.co.in/${area.slug}`,
+        canonical: `https://anniversarydinnersurat.com/${area.slug}`,
       },
       openGraph: {
         title: areaTitle,
         description: `Premium romantic celebration services for couples in ${area.name}, Surat. Birthday surprises, candlelight dinners & more!`,
-        url: `https://anniversary.hivy.co.in/${area.slug}`,
+        url: `https://anniversarydinnersurat.com/${area.slug}`,
         type: "website",
         locale: "en_IN",
         siteName: "HIVY - Place for Celebrations",
@@ -124,12 +124,12 @@ export async function generateMetadata({
         `${keywordData.service.name.toLowerCase()} near me surat`
       ],
       alternates: {
-        canonical: `https://anniversary.hivy.co.in/${keywordData.keyword.slug}`,
+        canonical: `https://anniversarydinnersurat.com/${keywordData.keyword.slug}`,
       },
       openGraph: {
         title: keywordTitle,
         description: keywordDescription,
-        url: `https://anniversary.hivy.co.in/${keywordData.keyword.slug}`,
+        url: `https://anniversarydinnersurat.com/${keywordData.keyword.slug}`,
         type: "website",
         locale: "en_IN",
         siteName: "HIVY - Place for Celebrations",

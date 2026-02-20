@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: area.metaTitle,
   description: area.metaDescription,
   keywords: [area.name, "anniversary anniversary celebration venue", "romantic anniversary dinner", "Surat", "HIVY Anniversary"],
-  alternates: { canonical: `https://anniversary.anniversary.hivy.co.in/${area.slug}` },
+  alternates: { canonical: `https://anniversarydinnersurat.com/${area.slug}` },
   openGraph: {
     title: area.metaTitle,
     description: area.metaDescription,
-    url: `https://anniversary.anniversary.hivy.co.in/${area.slug}`,
+    url: `https://anniversarydinnersurat.com/${area.slug}`,
     type: "website",
     locale: "en_IN",
     siteName: "HIVY Anniversary",

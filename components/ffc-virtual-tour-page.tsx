@@ -61,7 +61,7 @@ export default function FFCVirtualTourPage() {
           <div className="max-w-xs mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold font-serif mb-4">Watch Our Space</h2>
-              <p className="text-gray-600">Experience the magic of HIVY - Place for Celebrations</p>
+              <p className="text-gray-600">Experience the magic of HIVY Anniversary</p>
             </div>
             
             {/* Vertical Video */}

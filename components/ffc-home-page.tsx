@@ -22,7 +22,7 @@ const experienceFeatures = [
   {
     icon: Clock,
     title: "3-Hour Private Celebration",
-    description: "Enjoy three exclusive hours at our private rooftop venue for your anniversary dinner or milestone celebration"
+    description: "Enjoy three exclusive hours at our private elegant venue for your anniversary dinner or milestone celebration"
   },
   {
     icon: Gift,
@@ -45,7 +45,7 @@ const experienceFeatures = [
 const faqs = [
   {
     question: "What is HIVY Anniversary and where is it located in Surat?",
-    answer: "HIVY Anniversary is Surat's premier private anniversary celebration venue—the best spot for romantic anniversary dinners, milestone celebrations, rooftop dining, and surprise anniversary parties in Surat, Gujarat."
+    answer: "HIVY Anniversary is Surat's premier private anniversary celebration venue—the best spot for romantic anniversary dinners, milestone celebrations, private venue dining, and surprise anniversary parties in Surat, Gujarat."
   },
   {
     question: "How do I book an anniversary celebration at HIVY?",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "What are the prices for anniversary celebration packages in Surat?",
-    answer: "Our romantic anniversary packages start from affordable rates and include premium rooftop setup, welcome drinks, anniversary decorations, and gourmet dining. Contact us for current pricing on all anniversary celebration deals."
+    answer: "Our romantic anniversary packages start from affordable rates and include premium romantic setup, welcome drinks, anniversary decorations, and gourmet dining. Contact us for current pricing on all anniversary celebration deals."
   },
   {
     question: "Can I celebrate milestone anniversaries like 25th or 50th at HIVY?",
@@ -98,7 +98,7 @@ const galleryItems = [
   { type: 'image', src: '/hivy-images/5700/6.webp', alt: 'Intimate Anniversary Dinner Surat', title: 'Intimate Dining', featured: false },
   { type: 'image', src: '/hivy-images/6300/3.webp', alt: 'Golden Anniversary Celebration Surat', title: 'Golden Setup', featured: false },
   { type: 'image', src: '/hivy-images/6500/4.webp', alt: 'Romantic Anniversary Decoration Surat', title: 'Anniversary Décor', featured: false },
-  { type: 'image', src: '/hivy-images/5100/5.webp', alt: 'Rooftop anniversary celebration Surat', title: 'Rooftop Celebration', featured: false },
+  { type: 'image', src: '/hivy-images/5100/5.webp', alt: 'private venue anniversary celebration Surat', title: 'private venue Celebration', featured: false },
   { type: 'image', src: '/hivy-images/5100/6.webp', alt: 'Private Anniversary Celebration Surat', title: 'Private Setup', featured: false },
   { type: 'image', src: '/hivy-images/5700/8.webp', alt: 'Night Anniversary Setup Surat', title: 'Evening Magic', featured: false },
   { type: 'image', src: '/hivy-images/6300/5.webp', alt: 'Luxury Anniversary Venue Surat', title: 'Luxury Setup', featured: false },
@@ -246,8 +246,8 @@ export default function FFCHomePage() {
   
   // Hero slider images
   const heroSlides = [
-    { src: '/images/hero/slider2.webp', alt: 'Rooftop Celebration Setup with Fairy Lights Surat' },
-    { src: '/images/hero/slider1.webp', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
+    { src: '/images/hero/slider2.webp', alt: 'private venue Celebration Setup with Fairy Lights Surat' },
+    { src: '/images/hero/slider1.webp', alt: 'Romantic Candlelight Dinner Setup at HIVY Anniversary Surat' },
   ];
 
   // Auto-slide effect
@@ -312,7 +312,7 @@ export default function FFCHomePage() {
                 {siteConfig.tagline}
               </p>
               <p className="text-lg mb-8 text-white/80 max-w-xl">
-                Surat&apos;s most exclusive private rooftop venue — where anniversaries become timeless memories. Candlelight dinners, milestone celebrations, surprise parties & intimate date nights crafted with devotion.
+                Surat&apos;s most exclusive private elegant venue — where anniversaries become timeless memories. Candlelight dinners, milestone celebrations, surprise parties & intimate date nights crafted with devotion.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -352,8 +352,11 @@ export default function FFCHomePage() {
       </section>
 
       {/* Mobile Booking Form */}
-      <section className="lg:hidden bg-purple-50 py-8">
+      <section className="lg:hidden bg-purple-50 py-6">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold text-purple-900">Book Your Anniversary Celebration</h2>
+          </div>
           <FFCBookingForm />
         </div>
       </section>
@@ -369,7 +372,7 @@ export default function FFCHomePage() {
               Romantic Celebration Packages in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              5 unique private rooftop setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
+              5 unique private romantic setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
             </p>
           </div>
           
@@ -425,7 +428,7 @@ export default function FFCHomePage() {
               Perfect For Every Romantic Celebration in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From intimate candlelight dinners to grand marriage proposals, surprise birthday parties to anniversary celebrations—we create magical moments for couples at our private rooftop venue in Surat.
+              From intimate candlelight dinners to grand marriage proposals, surprise birthday parties to anniversary celebrations—we create magical moments for couples at our private elegant venue in Surat.
             </p>
           </div>
           
@@ -534,7 +537,7 @@ export default function FFCHomePage() {
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/Food hivy.webp" 
-                  alt="HIVY - Place for Celebrations Menu - Romantic Dining Experience" 
+                  alt="HIVY Anniversary Menu - Romantic Dining Experience" 
                   width={600} 
                   height={600} 
                   loading="lazy"

@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/ffc-config";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${siteConfig.name} | Best Anniversary Celebration Venue in Surat`,
-    description: `${siteConfig.tagline}. Surat's #1 anniversary celebration venue. Book romantic anniversary dinners, surprise anniversary parties, milestone celebrations & private rooftop dining for couples. 100% private venue with 4.9★ rating.`,
+    description: `${siteConfig.tagline}. Surat's #1 anniversary celebration venue. Book romantic anniversary dinners, surprise anniversary parties, milestone celebrations & private private dining for couples. 100% private venue with 4.9★ rating.`,
     keywords: [
       'anniversary celebration surat',
       'wedding anniversary surat',
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'anniversary party surat',
       'anniversary surprise for wife surat',
       'anniversary surprise for husband surat',
-      'rooftop anniversary dinner surat',
+      'private venue anniversary dinner surat',
       'private anniversary celebration surat',
       'luxury anniversary celebration surat',
       'intimate anniversary dinner surat',

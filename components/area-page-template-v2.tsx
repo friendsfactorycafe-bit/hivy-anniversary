@@ -131,6 +131,16 @@ export function AreaPageTemplateV2({ domain, areaName, areaSlug }: AreaPageTempl
         </div>
       </section>
 
+      {/* Mobile Booking Form - Above Fold */}
+      <section className="lg:hidden py-6 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold">Book Services in {areaName}</h2>
+          </div>
+          <BookingForm domain={domain} pageTitle={`Services in ${areaName}`} />
+        </div>
+      </section>
+
       {/* Trust Indicators */}
       <section className="py-8 border-b bg-muted/30">
         <div className="container mx-auto px-4">

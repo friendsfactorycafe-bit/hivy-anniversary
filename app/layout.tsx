@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "birthday surprise surat",
     "anniversary celebration surat",
     "romantic proposal surat",
-    "rooftop dinner surat",
+    "private dinner surat",
     "private dining surat",
     "romantic restaurant surat",
     "date night surat",
@@ -324,7 +324,7 @@ const jsonLd = {
           "name": "What is HIVY Anniversary and where is it located in Surat?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HIVY Anniversary is Surat's premier private anniversary celebration venue — the best spot for romantic anniversary dinners, milestone celebrations, rooftop dining, and surprise anniversary parties in Surat, Gujarat."
+            "text": "HIVY Anniversary is Surat's premier private anniversary celebration venue — the best spot for romantic anniversary dinners, milestone celebrations, private dining, and surprise anniversary parties in Surat, Gujarat."
           }
         },
         {
@@ -340,7 +340,7 @@ const jsonLd = {
           "name": "What are the prices for anniversary celebration packages in Surat?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our romantic anniversary packages range from ₹5,100 to ₹6,500 and include premium rooftop setup, welcome drinks, anniversary decorations, gourmet dining, cake, and 3 hours of private access."
+            "text": "Our romantic anniversary packages range from ₹5,100 to ₹6,500 and include premium romantic setup, welcome drinks, anniversary decorations, gourmet dining, cake, and 3 hours of private access."
           }
         },
         {

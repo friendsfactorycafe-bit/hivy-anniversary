@@ -78,19 +78,20 @@ export default function FFCServicePage({ service }: ServicePageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-80 h-80 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="text-[8rem]">{service.emoji}</span>
-              </div>
+            {/* Hero Booking Form - Desktop */}
+            <div className="hidden lg:block">
+              <FFCBookingForm variant="hero" pageTitle={`${service.name} Page`} />
             </div>
           </div>
         </div>
       </section>
 
       {/* Mobile Booking Form - Above Fold */}
-      <section className="lg:hidden bg-purple-50 py-8">
+      <section className="lg:hidden bg-purple-50 py-6">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold text-purple-900">Book Your {service.name}</h2>
+          </div>
           <FFCBookingForm pageTitle={`${service.name} Page`} />
         </div>
       </section>
@@ -100,14 +101,14 @@ export default function FFCServicePage({ service }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 font-serif">
-              Why Choose HIVY - Place for Celebrations for {service.name}?
+              Why Choose HIVY Anniversary for {service.name}?
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { emoji: "🔒", title: "100% Private", desc: "Exclusive booking for couples" },
-              { emoji: "🌙", title: "Stunning Setup", desc: "Rooftop & glass house options" },
+              { emoji: "🌙", title: "Stunning Setup", desc: "private venue & glass house options" },
               { emoji: "🍽️", title: "Delicious Food", desc: "Curated café-style menu" },
               { emoji: "📸", title: "Photo-Ready", desc: "Instagram-worthy décor" },
             ].map((item, index) => (
@@ -283,7 +284,7 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                question: `How can I book a ${service.name.toLowerCase()} at HIVY - Place for Celebrations?`,
+                question: `How can I book a ${service.name.toLowerCase()} at HIVY Anniversary?`,
                 answer: `Booking is easy! Call us at ${siteConfig.phone}, WhatsApp us, or fill out our online form. We recommend booking 2-3 days in advance for weekday celebrations and 1-2 weeks for weekends.`
               },
               {

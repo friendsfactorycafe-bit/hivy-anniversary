@@ -168,7 +168,6 @@ export const domains: DomainConfig[] = [
       { slug: "couple-dinner-surat", title: "Couple Dinner", h1: "Couple Dinner in Surat", metaTitle: "Couple Dinner Surat | Private Dining Experience", metaDescription: "Perfect couple dinner in Surat with private setting and romantic ambiance." },
       { slug: "private-dining-surat", title: "Private Dining", h1: "Private Dining in Surat", metaTitle: "Private Dining Surat | Exclusive Experience", metaDescription: "Exclusive private dining in Surat for couples seeking intimate and romantic meals." },
       { slug: "candlelight-dinner-for-couples-surat", title: "Candlelight Dinner for Couples", h1: "Candlelight Dinner for Couples in Surat", metaTitle: "Candlelight Dinner for Couples Surat | Book Now", metaDescription: "Special candlelight dinner packages for couples in Surat with decorations and romantic setup." },
-      { slug: "rooftop-candlelight-dinner-surat", title: "Rooftop Candlelight Dinner", h1: "Rooftop Candlelight Dinner in Surat", metaTitle: "Rooftop Candlelight Dinner Surat | Sky Dining", metaDescription: "Enjoy rooftop candlelight dinner in Surat under the stars with romantic views." },
       { slug: "poolside-candlelight-dinner-surat", title: "Poolside Candlelight Dinner", h1: "Poolside Candlelight Dinner in Surat", metaTitle: "Poolside Candlelight Dinner Surat | Water View Dining", metaDescription: "Romantic poolside candlelight dinner in Surat with serene water views and ambiance." },
       { slug: "candlelight-dinner-near-me-surat", title: "Candlelight Dinner Near Me", h1: "Candlelight Dinner Near Me in Surat", metaTitle: "Candlelight Dinner Near Me Surat | Local Options", metaDescription: "Find candlelight dinner options near you in Surat. Multiple locations across the city." },
       { slug: "candlelight-dinner-for-boyfriend-surat", title: "Candlelight Dinner for Boyfriend", h1: "Candlelight Dinner for Boyfriend in Surat", metaTitle: "Candlelight Dinner for Boyfriend Surat | Surprise Him", metaDescription: "Plan a candlelight dinner surprise for your boyfriend in Surat with romantic setup." },
@@ -226,7 +225,6 @@ export const domains: DomainConfig[] = [
       { slug: "best-date-spots-surat", title: "Best Date Spots", h1: "Best Date Spots in Surat", metaTitle: "Best Date Spots Surat | Top Locations", metaDescription: "Discover the best date spots in Surat for romantic outings and celebrations." },
       { slug: "private-date-surat", title: "Private Date", h1: "Private Date in Surat", metaTitle: "Private Date Surat | Exclusive Setting", metaDescription: "Enjoy a private date in Surat with exclusive setup and intimate ambiance." },
       { slug: "outdoor-date-surat", title: "Outdoor Date", h1: "Outdoor Date in Surat", metaTitle: "Outdoor Date Surat | Open Air Romance", metaDescription: "Plan an outdoor date in Surat with fresh air and romantic surroundings." },
-      { slug: "rooftop-date-surat", title: "Rooftop Date", h1: "Rooftop Date in Surat", metaTitle: "Rooftop Date Surat | Sky High Romance", metaDescription: "Enjoy a rooftop date in Surat with stunning views and romantic ambiance." },
       { slug: "date-night-ideas-surat", title: "Date Night Ideas", h1: "Date Night Ideas in Surat", metaTitle: "Date Night Ideas Surat | Creative Options", metaDescription: "Get creative date night ideas in Surat for memorable romantic evenings." },
       { slug: "couple-activities-surat", title: "Couple Activities", h1: "Couple Activities in Surat", metaTitle: "Couple Activities Surat | Fun Together", metaDescription: "Find fun couple activities in Surat for quality time and bonding." },
       { slug: "romantic-surprise-surat", title: "Romantic Surprise", h1: "Romantic Surprise in Surat", metaTitle: "Romantic Surprise Surat | Special Moments", metaDescription: "Plan a romantic surprise in Surat with thoughtful setup and decorations." },
@@ -376,7 +374,6 @@ export const domains: DomainConfig[] = [
       { slug: "best-date-spots-surat", title: "Best Date Spots", h1: "Best Date Spots in Surat", metaTitle: "Best Date Spots Surat | Top Locations", metaDescription: "Discover the best date spots in Surat for romantic outings and celebrations." },
       { slug: "private-date-surat", title: "Private Date", h1: "Private Date in Surat", metaTitle: "Private Date Surat | Exclusive Setting", metaDescription: "Enjoy a private date in Surat with exclusive setup and intimate ambiance." },
       { slug: "outdoor-date-surat", title: "Outdoor Date", h1: "Outdoor Date in Surat", metaTitle: "Outdoor Date Surat | Open Air Romance", metaDescription: "Plan an outdoor date in Surat with fresh air and romantic surroundings." },
-      { slug: "rooftop-date-surat", title: "Rooftop Date", h1: "Rooftop Date in Surat", metaTitle: "Rooftop Date Surat | Sky High Romance", metaDescription: "Enjoy a rooftop date in Surat with stunning views and romantic ambiance." },
       { slug: "date-night-ideas-surat", title: "Date Night Ideas", h1: "Date Night Ideas in Surat", metaTitle: "Date Night Ideas Surat | Creative Options", metaDescription: "Get creative date night ideas in Surat for memorable romantic evenings." },
       { slug: "couple-activities-surat", title: "Couple Activities", h1: "Couple Activities in Surat", metaTitle: "Couple Activities Surat | Fun Together", metaDescription: "Find fun couple activities in Surat for quality time and bonding." },
       { slug: "romantic-surprise-surat", title: "Romantic Surprise", h1: "Romantic Surprise in Surat", metaTitle: "Romantic Surprise Surat | Special Moments", metaDescription: "Plan a romantic surprise in Surat with thoughtful setup and decorations." },
@@ -391,16 +388,15 @@ export const domains: DomainConfig[] = [
     ]
   },
 
-  // ==================== 7. ROOFTOP DATE VADODARA ====================
+  // ==================== 7. private venue DATE VADODARA ====================
   {
-    slug: "rooftop-date-surat",
-    domain: "rooftopdatesurat.com",
-    name: "Rooftop Date Surat",
+    domain: "private venuedatesurat.com",
+    name: "private venue Date Surat",
     tagline: "Romance Under the Stars",
     city: "surat",
     phone: "+91 6353583148",
     whatsapp: "916353583148",
-    email: "info@rooftopdatesurat.com",
+    email: "info@private venuedatesurat.com",
     colors: {
       primary: "#1E3A8A", // Dark Blue/Navy
       secondary: "#3B82F6",
@@ -411,33 +407,31 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-blue-950",
       text: "text-blue-700"
     },
-    heroImages: ["/images/hero/rooftop1.jpg", "/images/hero/rooftop2.jpg", "/images/hero/rooftop3.jpg"],
+    heroImages: ["/images/hero/private venue1.jpg", "/images/hero/private venue2.jpg", "/images/hero/private venue3.jpg"],
     keywords: [
-      { slug: "rooftop-date-in-surat", title: "Rooftop Date", h1: "Rooftop Date in Surat", metaTitle: "Rooftop Date in Surat | Sky High Romance", metaDescription: "Enjoy a romantic rooftop date in Surat with stunning city views and intimate ambiance." },
-      { slug: "rooftop-dinner-for-couples-surat", title: "Rooftop Dinner for Couples", h1: "Rooftop Dinner for Couples in Surat", metaTitle: "Rooftop Dinner for Couples Surat | Romantic Evening", metaDescription: "Book a rooftop dinner for couples in Surat with beautiful decorations and views." },
-      { slug: "rooftop-cafe-surat", title: "Rooftop Cafe", h1: "Rooftop Cafe in Surat", metaTitle: "Rooftop Cafe Surat | Date Spot", metaDescription: "Visit our rooftop cafe in Surat for romantic dates with amazing views." },
-      { slug: "rooftop-candlelight-dinner-surat", title: "Rooftop Candlelight Dinner", h1: "Rooftop Candlelight Dinner in Surat", metaTitle: "Rooftop Candlelight Dinner Surat | Under the Stars", metaDescription: "Book a rooftop candlelight dinner in Surat for a magical evening under the stars." },
-      { slug: "romantic-rooftop-date-surat", title: "Romantic Rooftop Date", h1: "Romantic Rooftop Date in Surat", metaTitle: "Romantic Rooftop Date Surat | Perfect Setting", metaDescription: "Plan a romantic rooftop date in Surat with beautiful setup and city views." },
-      { slug: "rooftop-dining-surat", title: "Rooftop Dining", h1: "Rooftop Dining in Surat", metaTitle: "Rooftop Dining Surat | Elevated Experience", metaDescription: "Enjoy rooftop dining in Surat with delicious food and romantic atmosphere." },
-      { slug: "best-rooftop-for-couples-surat", title: "Best Rooftop for Couples", h1: "Best Rooftop for Couples in Surat", metaTitle: "Best Rooftop for Couples Surat | Top Rated", metaDescription: "Discover the best rooftop spots for couples in Surat for romantic dates." },
-      { slug: "rooftop-celebration-surat", title: "Rooftop Celebration", h1: "Rooftop Celebration in Surat", metaTitle: "Rooftop Celebration Surat | Special Occasions", metaDescription: "Book rooftop celebrations in Surat for birthdays, anniversaries, and special occasions." },
+      { slug: "private venue-date-in-surat", title: "private venue Date", h1: "private venue Date in Surat", metaTitle: "private venue Date in Surat | Sky High Romance", metaDescription: "Enjoy a romantic private venue date in Surat with stunning city views and intimate ambiance." },
+      { slug: "private venue-dinner-for-couples-surat", title: "private dinner for Couples", h1: "private dinner for Couples in Surat", metaTitle: "private dinner for Couples Surat | Romantic Evening", metaDescription: "Book a private dinner for couples in Surat with beautiful decorations and views." },
+      { slug: "private venue-cafe-surat", title: "private cafe", h1: "private cafe in Surat", metaTitle: "private cafe Surat | Date Spot", metaDescription: "Visit our private cafe in Surat for romantic dates with amazing views." },
+      { slug: "private venue-dining-surat", title: "private venue Dining", h1: "private venue Dining in Surat", metaTitle: "private venue Dining Surat | Elevated Experience", metaDescription: "Enjoy private venue dining in Surat with delicious food and romantic atmosphere." },
+      { slug: "best-private venue-for-couples-surat", title: "Best private venue for Couples", h1: "Best private venue for Couples in Surat", metaTitle: "Best private venue for Couples Surat | Top Rated", metaDescription: "Discover the best private venue spots for couples in Surat for romantic dates." },
+      { slug: "private venue-celebration-surat", title: "private venue Celebration", h1: "private venue Celebration in Surat", metaTitle: "private venue Celebration Surat | Special Occasions", metaDescription: "Book private celebrations in Surat for birthdays, anniversaries, and special occasions." },
       { slug: "terrace-dinner-for-two-surat", title: "Terrace Dinner for Two", h1: "Terrace Dinner for Two in Surat", metaTitle: "Terrace Dinner for Two Surat | Private Setup", metaDescription: "Enjoy a private terrace dinner for two in Surat with romantic ambiance." },
       { slug: "open-sky-dinner-surat", title: "Open Sky Dinner", h1: "Open Sky Dinner in Surat", metaTitle: "Open Sky Dinner Surat | Starlit Romance", metaDescription: "Book an open sky dinner in Surat for a romantic evening under the stars." },
-      { slug: "rooftop-date-ideas-surat", title: "Rooftop Date Ideas", h1: "Rooftop Date Ideas in Surat", metaTitle: "Rooftop Date Ideas Surat | Creative Options", metaDescription: "Get creative rooftop date ideas in Surat for memorable romantic experiences." },
-      { slug: "private-rooftop-dinner-surat", title: "Private Rooftop Dinner", h1: "Private Rooftop Dinner in Surat", metaTitle: "Private Rooftop Dinner Surat | Exclusive Setting", metaDescription: "Book a private rooftop dinner in Surat with exclusive setup for two." },
-      { slug: "rooftop-anniversary-surat", title: "Rooftop Anniversary", h1: "Rooftop Anniversary Celebration in Surat", metaTitle: "Rooftop Anniversary Surat | Special Evening", metaDescription: "Celebrate your anniversary on a rooftop in Surat with romantic decorations." },
-      { slug: "rooftop-birthday-for-couple-surat", title: "Rooftop Birthday for Couple", h1: "Rooftop Birthday for Couple in Surat", metaTitle: "Rooftop Birthday for Couple Surat | Celebrate Together", metaDescription: "Celebrate your birthday as a couple on a rooftop in Surat." },
-      { slug: "rooftop-surprise-surat", title: "Rooftop Surprise", h1: "Rooftop Surprise in Surat", metaTitle: "Rooftop Surprise Surat | Special Moments", metaDescription: "Plan a rooftop surprise for your partner in Surat with romantic setup." },
-      { slug: "romantic-rooftop-dinner-surat", title: "Romantic Rooftop Dinner", h1: "Romantic Rooftop Dinner in Surat", metaTitle: "Romantic Rooftop Dinner Surat | Unforgettable Evening", metaDescription: "Book a romantic rooftop dinner in Surat with candlelight and decorations." },
-      { slug: "rooftop-date-night-surat", title: "Rooftop Date Night", h1: "Rooftop Date Night in Surat", metaTitle: "Rooftop Date Night Surat | Perfect Evening", metaDescription: "Plan a perfect rooftop date night in Surat with stunning views." },
-      { slug: "rooftop-couple-dinner-surat", title: "Rooftop Couple Dinner", h1: "Rooftop Couple Dinner in Surat", metaTitle: "Rooftop Couple Dinner Surat | Intimate Setting", metaDescription: "Enjoy a rooftop couple dinner in Surat with private and romantic setup." },
+      { slug: "private venue-date-ideas-surat", title: "private venue Date Ideas", h1: "private venue Date Ideas in Surat", metaTitle: "private venue Date Ideas Surat | Creative Options", metaDescription: "Get creative private venue date ideas in Surat for memorable romantic experiences." },
+      { slug: "private-private venue-dinner-surat", title: "Private private dinner", h1: "Private private dinner in Surat", metaTitle: "Private private dinner Surat | Exclusive Setting", metaDescription: "Book a private private dinner in Surat with exclusive setup for two." },
+      { slug: "private venue-anniversary-surat", title: "private venue Anniversary", h1: "private venue Anniversary Celebration in Surat", metaTitle: "private venue Anniversary Surat | Special Evening", metaDescription: "Celebrate your anniversary on a private venue in Surat with romantic decorations." },
+      { slug: "private venue-birthday-for-couple-surat", title: "private venue Birthday for Couple", h1: "private venue Birthday for Couple in Surat", metaTitle: "private venue Birthday for Couple Surat | Celebrate Together", metaDescription: "Celebrate your birthday as a couple on a private venue in Surat." },
+      { slug: "private venue-surprise-surat", title: "private venue Surprise", h1: "private venue Surprise in Surat", metaTitle: "private venue Surprise Surat | Special Moments", metaDescription: "Plan a private venue surprise for your partner in Surat with romantic setup." },
+      { slug: "romantic-private venue-dinner-surat", title: "Romantic private dinner", h1: "Romantic private dinner in Surat", metaTitle: "Romantic private dinner Surat | Unforgettable Evening", metaDescription: "Book a romantic private dinner in Surat with candlelight and decorations." },
+      { slug: "private venue-date-night-surat", title: "private venue Date Night", h1: "private venue Date Night in Surat", metaTitle: "private venue Date Night Surat | Perfect Evening", metaDescription: "Plan a perfect private venue date night in Surat with stunning views." },
+      { slug: "private venue-couple-dinner-surat", title: "private venue Couple Dinner", h1: "private venue Couple Dinner in Surat", metaTitle: "private venue Couple Dinner Surat | Intimate Setting", metaDescription: "Enjoy a private venue couple dinner in Surat with private and romantic setup." },
       { slug: "sky-dining-surat", title: "Sky Dining", h1: "Sky Dining in Surat", metaTitle: "Sky Dining Surat | Elevated Romance", metaDescription: "Experience sky dining in Surat with panoramic views and romantic ambiance." },
-      { slug: "rooftop-packages-surat", title: "Rooftop Packages", h1: "Rooftop Packages in Surat", metaTitle: "Rooftop Packages Surat | All Inclusive", metaDescription: "Book all-inclusive rooftop packages in Surat with dinner and decorations." },
-      { slug: "rooftop-with-decorations-surat", title: "Rooftop with Decorations", h1: "Rooftop with Decorations in Surat", metaTitle: "Rooftop with Decorations Surat | Beautiful Setup", metaDescription: "Book rooftop dates with beautiful decorations in Surat." },
-      { slug: "budget-rooftop-dinner-surat", title: "Budget Rooftop Dinner", h1: "Budget Rooftop Dinner in Surat", metaTitle: "Budget Rooftop Dinner Surat | Affordable Romance", metaDescription: "Enjoy budget-friendly rooftop dinner in Surat without compromising on romance." },
-      { slug: "luxury-rooftop-surat", title: "Luxury Rooftop", h1: "Luxury Rooftop Experience in Surat", metaTitle: "Luxury Rooftop Surat | Premium Experience", metaDescription: "Indulge in luxury rooftop dining in Surat with premium setup and service." },
-      { slug: "rooftop-proposal-surat", title: "Rooftop Proposal", h1: "Rooftop Proposal in Surat", metaTitle: "Rooftop Proposal Surat | Say Yes", metaDescription: "Plan a romantic rooftop proposal in Surat with beautiful decorations and views." },
-      { slug: "intimate-rooftop-dinner-surat", title: "Intimate Rooftop Dinner", h1: "Intimate Rooftop Dinner in Surat", metaTitle: "Intimate Rooftop Dinner Surat | Private Moments", metaDescription: "Enjoy an intimate rooftop dinner in Surat with private setup and romantic ambiance." }
+      { slug: "private venue-packages-surat", title: "private venue Packages", h1: "private venue Packages in Surat", metaTitle: "private venue Packages Surat | All Inclusive", metaDescription: "Book all-inclusive private venue packages in Surat with dinner and decorations." },
+      { slug: "private venue-with-decorations-surat", title: "private venue with Decorations", h1: "private venue with Decorations in Surat", metaTitle: "private venue with Decorations Surat | Beautiful Setup", metaDescription: "Book private venue dates with beautiful decorations in Surat." },
+      { slug: "budget-private venue-dinner-surat", title: "Budget private dinner", h1: "Budget private dinner in Surat", metaTitle: "Budget private dinner Surat | Affordable Romance", metaDescription: "Enjoy budget-friendly private dinner in Surat without compromising on romance." },
+      { slug: "luxury-private venue-surat", title: "Luxury private venue", h1: "Luxury private venue Experience in Surat", metaTitle: "Luxury private venue Surat | Premium Experience", metaDescription: "Indulge in luxury private venue dining in Surat with premium setup and service." },
+      { slug: "private venue-proposal-surat", title: "private venue Proposal", h1: "private venue Proposal in Surat", metaTitle: "private venue Proposal Surat | Say Yes", metaDescription: "Plan a romantic private venue proposal in Surat with beautiful decorations and views." },
+      { slug: "intimate-private venue-dinner-surat", title: "Intimate private dinner", h1: "Intimate private dinner in Surat", metaTitle: "Intimate private dinner Surat | Private Moments", metaDescription: "Enjoy an intimate private dinner in Surat with private setup and romantic ambiance." }
     ]
   },
 
@@ -468,7 +462,6 @@ export const domains: DomainConfig[] = [
       { slug: "couple-dinner-surat", title: "Couple Dinner", h1: "Couple Dinner in Surat", metaTitle: "Couple Dinner Surat | Private Dining Experience", metaDescription: "Perfect couple dinner in Surat with private setting and romantic ambiance." },
       { slug: "private-dining-surat", title: "Private Dining", h1: "Private Dining in Surat", metaTitle: "Private Dining Surat | Exclusive Experience", metaDescription: "Exclusive private dining in Surat for couples seeking intimate and romantic meals." },
       { slug: "candlelight-dinner-for-couples-surat", title: "Candlelight Dinner for Couples", h1: "Candlelight Dinner for Couples in Surat", metaTitle: "Candlelight Dinner for Couples Surat | Book Now", metaDescription: "Special candlelight dinner packages for couples in Surat with decorations and romantic setup." },
-      { slug: "rooftop-candlelight-dinner-surat", title: "Rooftop Candlelight Dinner", h1: "Rooftop Candlelight Dinner in Surat", metaTitle: "Rooftop Candlelight Dinner Surat | Sky Dining", metaDescription: "Enjoy rooftop candlelight dinner in Surat under the stars with romantic views." },
       { slug: "poolside-candlelight-dinner-surat", title: "Poolside Candlelight Dinner", h1: "Poolside Candlelight Dinner in Surat", metaTitle: "Poolside Candlelight Dinner Surat | Water View Dining", metaDescription: "Romantic poolside candlelight dinner in Surat with serene water views and ambiance." },
       { slug: "candlelight-dinner-near-me-surat", title: "Candlelight Dinner Near Me", h1: "Candlelight Dinner Near Me in Surat", metaTitle: "Candlelight Dinner Near Me Surat | Local Options", metaDescription: "Find candlelight dinner options near you in Surat. Multiple locations across the city." },
       { slug: "candlelight-dinner-for-boyfriend-surat", title: "Candlelight Dinner for Boyfriend", h1: "Candlelight Dinner for Boyfriend in Surat", metaTitle: "Candlelight Dinner for Boyfriend Surat | Surprise Him", metaDescription: "Plan a candlelight dinner surprise for your boyfriend in Surat with romantic setup." },
@@ -649,7 +642,7 @@ export function getAreaFromSlug(domainSlug: string, slug: string): string | null
 // - Anniversary Dinner Surat: 25 keywords + 40 areas + 1 home = 66 pages
 // - Anniversary Dinner Surat: 25 keywords + 40 areas + 1 home = 66 pages
 // - Surprise Date Surat: 25 keywords + 40 areas + 1 home = 66 pages
-// - Rooftop Date Surat: 25 keywords + 40 areas + 1 home = 66 pages
+// - private venue Date Surat: 25 keywords + 40 areas + 1 home = 66 pages
 // - Candlelight Dinner Surat: 25 keywords + 40 areas + 1 home = 66 pages
 // - Birthday Surprise Surat: 25 keywords + 40 areas + 1 home = 66 pages
 //

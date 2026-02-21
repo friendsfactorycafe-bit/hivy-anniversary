@@ -143,7 +143,7 @@ export default function FFCContactPage() {
                             <p>4 PM - 7 PM | 5 PM - 8 PM | 6 PM - 9 PM</p>
                           </div>
                           <div>
-                            <p className="font-semibold text-purple-900 mb-1">🌙 Dinner (Indoor/Rooftop)</p>
+                            <p className="font-semibold text-purple-900 mb-1">🌙 Dinner (Indoor/private venue)</p>
                             <p>7 PM - 10 PM | 7:30 PM - 10:30 PM | 8 PM - 11 PM</p>
                           </div>
                         </div>
@@ -190,7 +190,7 @@ export default function FFCContactPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold font-serif">Find Us</h2>
-            <p className="text-gray-600 mt-2">Visit HIVY - Place for Celebrations in Surat</p>
+            <p className="text-gray-600 mt-2">Visit HIVY Anniversary in Surat</p>
           </div>
           <div className="max-w-5xl mx-auto">
             <div className="rounded-xl overflow-hidden shadow-lg">
@@ -203,7 +203,7 @@ export default function FFCContactPage() {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full"
-                title="HIVY - Place for Celebrations Location"
+                title="HIVY Anniversary Location"
               />
             </div>
             <div className="text-center mt-6">

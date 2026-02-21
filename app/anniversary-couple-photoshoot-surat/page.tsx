@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import FFCKeywordPage from "@/components/ffc-keyword-page";
-import { getAnniversaryKeywordBySlug, anniversaryServiceCategories } from "@/lib/anniversary-config";
+import { getServiceBySlug } from "@/lib/ffc-config";
 
-const service = anniversaryServiceCategories[0];
-const keyword = getAnniversaryKeywordBySlug("rooftop-anniversary-dinner-surat")!;
+const service = getServiceBySlug("anniversary-celebration")!;
+const keyword = service.keywords.find(k => k.slug === "anniversary-couple-photoshoot-surat")!;
 
 export const metadata: Metadata = {
   title: keyword.metaTitle,
   description: keyword.metaDescription,
-  keywords: [keyword.title, "rooftop dinner", "anniversary dinner", "romantic rooftop", "Surat", "HIVY Anniversary"],
+  keywords: [keyword.title, "couple photoshoot", "anniversary photography", "couple celebration", "Surat", "HIVY Anniversary"],
   alternates: { canonical: `https://anniversarydinnersurat.com/${keyword.slug}` },
   openGraph: {
     title: keyword.metaTitle,

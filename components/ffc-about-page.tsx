@@ -24,7 +24,7 @@ export default function FFCAboutPage() {
             <Heart className="h-4 w-4 mr-2" /> About Us
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-            About HIVY - Place for Celebrations
+            About HIVY Anniversary
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Surat's Premier Destination for Candlelight Dinners & Romantic Celebrations
@@ -45,10 +45,10 @@ export default function FFCAboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  At <strong>HIVY - Place for Celebrations</strong> in Surat's Gotri area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
+                  At <strong>HIVY Anniversary</strong> in Surat's Gotri area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
                 </p>
                 <p>
-                  That's why we transformed a stunning <strong>rooftop into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic rooftop cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
+                  That's why we transformed a stunning <strong>private venue into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic private cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
                 </p>
                 <p>
                   From heartfelt <strong>birthday surprises</strong> and <strong>anniversary celebrations</strong> to unforgettable <strong>marriage proposals</strong>, engagement reveals, <strong>pre-wedding shoots</strong>, pregnancy announcements, and last candlelight dinners before marriage, we've hosted <strong>500+ magical evenings</strong>.
@@ -69,7 +69,7 @@ export default function FFCAboutPage() {
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-slate-50 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
                   src="/hivy-images/5100/3.webp"
-                  alt="HIVY - Place for Celebrations Surat - Romantic Swing of Love Setup for Candlelight Dinner"
+                  alt="HIVY Anniversary Surat - Romantic Swing of Love Setup for Candlelight Dinner"
                   fill
                   className="object-cover"
                 />
@@ -114,7 +114,7 @@ export default function FFCAboutPage() {
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-slate-50 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
                   src="/hivy-images/5100/7.webp"
-                  alt="HIVY - Place for Celebrations Team - Romantic Setup Surat"
+                  alt="HIVY Anniversary Team - Romantic Setup Surat"
                   fill
                   className="object-cover"
                 />
@@ -134,7 +134,7 @@ export default function FFCAboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Meet the passionate team behind the magic at <strong>HIVY - Place for Celebrations</strong>. Committed to crafting unforgettable experiences, our dedicated staff is here to ensure that every detail of your visit is perfect.
+                  Meet the passionate team behind the magic at <strong>HIVY Anniversary</strong>. Committed to crafting unforgettable experiences, our dedicated staff is here to ensure that every detail of your visit is perfect.
                 </p>
                 <p>
                   From our talented chefs who bring culinary dreams to life, to our attentive servers who anticipate your every need, each member of our team is dedicated to creating moments of joy and romance for you and your loved one.
@@ -168,8 +168,8 @@ export default function FFCAboutPage() {
                     <MapPin className="h-5 w-5 text-purple-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Prime Gotri Rooftop Location</h3>
-                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds on Sevasi-Canal Road. The best rooftop cafe in Surat for couples seeking privacy.</p>
+                    <h3 className="font-semibold text-lg mb-1">Prime Gotri private venue Location</h3>
+                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds on Sevasi-Canal Road. The best private cafe in Surat for couples seeking privacy.</p>
                   </div>
                 </div>
                 
@@ -208,7 +208,7 @@ export default function FFCAboutPage() {
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-slate-50 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
                   src="/hivy-images/5100/10.webp"
-                  alt="Why Choose HIVY - Place for Celebrations - Romantic Setup Surat"
+                  alt="Why Choose HIVY Anniversary - Romantic Setup Surat"
                   fill
                   className="object-cover"
                 />

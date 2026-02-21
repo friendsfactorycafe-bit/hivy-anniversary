@@ -132,7 +132,7 @@ export default function FFCBlogPage() {
           </h2>
           <p className="text-violet-100 mb-8 max-w-2xl mx-auto">
             Turn your special anniversary into unforgettable memories at HIVY Anniversary, 
-            Surat's premier rooftop anniversary celebration venue.
+            Surat's premier private venue anniversary celebration venue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

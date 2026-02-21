@@ -67,7 +67,7 @@ export default function robots(): MetadataRoute.Robots {
           "/intimate-*",
           "/luxury-*",
           "/budget-*",
-          "/rooftop-*",
+          "/private venue-*",
           "/outdoor-*",
           "/last-minute-*",
           // Surat area pages

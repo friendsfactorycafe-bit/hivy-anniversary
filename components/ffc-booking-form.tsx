@@ -158,7 +158,7 @@ export function FFCBookingForm({ pageTitle, variant = 'default', packageName, de
     const timeLabel = timeSlots.find(t => t.value === data.preferredTime)?.label || data.preferredTime;
     const selectedPkg = data.selectedPackage ? packages.find(p => p.slug === data.selectedPackage) : null;
     
-    let message = `*New Booking Inquiry - HIVY - Place for Celebrations*\n\n`;
+    let message = `*New Booking Inquiry - HIVY Anniversary*\n\n`;
     message += `*Your Name:* ${data.yourName}\n`;
     message += `*Partner's Name:* ${data.partnerName}\n`;
     message += `*Phone:* +91 ${data.phone}\n`;

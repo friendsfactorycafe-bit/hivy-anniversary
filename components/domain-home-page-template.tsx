@@ -25,7 +25,7 @@ function getServiceTypeName(domainSlug: string): string {
   if (domainSlug.includes('candlelight')) return 'Candlelight Dinner';
   if (domainSlug.includes('surprise-date')) return 'Surprise Date';
   if (domainSlug.includes('anniversary')) return 'Anniversary Dinner';
-  if (domainSlug.includes('rooftop')) return 'Rooftop Date';
+  if (domainSlug.includes('private venue')) return 'private venue Date';
   return 'Romantic Experience';
 }
 
@@ -43,8 +43,8 @@ function getServiceDescription(domainSlug: string): string {
   if (domainSlug.includes('anniversary')) {
     return 'Celebrate your love journey with elegant anniversary dinners featuring special decorations and intimate celebrations.';
   }
-  if (domainSlug.includes('rooftop')) {
-    return 'Dine under the stars with stunning city views, romantic ambiance, and exclusive rooftop experiences for couples.';
+  if (domainSlug.includes('private venue')) {
+    return 'Dine under the stars with stunning city views, romantic ambiance, and exclusive private venue experiences for couples.';
   }
   return 'Create memorable romantic experiences with private venues, beautiful decorations, and personalized celebrations.';
 }
@@ -65,9 +65,9 @@ function getPackages(domainSlug: string) {
       { name: 'Luxury Dinner', price: '₹6,999', features: ['Luxury setup', '5-course gourmet', 'Full decoration', 'Live music', 'Champagne'] }
     ];
   }
-  if (domainSlug.includes('rooftop')) {
+  if (domainSlug.includes('private venue')) {
     return [
-      { name: 'Starlight Basic', price: '₹2,999', features: ['Basic rooftop setup', 'Snacks & drinks', '1.5 hours', 'City view'] },
+      { name: 'Starlight Basic', price: '₹2,999', features: ['Basic romantic setup', 'Snacks & drinks', '1.5 hours', 'City view'] },
       { name: 'Moonlight Premium', price: '₹4,999', features: ['Premium setup', 'Full dinner', '2.5 hours', 'Decoration', 'Photography'], popular: true },
       { name: 'Sky Luxury', price: '₹7,999', features: ['Luxury experience', 'Gourmet dinner', '4 hours', 'Full setup', 'Musician'] }
     ];
@@ -201,6 +201,16 @@ export function DomainHomePageTemplate({ domain }: DomainHomePageTemplateProps) 
               <BookingForm domain={domain} pageTitle={serviceTypeName} variant="hero" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mobile Booking Form - Above Fold */}
+      <section className="lg:hidden py-6 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold">Book Your Celebration</h2>
+          </div>
+          <BookingForm domain={domain} pageTitle={serviceTypeName} />
         </div>
       </section>
 

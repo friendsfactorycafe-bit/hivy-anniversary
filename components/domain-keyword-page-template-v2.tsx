@@ -116,6 +116,16 @@ export function DomainKeywordPageTemplateV2({ domain, keyword }: DomainKeywordPa
         </div>
       </section>
 
+      {/* Mobile Booking Form - Above Fold */}
+      <section className="lg:hidden py-6 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold">Book Your {keyword.title}</h2>
+          </div>
+          <BookingForm domain={domain} pageTitle={keyword.title} />
+        </div>
+      </section>
+
       {/* Trust Indicators */}
       <section className="py-8 border-b bg-muted/30">
         <div className="container mx-auto px-4">
@@ -305,13 +315,6 @@ export function DomainKeywordPageTemplateV2({ domain, keyword }: DomainKeywordPa
               </Button>
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Mobile Booking Form */}
-      <section className="lg:hidden py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <BookingForm domain={domain} pageTitle={keyword.title} />
         </div>
       </section>
 

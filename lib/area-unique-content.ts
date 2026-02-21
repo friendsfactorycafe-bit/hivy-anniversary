@@ -368,13 +368,13 @@ function generateAboutAreaSection(domain: DomainConfig, areaName: string, areaSl
     content: `
       <p class="mb-4">${areaDescription}</p>
       
-      <p class="mb-4">Our deep familiarity with ${areaName} allows us to recommend the best spots and venues for your celebration. Whether you prefer your home, a private venue, or a rooftop setting, we know exactly how to create the perfect romantic atmosphere in this locality.</p>
+      <p class="mb-4">Our deep familiarity with ${areaName} allows us to recommend the best spots and venues for your celebration. Whether you prefer your home, a private venue, or a intimate setting, we know exactly how to create the perfect romantic atmosphere in this locality.</p>
       
       <h4 class="text-lg font-semibold mt-6 mb-3">Popular Celebration Venues in ${areaName}:</h4>
       <ul class="list-disc list-inside space-y-2 mb-4">
         <li>Private apartments and homes with balcony or terrace</li>
         <li>Partner restaurants and cafes in ${areaName}</li>
-        <li>Rooftop venues with city views</li>
+        <li>elegant venues with city views</li>
         <li>Garden and poolside spaces</li>
         <li>Hotel suites and private dining areas</li>
       </ul>

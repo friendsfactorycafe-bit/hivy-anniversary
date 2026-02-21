@@ -130,7 +130,7 @@ export const anniversaryBlogPosts: BlogPost[] = [
     title: "Anniversary Date Night Ideas in Surat",
     excerpt: "Romantic date night ideas perfect for celebrating your anniversary as a couple in Surat.",
     metaTitle: "Anniversary Date Night Ideas Surat 2026 | Best Dates",
-    metaDescription: "Need anniversary date night inspiration in Surat? Discover romantic ideas from rooftop dinners to stargazing experiences.",
+    metaDescription: "Need anniversary date night inspiration in Surat? Discover romantic ideas from private dinners to stargazing experiences.",
     coverImage: "/packages/tent-of-romance/images/14.webp",
     publishedAt: "2026-01-03",
     readTime: "5 min",
@@ -148,18 +148,6 @@ export const anniversaryBlogPosts: BlogPost[] = [
     readTime: "7 min",
     category: "Anniversary",
     tags: ["parents anniversary", "celebration", "family", "planning"]
-  },
-  {
-    slug: "rooftop-anniversary-dinner-surat-guide",
-    title: "Best Rooftop Anniversary Dinner Spots in Surat",
-    excerpt: "Top rooftop venues in Surat perfect for a romantic anniversary dinner under the stars.",
-    metaTitle: "Best Rooftop Anniversary Dinner Surat 2026",
-    metaDescription: "Looking for rooftop anniversary dinner venues in Surat? Find the best sky-high dining spots for romantic celebrations.",
-    coverImage: "/packages/swing-of-love/images/30.webp",
-    publishedAt: "2025-12-28",
-    readTime: "5 min",
-    category: "Anniversary",
-    tags: ["rooftop", "anniversary dinner", "surat", "romantic"]
   },
   {
     slug: "intimate-anniversary-celebration-ideas",

@@ -80,22 +80,20 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 mx-auto mb-2" />
-                  <span className="text-2xl font-serif">{area.name}</span>
-                </div>
-              </div>
+            {/* Hero Booking Form - Desktop */}
+            <div className="hidden lg:block">
+              <FFCBookingForm variant="hero" pageTitle={`${area.name} Area Page`} />
             </div>
           </div>
         </div>
       </section>
 
       {/* Mobile Booking Form - Above Fold */}
-      <section className="lg:hidden bg-violet-50 py-8">
+      <section className="lg:hidden bg-violet-50 py-6">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-lg font-semibold text-violet-900">Book Anniversary in {area.name}</h2>
+          </div>
           <FFCBookingForm pageTitle={`${area.name} Area`} />
         </div>
       </section>
@@ -117,9 +115,9 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               <Link key={keyword.slug} href={`/${keyword.slug}`}>
                 <Card className="h-full hover:shadow-lg transition-all border-violet-200 group text-center">
                   <CardContent className="p-4 md:p-6">
-                    <span className="text-4xl md:text-5xl mb-3 md:mb-4 block">{keyword.emoji}</span>
+                    <span className="text-4xl md:text-5xl mb-3 md:mb-4 block">💑</span>
                     <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2 group-hover:text-violet-700 transition-colors line-clamp-2">
-                      {keyword.name}
+                      {keyword.title}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-1 hidden md:block">
                       in {area.name}
@@ -148,7 +146,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </p>
 
                 <p className="text-gray-600 mb-6">
-                  Whether you're celebrating your first anniversary, silver jubilee, golden anniversary, or any milestone in between, our venue offers stunning rooftop setups and elegant private spaces that provide the perfect romantic ambiance for your anniversary celebration. From the moment you step in, our team handles every element — decorations, gourmet dining, soft romantic music, and a photo-ready ambiance — so you can focus entirely on your partner and the love you share.
+                  Whether you're celebrating your first anniversary, silver jubilee, golden anniversary, or any milestone in between, our venue offers stunning romantic setups and elegant private spaces that provide the perfect romantic ambiance for your anniversary celebration. From the moment you step in, our team handles every element — decorations, gourmet dining, soft romantic music, and a photo-ready ambiance — so you can focus entirely on your partner and the love you share.
                 </p>
 
                 <p className="text-gray-600 mb-6">
@@ -211,7 +209,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-violet-700 font-bold">•</span>
-                    <span><strong>Weekend Anniversary Getaway:</strong> Make your anniversary special with an evening escape from {area.name} to our rooftop paradise.</span>
+                    <span><strong>Weekend Anniversary Getaway:</strong> Make your anniversary special with an evening escape from {area.name} to Our venue paradise.</span>
                   </li>
                 </ul>
 
@@ -230,7 +228,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-violet-700 font-bold">•</span>
-                    <span><strong>6 Romantic Setups:</strong> Choose from premium rooftop and private space experiences. Each setup is uniquely designed with its own theme and ambiance.</span>
+                    <span><strong>6 Romantic Setups:</strong> Choose from premium private venue and private space experiences. Each setup is uniquely designed with its own theme and ambiance.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-violet-700 font-bold">•</span>

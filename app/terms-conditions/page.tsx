@@ -117,7 +117,7 @@ export default function TermsConditionsPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">9. Weather and Force Majeure</h2>
             <p className="text-gray-600 mb-6">
-              For rooftop bookings, in case of inclement weather (rain, extreme wind), we will:
+              For private venue bookings, in case of inclement weather (rain, extreme wind), we will:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
               <li>Offer an alternative indoor setup if available</li>

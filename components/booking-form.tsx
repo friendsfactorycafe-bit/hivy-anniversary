@@ -36,7 +36,6 @@ const occasionOptions = [
   { value: 'surprise-date', label: 'Surprise Date' },
   { value: 'valentines-day', label: "Valentine's Day Special" },
   { value: 'honeymoon', label: 'Honeymoon Celebration' },
-  { value: 'rooftop-dinner', label: 'Rooftop Dinner' },
   { value: 'midnight-celebration', label: 'Midnight Celebration' },
   { value: 'other', label: 'Other Special Occasion' },
 ];

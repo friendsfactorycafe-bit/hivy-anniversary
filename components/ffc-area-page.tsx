@@ -22,8 +22,70 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
   // Get nearby areas (excluding current)
   const nearbyAreas = suratAreas.filter(a => a.slug !== area.slug).slice(0, 8);
 
+  // Area FAQ data for schema
+  const areaFaqs = [
+    {
+      question: `How do couples from ${area.name} reach HIVY Anniversary?`,
+      answer: `HIVY Anniversary is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions from ${area.name}.`
+    },
+    {
+      question: "What anniversary packages do you offer?",
+      answer: `We offer 5 unique anniversary celebration packages starting from ₹5,100, including Swing of Love, Boho Chic, Fairy Tale Proposals, Tent of Romance, and more. Each package includes dinner, decorations, cake, and exclusive venue access.`
+    },
+    {
+      question: `What are the booking options available for ${area.name} residents?`,
+      answer: `Couples from ${area.name} can book via WhatsApp at ${siteConfig.phone}, phone call, or our online booking form. We recommend booking 2-3 days in advance for your preferred slot.`
+    },
+    {
+      question: "Is the venue private for anniversary celebrations?",
+      answer: "Yes! Your anniversary celebration is 100% private. No other guests will be present during your booking slot, ensuring an intimate romantic experience for you and your partner."
+    },
+    {
+      question: `What food is included in the anniversary dinner?`,
+      answer: "Our anniversary packages include welcome drinks, cheese fondue with accompaniments, signature mocktails, delicious main course items, and a dessert with chocolate brownie. A complimentary anniversary cake is also included."
+    },
+    {
+      question: `Can I plan a surprise anniversary for my spouse from ${area.name}?`,
+      answer: `Absolutely! We specialize in surprise anniversary celebrations. Our team helps ${area.name} couples with coordination, timing, and keeping the secret until the big reveal. Just WhatsApp us with your plan and we'll handle the rest.`
+    },
+    {
+      question: "What time slots are available for anniversary celebrations?",
+      answer: "We offer flexible time slots: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Each slot includes 3 hours of private access."
+    },
+    {
+      question: "Can I customize the anniversary decoration theme?",
+      answer: "Yes! All our setups are customizable. You can choose specific color themes, add personalized messages, request special flowers, include photos from your journey together, or select a milestone-specific theme (silver, gold, etc.)."
+    },
+    {
+      question: `Is HIVY Anniversary good for parents' anniversary celebrations?`,
+      answer: `Many ${area.name} families book us for parents' and in-laws' anniversary celebrations. We create elegant, age-appropriate setups that honor the couple's journey. It's a wonderful gift for your parents' milestone anniversary.`
+    },
+    {
+      question: "What is the cancellation policy?",
+      answer: "You can reschedule free of charge up to 48 hours before your slot. Cancellations made 48+ hours in advance receive a refund minus processing fees. We try to be as flexible as possible for our couples."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": areaFaqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
@@ -367,48 +429,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                question: `How do couples from ${area.name} reach HIVY Anniversary?`,
-                answer: `HIVY Anniversary is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions from ${area.name}.`
-              },
-              {
-                question: "What anniversary packages do you offer?",
-                answer: `We offer 5 unique anniversary celebration packages starting from ₹5,100, including Swing of Love, Boho Chic, Fairy Tale Proposals, Tent of Romance, and more. Each package includes dinner, decorations, cake, and exclusive venue access.`
-              },
-              {
-                question: `What are the booking options available for ${area.name} residents?`,
-                answer: `Couples from ${area.name} can book via WhatsApp at ${siteConfig.phone}, phone call, or our online booking form. We recommend booking 2-3 days in advance for your preferred slot.`
-              },
-              {
-                question: "Is the venue private for anniversary celebrations?",
-                answer: "Yes! Your anniversary celebration is 100% private. No other guests will be present during your booking slot, ensuring an intimate romantic experience for you and your partner."
-              },
-              {
-                question: `What food is included in the anniversary dinner?`,
-                answer: "Our anniversary packages include welcome drinks, cheese fondue with accompaniments, signature mocktails, delicious main course items, and a dessert with chocolate brownie. A complimentary anniversary cake is also included."
-              },
-              {
-                question: `Can I plan a surprise anniversary for my spouse from ${area.name}?`,
-                answer: `Absolutely! We specialize in surprise anniversary celebrations. Our team helps ${area.name} couples with coordination, timing, and keeping the secret until the big reveal. Just WhatsApp us with your plan and we'll handle the rest.`
-              },
-              {
-                question: "What time slots are available for anniversary celebrations?",
-                answer: "We offer flexible time slots: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Each slot includes 3 hours of private access."
-              },
-              {
-                question: "Can I customize the anniversary decoration theme?",
-                answer: "Yes! All our setups are customizable. You can choose specific color themes, add personalized messages, request special flowers, include photos from your journey together, or select a milestone-specific theme (silver, gold, etc.)."
-              },
-              {
-                question: `Is HIVY Anniversary good for parents' anniversary celebrations?`,
-                answer: `Many ${area.name} families book us for parents' and in-laws' anniversary celebrations. We create elegant, age-appropriate setups that honor the couple's journey. It's a wonderful gift for your parents' milestone anniversary.`
-              },
-              {
-                question: "What is the cancellation policy?",
-                answer: "You can reschedule free of charge up to 48 hours before your slot. Cancellations made 48+ hours in advance receive a refund minus processing fees. We try to be as flexible as possible for our couples."
-              }
-            ].map((faq, index) => (
+            {areaFaqs.map((faq, index) => (
               <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-violet-200 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}

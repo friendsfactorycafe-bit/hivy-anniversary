@@ -113,13 +113,13 @@ function GallerySection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-            <ImageIcon className="h-4 w-4 mr-2" /> Romantic Celebration Gallery
+            <ImageIcon className="h-4 w-4 mr-2" /> Anniversary Celebration Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Candlelight Dinners & Celebrations at HIVY Surat
+            Anniversary Dinners & Milestone Celebrations at HIVY Surat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Real moments from anniversary surprises, romantic dinners, marriage proposals & milestone celebrations at Surat&apos;s best couples-only celebration venue.
+            Real moments from first anniversaries, silver jubilees, golden anniversaries & romantic milestone celebrations at Surat&apos;s premier couples-only anniversary venue.
           </p>
         </div>
 
@@ -174,13 +174,13 @@ function BlogSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-            Romantic Celebration Blog
+            Anniversary Celebration Blog
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Birthday Surprise & Anniversary Ideas in Surat
+            Anniversary Celebration Ideas & Tips in Surat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Tips, guides, and romantic date ideas to help you plan the perfect candlelight dinner, birthday surprise, or proposal in Surat
+            Expert tips, milestone guides, and romantic ideas to help you plan the perfect anniversary dinner, celebration, or surprise for your spouse in Surat
           </p>
         </div>
 
@@ -258,8 +258,48 @@ export default function FFCHomePage() {
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
+  // FAQ Schema (FAQPage structured data)
+  const homeFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  // Speakable schema for voice assistants (Google Assistant, Siri, Alexa)
+  const speakableJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "HIVY - Anniversary Dinner Planners | Best Anniversary Venue in Surat",
+    "url": "https://anniversarydinnersurat.com",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-description", ".faq-section", ".services-heading"]
+    },
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://anniversarydinnersurat.com/#business"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
+      {/* Speakable Schema for Voice Assistants & AI */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Hero Section */}
@@ -312,7 +352,7 @@ export default function FFCHomePage() {
                 {siteConfig.tagline}
               </p>
               <p className="text-lg mb-8 text-white/80 max-w-xl">
-                Surat&apos;s most exclusive private elegant venue — where anniversaries become timeless memories. Candlelight dinners, milestone celebrations, surprise parties & intimate date nights crafted with devotion.
+                Surat&apos;s most exclusive private venue for anniversary celebrations — where every milestone becomes a timeless memory. Romantic anniversary dinners, silver & golden jubilee celebrations, surprise anniversary parties & intimate milestone dinners crafted with devotion.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -391,16 +431,22 @@ export default function FFCHomePage() {
                       Setup {index + 1}
                     </Badge>
                   </div>
-                  <CardContent className="p-2 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-purple-800 transition-colors line-clamp-2">
+                  <CardContent className="p-2.5 sm:p-3 md:p-4">
+                    <h3 className="font-semibold text-xs sm:text-sm md:text-lg mb-1 group-hover:text-purple-800 transition-colors leading-tight">
                       {pkg.name}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-2 mb-2 hidden md:block">
                       {pkg.shortDescription}
                     </p>
-                    <p className="text-base md:text-xl font-bold text-purple-800">
+                    <p className="text-base sm:text-lg md:text-xl font-bold text-purple-800">
                       {formatPrice(pkg.price)}
                     </p>
+                    {/* View Details */}
+                    <div className="flex justify-end mt-2">
+                      <span className="text-[10px] sm:text-xs text-purple-700 font-medium flex items-center gap-1 hover:text-purple-900">
+                        View Details <ChevronRight className="h-3 w-3" />
+                      </span>
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
@@ -422,13 +468,13 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-              Romantic Celebration Services in Surat
+              Anniversary Celebration Services in Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Perfect For Every Romantic Celebration in Surat
+              Perfect For Every Anniversary Milestone in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From intimate candlelight dinners to grand marriage proposals, surprise birthday parties to anniversary celebrations—we create magical moments for couples at our private elegant venue in Surat.
+              From first anniversary dinners to silver & golden jubilee celebrations, surprise anniversary parties to romantic milestone dinners—we create magical anniversary moments for couples at our private elegant venue in Surat.
             </p>
           </div>
           
@@ -455,13 +501,13 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-              Why Couples Choose HIVY Surat
+              Why Couples Choose HIVY Anniversary
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              The Complete Romantic Date Experience
+              The Complete Anniversary Celebration Experience
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Every couple deserves a private, romantic celebration. Our packages include everything for an unforgettable candlelight dinner or birthday surprise.
+              Every couple deserves a memorable anniversary celebration. Our packages include everything for an unforgettable anniversary dinner or milestone celebration.
             </p>
           </div>
           
@@ -485,13 +531,13 @@ export default function FFCHomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-purple-900/20 text-amber-300 border-purple-900/30">
-                Romantic Dinner Menu
+                Anniversary Dinner Menu
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                Gourmet Cuisine for Candlelight Dinners
+                Gourmet Cuisine for Anniversary Dinners
               </h2>
               <p className="text-gray-300 mb-8">
-                Curated café-style delicacies crafted for romantic date nights, anniversary dinners & special celebrations in Surat
+                Curated café-style delicacies crafted for anniversary celebrations, milestone dinners & romantic date nights in Surat
               </p>
               
               <div className="space-y-4">
@@ -554,13 +600,13 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-              <MapPin className="h-4 w-4 mr-2" /> Candlelight Dinner & Celebrations Near You
+              <MapPin className="h-4 w-4 mr-2" /> Anniversary Celebrations Near You
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Best Romantic Restaurant Serving All Areas in Surat
+              Premier Anniversary Venue Serving All Areas in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Whether you're looking for a candlelight dinner near Vesu, birthday surprise venue in Adajan, or anniversary restaurant in Athwa—we serve couples from all areas of Surat
+              Whether you're looking for an anniversary dinner near Vesu, milestone celebration venue in Adajan, or romantic anniversary restaurant in Athwa—we serve couples from all areas of Surat
             </p>
           </div>
           
@@ -587,18 +633,76 @@ export default function FFCHomePage() {
       {/* Blog Section */}
       <BlogSection />
 
+      {/* Extended SEO Content Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-purple-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-purple-700">
+            Why HIVY is Surat&apos;s Best Anniversary Celebration Venue
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+            <p className="hero-description">
+              Celebrating your wedding anniversary deserves a venue that honors the significance of your love journey. At HIVY Anniversary in Surat, we have created Gujarat&apos;s most romantic and exclusive anniversary celebration destination where couples can relive the magic of their wedding day in an intimate, private setting. Whether you are marking your first anniversary or celebrating fifty golden years together, our dedicated team transforms ordinary moments into extraordinary memories that last a lifetime.
+            </p>
+            <p className="hero-description">
+              As Surat&apos;s premier anniversary dinner venue, HIVY understands that every wedding anniversary represents a unique chapter in your love story. Our private celebration spaces are meticulously designed to provide the perfect backdrop for romantic anniversary dinners, surprise parties for spouses, and milestone celebrations with family. Unlike conventional restaurants where privacy is compromised, HIVY offers an exclusively private venue experience where you and your partner become the center of attention throughout your special evening.
+            </p>
+            <p className="hero-description">
+              What sets HIVY apart as the best anniversary celebration venue in Surat is our unwavering commitment to personalization. From the moment you inquire about booking, our anniversary specialists work closely with you to understand your preferences, dietary requirements, decoration themes, and special requests. Whether you envision a candlelit dinner under fairy lights, a grand golden anniversary setup with elegant floral arrangements, or a surprise party for your unsuspecting spouse, we bring your vision to life with meticulous attention to detail.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-purple-600">The Perfect Anniversary Dinner Experience</h3>
+            <p className="hero-description">
+              An anniversary dinner at HIVY transcends the ordinary dining experience. Picture entering our beautifully decorated private venue where soft romantic music fills the air, candlelight dances across elegant table settings, and every corner has been thoughtfully arranged to create an atmosphere of love and celebration. Our anniversary dinner packages include premium romantic decorations featuring rose petals, fairy lights, balloon arrangements, and personalized banners that celebrate your years together.
+            </p>
+            <p className="hero-description">
+              The dining experience itself is crafted to impress. Choose from our curated menu options that cater to diverse palates, or request a customized menu that includes your favorite dishes. Each anniversary dinner package includes a celebratory anniversary cake and non-alcoholic champagne for that perfect toast to your years of togetherness. Our three-hour exclusive booking ensures you have ample time to enjoy your meal leisurely, reminisce about your journey together, and create new memories without feeling rushed. The romantic ambiance at HIVY makes it the ideal anniversary restaurant in Surat for couples seeking an intimate dining experience away from crowded public spaces.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-purple-600">Celebrating Every Milestone Anniversary</h3>
+            <p className="hero-description">
+              Every anniversary milestone carries its own significance and deserves recognition befitting its importance. At HIVY, we specialize in creating themed celebrations for all anniversary milestones. Your first wedding anniversary marks the beginning of a lifetime of celebrations, and we help make it absolutely special with romantic setups that remind you of the love that brought you together. Our first anniversary packages are designed to recreate the magic of your wedding day while looking forward to the beautiful years ahead.
+            </p>
+            <p className="hero-description">
+              As years pass, each milestone anniversary gains deeper meaning. The 5th anniversary celebrates establishing your foundation together. The 10th anniversary honors a decade of shared experiences and growth. At HIVY, we craft unique setups for each of these occasions with decorations and ambiance that reflect the journey you have undertaken together. Our anniversary specialists can incorporate personal touches such as photographs from your wedding day, memorabilia from significant moments, and messages that celebrate your unique love story.
+            </p>
+            <p className="hero-description">
+              For silver jubilee celebrations marking 25 years of marriage, HIVY creates elegant silver-themed setups that honor a quarter century of commitment and love. These milestone celebrations often involve family members, and our versatile venue accommodates both intimate couple dinners and larger family gatherings. The golden anniversary at 50 years deserves nothing less than a royal celebration, and our golden anniversary packages feature luxurious gold-accented decorations, premium dining experiences, and an atmosphere befitting such a remarkable achievement in marital commitment.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-purple-600">Anniversary Surprises for Your Spouse</h3>
+            <p className="hero-description">
+              Planning a surprise anniversary celebration for your husband or wife? HIVY is your perfect partner in creating unforgettable moments of joy and surprise. Our team has extensive experience coordinating surprise anniversary parties, working discreetly with the planning spouse to ensure every detail is perfect while maintaining complete secrecy from the honoree. From the moment your spouse walks through our doors to find a beautifully decorated private venue awaiting them, to the joy of cutting their anniversary cake together, we orchestrate every element for maximum impact.
+            </p>
+            <p className="hero-description">
+              Surprise anniversary ideas at HIVY include unexpected romantic dinners, elaborate decoration reveals, personalized video messages playing on screens, favorite songs setting the ambiance, and custom cake designs featuring meaningful symbols or messages. For husbands planning surprises for their wives, we can arrange rose petal pathways, heartfelt letter presentations, and Instagram-worthy photo setups. For wives surprising their husbands, we create comfortable yet elegant settings with their favorite cuisines and personalized touches that speak to shared memories and inside jokes. Our anniversary surprise planners in Surat understand that the element of surprise combined with thoughtful personalization creates the most memorable celebrations.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-purple-600">Creating Timeless Anniversary Memories</h3>
+            <p className="hero-description">
+              At HIVY, we believe that anniversary celebrations should create memories that you cherish forever. Every element of your celebration is designed to be photograph-worthy, from our elegant table settings to our romantic lighting and beautiful decoration backdrops. Couples frequently return to HIVY year after year because they know their anniversary memories will be captured in stunning photographs that they treasure for decades. Our Instagram-worthy setups ensure that every moment of your anniversary dinner is preserved in beautiful images that you will proudly share with family and friends.
+            </p>
+            <p className="hero-description">
+              Beyond photography, we help create experiences that engage all senses and emotions. The aroma of fresh flowers, the taste of exquisite cuisine, the sound of your favorite romantic songs, the feel of luxury surroundings, and the sight of your partner&apos;s joy all combine to create a multi-sensory anniversary experience. Our attention to these details is why HIVY has earned its reputation as Surat&apos;s most romantic anniversary venue with a 4.9-star rating from hundreds of satisfied couples. When you celebrate your anniversary at HIVY, you are not just booking a venue; you are investing in memories that will warm your hearts every time you look back at your love story.
+            </p>
+            <p className="hero-description">
+              Whether you are celebrating in intimate privacy as a couple or including close family members in your milestone anniversary, HIVY provides the perfect setting for creating lasting memories. Book your anniversary celebration today and experience why couples across Surat choose HIVY as their preferred destination for honoring their most precious relationship. From first anniversaries to golden jubilees, we are honored to be part of your continuing love story.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-900 border-purple-200">
-              FAQ - Candlelight Dinner & Celebrations
+              FAQ - Anniversary Celebrations
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Common Questions About Romantic Celebrations in Surat
+              Common Questions About Anniversary Celebrations in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Everything you need to know about booking candlelight dinners, birthday surprises & anniversary celebrations at HIVY
+              Everything you need to know about booking anniversary dinners, milestone celebrations & romantic anniversary surprises at HIVY
             </p>
           </div>
           
@@ -621,10 +725,10 @@ export default function FFCHomePage() {
       <section className="py-20 bg-gradient-to-r from-purple-800 to-violet-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Book Your Candlelight Dinner or Birthday Surprise Today
+            Book Your Anniversary Celebration Today
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Create unforgettable romantic memories at Surat's best private celebration venue. Perfect for anniversaries, proposals, date nights & special occasions.
+            Create unforgettable anniversary memories at Surat's premier private celebration venue. Perfect for first anniversaries, silver jubilees, golden anniversaries & milestone celebrations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer">

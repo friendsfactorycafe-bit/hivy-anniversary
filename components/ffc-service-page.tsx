@@ -21,8 +21,70 @@ export default function FFCServicePage({ service }: ServicePageProps) {
   // Get related packages
   const relatedPackages = getVisiblePackages().slice(0, 4);
 
+  // Service FAQ data for schema
+  const serviceFaqs = [
+    {
+      question: `How can I book a ${service.name.toLowerCase()} at HIVY Anniversary?`,
+      answer: `Booking is easy! Call us at ${siteConfig.phone}, WhatsApp us, or fill out our online form. We recommend booking 2-3 days in advance for weekday anniversary celebrations and 1-2 weeks for weekends.`
+    },
+    {
+      question: `What is included in the ${service.name.toLowerCase()} package?`,
+      answer: "Our anniversary packages include 3 hours of private celebration, welcome drink, anniversary celebration cake, romantic decorations with fairy lights and flowers, gourmet café-style dinner, soft romantic music, and a dedicated host for your anniversary evening."
+    },
+    {
+      question: "Is the venue completely private?",
+      answer: "Yes! Our venue is exclusively for couples celebrating anniversaries. You'll have complete privacy during your anniversary celebration with no other guests present. It's a 100% couples-only anniversary experience."
+    },
+    {
+      question: "Can I customize the anniversary decorations?",
+      answer: "Absolutely! We love creating personalized anniversary experiences. Choose specific color themes (silver, gold, rose), add personalized messages, request special flowers, or include photos from your love journey. Share your vision and we'll make your anniversary unforgettable."
+    },
+    {
+      question: `What are the prices for ${service.name.toLowerCase()} packages?`,
+      answer: "Our celebration packages start from ₹5,100 and go up to ₹6,500. Each package includes venue access, decorations, food, music, cake, and dedicated service. No hidden costs or surprise charges."
+    },
+    {
+      question: `What time slots are available for ${service.name.toLowerCase()}?`,
+      answer: "We offer flexible 3-hour time slots: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Evening and dinner slots are most popular."
+    },
+    {
+      question: `Can I plan a surprise ${service.name.toLowerCase()} for my partner?`,
+      answer: "Yes! Surprise anniversary celebrations are our specialty. Our team helps with coordination, timing, and keeping the secret. We've successfully executed over 500 surprise anniversary celebrations with a 100% success rate."
+    },
+    {
+      question: "What food options are available?",
+      answer: "Our gourmet menu includes welcome drinks, cheese fondue with cheese balls, wedges & nachos, signature mocktails, main course items, and dessert with chocolate brownie. All vegetarian. Jain options available on request."
+    },
+    {
+      question: "Is parking available at the venue?",
+      answer: "Yes, ample free parking is available on-site. You can drive to our venue worry-free for your celebration experience."
+    },
+    {
+      question: "What is the cancellation and rescheduling policy?",
+      answer: "We offer free rescheduling up to 48 hours before your slot. Cancellations made 48+ hours in advance receive a refund minus processing fees. We're flexible and understanding with our couples."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": serviceFaqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
@@ -108,9 +170,9 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { emoji: "🔒", title: "100% Private", desc: "Exclusive booking for couples" },
-              { emoji: "🌙", title: "Stunning Setup", desc: "private venue & glass house options" },
-              { emoji: "🍽️", title: "Delicious Food", desc: "Curated café-style menu" },
-              { emoji: "📸", title: "Photo-Ready", desc: "Instagram-worthy décor" },
+              { emoji: "🌙", title: "Stunning Setup", desc: "Elegant private venue options" },
+              { emoji: "🍽️", title: "Gourmet Dinner", desc: "Anniversary-special menu" },
+              { emoji: "📸", title: "Photo-Ready", desc: "Instagram-worthy anniversary décor" },
             ].map((item, index) => (
               <Card key={index} className="border-purple-100 text-center">
                 <CardContent className="p-6">
@@ -129,9 +191,9 @@ export default function FFCServicePage({ service }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 font-serif">
-              {service.name} Packages
+              {service.name} Anniversary Packages
             </h2>
-            <p className="text-gray-600">Choose from our romantic celebration packages</p>
+            <p className="text-gray-600">Choose from our anniversary celebration packages</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -282,48 +344,7 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                question: `How can I book a ${service.name.toLowerCase()} at HIVY Anniversary?`,
-                answer: `Booking is easy! Call us at ${siteConfig.phone}, WhatsApp us, or fill out our online form. We recommend booking 2-3 days in advance for weekday celebrations and 1-2 weeks for weekends.`
-              },
-              {
-                question: `What is included in the ${service.name.toLowerCase()} package?`,
-                answer: "Our packages include 3 hours of private celebration, welcome drink, celebration cake, romantic decorations with fairy lights and flowers, gourmet café-style dinner, soft romantic music, and a dedicated host for your evening."
-              },
-              {
-                question: "Is the venue completely private?",
-                answer: "Yes! Our venue is exclusively for couples. You'll have complete privacy during your celebration with no other guests present. It's a 100% couples-only experience."
-              },
-              {
-                question: "Can I customize the decorations?",
-                answer: "Absolutely! We love creating personalized experiences. Choose specific color themes, add personalized messages, request special flowers, or include photos from your journey. Share your vision and we'll make it happen."
-              },
-              {
-                question: `What are the prices for ${service.name.toLowerCase()} packages?`,
-                answer: "Our celebration packages start from ₹5,100 and go up to ₹6,500. Each package includes venue access, decorations, food, music, cake, and dedicated service. No hidden costs or surprise charges."
-              },
-              {
-                question: `What time slots are available for ${service.name.toLowerCase()}?`,
-                answer: "We offer flexible 3-hour time slots: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM). Evening and dinner slots are most popular."
-              },
-              {
-                question: `Can I plan a surprise ${service.name.toLowerCase()} for my partner?`,
-                answer: "Yes! Surprise celebrations are our specialty. Our team helps with coordination, timing, and keeping the secret. We've successfully executed over 500 surprise celebrations with a 100% success rate."
-              },
-              {
-                question: "What food options are available?",
-                answer: "Our gourmet menu includes welcome drinks, cheese fondue with cheese balls, wedges & nachos, signature mocktails, main course items, and dessert with chocolate brownie. All vegetarian. Jain options available on request."
-              },
-              {
-                question: "Is parking available at the venue?",
-                answer: "Yes, ample free parking is available on-site. You can drive to our venue worry-free for your celebration experience."
-              },
-              {
-                question: "What is the cancellation and rescheduling policy?",
-                answer: "We offer free rescheduling up to 48 hours before your slot. Cancellations made 48+ hours in advance receive a refund minus processing fees. We're flexible and understanding with our couples."
-              }
-            ].map((faq, index) => (
+            {serviceFaqs.map((faq, index) => (
               <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-purple-100 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}

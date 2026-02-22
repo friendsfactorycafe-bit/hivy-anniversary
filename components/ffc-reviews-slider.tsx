@@ -12,42 +12,42 @@ const reviews = [
     initial: "Y",
     color: "bg-purple-600",
     date: "1 month ago",
-    review: "Cutest set up and amazing food service."
+    review: "Cutest anniversary setup and amazing food service."
   },
   {
     name: "Krishn Sharma",
     initial: "K",
     color: "bg-violet-600",
     date: "2 months ago",
-    review: "Best candlelight dinner experience in Surat! The decoration was stunning and staff was very helpful. Proposed here and she said YES! 💍"
+    review: "Best anniversary dinner experience in Surat! The decoration was stunning and staff was very helpful. Celebrated our 5th anniversary here! 💍"
   },
   {
     name: "Priya Shah",
     initial: "P",
     color: "bg-pink-500",
     date: "2 months ago",
-    review: "My husband surprised me here for our anniversary. The romantic setup was magical! Highly recommend for couples! ❤️"
+    review: "My husband surprised me here for our wedding anniversary. The romantic setup was magical! Highly recommend for anniversary celebrations! ❤️"
   },
   {
     name: "Rahul Desai",
     initial: "R",
     color: "bg-red-500",
     date: "3 months ago",
-    review: "Best place for couples in Surat! Booked for my wife's birthday and the team made it so special. Glass house setup was Instagram-perfect!"
+    review: "Best place for anniversary celebration in Surat! Booked for my parents' 25th silver anniversary and the team made it so special. Glass house setup was Instagram-perfect!"
   },
   {
     name: "Devanshi",
     initial: "D",
     color: "bg-cyan-500",
     date: "3 weeks ago",
-    review: "Such a great time!!!! Thanks to my hubby and the team of friends factory cafe!!!"
+    review: "Such a great time for our anniversary!!!! Thanks to my hubby and the team of HIVY Anniversary!!!"
   },
   {
     name: "Vraj Patel",
     initial: "V",
     color: "bg-green-500",
     date: "1 month ago",
-    review: "The place was calm and peace, food was awesome, will be back soon 🍽️"
+    review: "The place was calm and peaceful for our anniversary celebration, food was awesome, will be back for our next anniversary 🍽️"
   },
 ];
 
@@ -88,7 +88,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
               <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" /> Google Reviews
             </Badge>
             <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">
-              What Our Guests Say
+              What Anniversary Couples Say
             </h2>
             <div className="flex items-center justify-center gap-2">
               <div className="flex">

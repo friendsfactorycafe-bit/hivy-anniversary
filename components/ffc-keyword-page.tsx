@@ -31,6 +31,24 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": uniqueContent.faqContent.map((faq: { question: string; answer: string }) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
@@ -60,7 +78,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 {keyword.h1}
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
-                Create magical {keyword.title.toLowerCase()} moments at HIVY Anniversary. Premium romantic celebration venue with stunning setups and unforgettable experiences.
+                Create magical {keyword.title.toLowerCase()} moments at HIVY Anniversary. Premium anniversary celebration venue with stunning setups and unforgettable milestone experiences.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -126,17 +144,17 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 <div className="bg-purple-50 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                     <Gift className="h-5 w-5 text-purple-800" />
-                    What's Included
+                    What's Included in Your Anniversary Celebration
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
                     {[
-                      "3 Mesmerizing Hours of Private Celebration",
-                      "Welcome Drink & Celebration Cake",
-                      "Romantic Decorations & Setup",
-                      "Candle-Lit Ambiance",
-                      "Soft Romantic Music",
-                      "Photo-Ready Backdrop",
-                      "Delicious Café-Style Food",
+                      "3 Mesmerizing Hours of Private Anniversary Celebration",
+                      "Welcome Drink & Anniversary Cake",
+                      "Romantic Anniversary Decorations & Setup",
+                      "Candle-Lit Anniversary Ambiance",
+                      "Soft Romantic Anniversary Music",
+                      "Photo-Ready Anniversary Backdrop",
+                      "Delicious Anniversary Dinner Menu",
                       "Panoramic City Views"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
@@ -158,7 +176,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 ))}
 
                 <h3 className="text-xl font-bold mb-4">
-                  Why Choose HIVY Anniversary?
+                  Why Choose HIVY Anniversary for Your Celebration?
                 </h3>
                 
                 <ul className="space-y-3 mb-8">
@@ -197,7 +215,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
                 {/* Testimonials */}
                 <div className="bg-purple-50 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-4">💬 What Couples Say</h3>
+                  <h3 className="text-xl font-bold mb-4">💬 What Anniversary Couples Say</h3>
                   <div className="text-gray-600 italic whitespace-pre-line">
                     {uniqueContent.testimonialContent}
                   </div>

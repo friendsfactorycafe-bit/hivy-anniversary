@@ -50,7 +50,7 @@ export function FFCHeader() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/hivy logo.avif"
-              alt="HIVY Anniversary"
+              alt="HIVY - Anniversary Dinner Planners"
               width={120}
               height={60}
               className="h-14 md:h-16 w-auto object-contain"
@@ -108,7 +108,7 @@ export function FFCHeader() {
                   <div className="flex items-center justify-between py-4 border-b">
                     <Image
                       src="/images/hivy logo.avif"
-                      alt="HIVY Anniversary"
+                      alt="HIVY - Anniversary Dinner Planners"
                       width={100}
                       height={50}
                       className="h-12 w-auto object-contain"
@@ -175,7 +175,7 @@ export function FFCFooter() {
           <div>
             <Image
               src="/images/hivy logo.avif"
-              alt="HIVY Anniversary"
+              alt="HIVY - Anniversary Dinner Planners"
               width={150}
               height={75}
               className="h-16 w-auto object-contain mb-4 brightness-110"
@@ -312,7 +312,7 @@ export function FFCFooter() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} HIVY Anniversary. All rights reserved.
+              © {new Date().getFullYear()} HIVY - Anniversary Dinner Planners. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link href="/privacy-policy" className="text-gray-500 hover:text-gray-300 text-sm">

@@ -252,30 +252,33 @@ function generateArticleContent(post: BlogPost): string {
       <p>Celebrate your engagement with champagne, cake, and a romantic candlelight dinner. We'll make sure your special night continues to be magical.</p>
     `,
     'Anniversary': `
-      <h2>Celebrate Your Love Story</h2>
-      <p>Every anniversary marks another beautiful chapter in your love story. Whether it's your 1st or 50th, HIVY Anniversary offers the perfect setting to celebrate your journey together.</p>
+      <h2>Celebrate Your Anniversary Love Story</h2>
+      <p>Every anniversary marks another beautiful chapter in your love story. Whether it's your 1st, 10th, 25th Silver Jubilee, or 50th Golden Anniversary, HIVY Anniversary offers the perfect setting to celebrate your journey together.</p>
       
-      <h3>Why Celebrate Your Anniversary at Our venue?</h3>
+      <h3>Why Celebrate Your Anniversary at Our Private Venue?</h3>
       <p>An anniversary deserves more than just dinner at a regular restaurant:</p>
       <ul>
-        <li><strong>Intimate Setting</strong> - Just the two of you, rekindling your romance</li>
-        <li><strong>Beautiful Decor</strong> - Romantic setup tailored to your love story</li>
-        <li><strong>Memory Making</strong> - Create new memories while celebrating old ones</li>
-        <li><strong>Special Touches</strong> - Personalized elements that show you care</li>
+        <li><strong>Intimate Setting</strong> — Just the two of you, rekindling your romance in a private space</li>
+        <li><strong>Beautiful Anniversary Décor</strong> — Romantic setup tailored to your milestone (silver, gold, rose themes)</li>
+        <li><strong>Memory Making</strong> — Create new memories while celebrating all the years you've shared</li>
+        <li><strong>Special Anniversary Touches</strong> — Personalized elements that honor your love journey</li>
       </ul>
       
-      <h3>Anniversary Celebration Ideas</h3>
+      <h3>Anniversary Milestone Celebration Ideas</h3>
       <p>Make your anniversary extra special with these ideas:</p>
       <ol>
-        <li><strong>Photo Timeline</strong> - Display photos from each year together</li>
-        <li><strong>Love Letter Reading</strong> - Write and read letters to each other</li>
-        <li><strong>Recreate Your First Date</strong> - Add elements from your first date</li>
-        <li><strong>Renew Your Vows</strong> - A private vow renewal ceremony</li>
-        <li><strong>Stargazing</strong> - End the night looking at stars together</li>
+        <li><strong>Photo Timeline</strong> — Display photos from each year of your marriage</li>
+        <li><strong>Love Letter Reading</strong> — Write and read heartfelt letters to each other</li>
+        <li><strong>Recreate Your Wedding Moments</strong> — Add elements from your wedding day</li>
+        <li><strong>Renew Your Vows</strong> — A private vow renewal ceremony at our venue</li>
+        <li><strong>Stargazing</strong> — End the anniversary night looking at stars together</li>
       </ol>
       
-      <h3>Milestone Anniversary Packages</h3>
-      <p>We offer special packages for milestone anniversaries (1st, 5th, 10th, 25th, 50th) with premium decorations, photography, and exclusive amenities.</p>
+      <h3>Milestone Anniversary Packages at HIVY</h3>
+      <p>We offer special packages for milestone anniversaries (1st Paper, 5th Wood, 10th Tin, 25th Silver, 50th Golden) with premium anniversary decorations, photography, and exclusive amenities. Our team creates themed setups that honor the significance of each milestone.</p>
+      
+      <h3>Surprise Anniversary Party Ideas</h3>
+      <p>Planning a surprise anniversary celebration for your spouse, parents, or in-laws? Our team helps coordinate timing, decorations, and the big reveal for a truly memorable anniversary surprise. We've executed 500+ successful surprise anniversary celebrations!</p>
     `,
     'Date Night': `
       <h2>Elevate Your Date Night</h2>
@@ -540,10 +543,10 @@ function generateArticleContent(post: BlogPost): string {
   
   // Add closing section
   content += `
-    <h2>Visit HIVY Anniversary</h2>
-    <p>Located at ${siteConfig.address}, HIVY Anniversary is Surat's premier private venue celebration venue. We specialize in creating unforgettable moments for couples and families.</p>
+    <h2>Celebrate Your Anniversary at HIVY</h2>
+    <p>Located at ${siteConfig.address}, HIVY Anniversary is Surat's premier private venue for anniversary celebrations. We specialize in creating unforgettable anniversary moments for couples celebrating milestones from first anniversaries to golden jubilees.</p>
     
-    <p>Ready to plan your celebration? <strong>Call us at ${siteConfig.phone}</strong> or WhatsApp to book your special experience today.</p>
+    <p>Ready to plan your anniversary celebration? <strong>Call us at ${siteConfig.phone}</strong> or WhatsApp to book your special anniversary experience today.</p>
   `;
 
   return content;

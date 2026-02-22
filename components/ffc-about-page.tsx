@@ -11,10 +11,93 @@ import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig } from '@/lib/ffc-config';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
+// About page FAQs for Anniversary Celebrations
+const aboutFaqs = [
+  {
+    question: "What makes HIVY the best anniversary dinner venue in Surat?",
+    answer: "HIVY is Surat's premier anniversary celebration venue with 4.9★ Google rating, offering completely private romantic dinners, elegant décor, gourmet dining, and personalized setups that honor your milestone. Located at The Boulevard, Adajan, we provide an exclusive couples-only experience."
+  },
+  {
+    question: "Can I celebrate milestone anniversaries like Silver or Golden Jubilee at HIVY?",
+    answer: "Absolutely! HIVY celebrates all anniversaries from first to fiftieth and beyond. We offer special packages for silver jubilee (25th) and golden anniversary (50th) celebrations with premium decorations, personalized touches, and enhanced dining experiences."
+  },
+  {
+    question: "How do I plan a surprise anniversary dinner for my spouse?",
+    answer: "Contact us on WhatsApp to plan secretly. We coordinate everything privately, prepare the venue before your spouse arrives, and help create the perfect surprise reveal. Many couples have successfully surprised their partners at HIVY."
+  },
+  {
+    question: "What anniversary decoration options are available?",
+    answer: "HIVY offers romantic anniversary decorations including rose petals, candles, fairy lights, customized banners, photo displays, and themed setups. We can incorporate your anniversary colors, personalized messages, and meaningful touches."
+  },
+  {
+    question: "Is anniversary cake included in the packages?",
+    answer: "Yes, most anniversary packages include a complimentary celebration cake. We also offer premium cake upgrades with customization like couple names, anniversary year, and special designs to match your celebration theme."
+  },
+  {
+    question: "What is the ideal time slot for an anniversary dinner?",
+    answer: "Evening slots (6 PM - 9 PM) are most popular for anniversary dinners as they offer the perfect romantic ambiance with candlelight and fairy lights. However, we accommodate all time preferences based on your schedule."
+  },
+  {
+    question: "Can I bring my own decorations or gifts for the anniversary?",
+    answer: "Yes! We welcome personal items that make your anniversary special. Bring photos from your wedding, love letters, gifts, or any meaningful items. Our team will incorporate them beautifully into the setup."
+  },
+  {
+    question: "How far in advance should I book for an anniversary celebration?",
+    answer: "We recommend booking 5-7 days in advance for anniversary dinners, especially for weekends and special dates. For milestone anniversaries (10th, 25th, 50th), booking 2 weeks ahead is advised for enhanced customization."
+  },
+  {
+    question: "Do you offer couple photography for anniversary celebrations?",
+    answer: "Yes! Our professional photography package (₹2700) captures your anniversary celebration beautifully. This includes 10-15 edited couple photos, a 30-45 second reel, and same-day delivery to preserve your memories."
+  },
+  {
+    question: "What makes anniversary celebrations at HIVY different from restaurants?",
+    answer: "Unlike restaurants, HIVY offers complete privacy (no other guests), full venue transformation with romantic décor, 3-hour exclusive booking, personalized setup for couples, and a dedicated team focused solely on your anniversary celebration."
+  }
+];
 
 export default function FFCAboutPage() {
+  // FAQ Schema for About page
+  const aboutFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": aboutFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqJsonLd) }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://anniversarydinnersurat.com" },
+              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://anniversarydinnersurat.com/about" }
+            ]
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Hero Section */}
@@ -27,7 +110,7 @@ export default function FFCAboutPage() {
             About HIVY Anniversary
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Surat's Premier Destination for Candlelight Dinners & Romantic Celebrations
+            Surat's Premier Destination for Anniversary Dinners & Milestone Celebrations
           </p>
         </div>
       </section>
@@ -41,20 +124,20 @@ export default function FFCAboutPage() {
                 Our Story
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                Where Love Stories Unfold Naturally
+                Where Anniversary Stories Unfold Naturally
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  At <strong>HIVY Anniversary</strong> in Surat's Gotri area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
+                  At <strong>HIVY Anniversary</strong> in Surat's Gotri area, we understand that anniversary celebrations deserve more than just another dinner out. Couples crave meaningful moments to honor their love journey, but finding the right venue—a place blending privacy, elegance, and romance—remains elusive.
                 </p>
                 <p>
-                  That's why we transformed a stunning <strong>private venue into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic private cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
+                  That's why we transformed a stunning <strong>private venue into Surat's premier destination for anniversary celebrations</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic private venue offers the perfect escape for couples celebrating milestones from first anniversaries to golden jubilees.
                 </p>
                 <p>
-                  From heartfelt <strong>birthday surprises</strong> and <strong>anniversary celebrations</strong> to unforgettable <strong>marriage proposals</strong>, engagement reveals, <strong>pre-wedding shoots</strong>, pregnancy announcements, and last candlelight dinners before marriage, we've hosted <strong>500+ magical evenings</strong>.
+                  From heartfelt <strong>first anniversary surprises</strong> and <strong>silver jubilee celebrations</strong> to unforgettable <strong>golden anniversary dinners</strong>, romantic milestone dinners, and <strong>surprise anniversary parties</strong> for parents and in-laws, we've hosted <strong>500+ magical anniversary evenings</strong>.
                 </p>
                 <p className="font-medium text-purple-900">
-                  Our mission: Create spaces where love stories unfold naturally.
+                  Our mission: Create spaces where anniversary love stories unfold naturally.
                 </p>
               </div>
               <div className="mt-6">
@@ -134,16 +217,16 @@ export default function FFCAboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Meet the passionate team behind the magic at <strong>HIVY Anniversary</strong>. Committed to crafting unforgettable experiences, our dedicated staff is here to ensure that every detail of your visit is perfect.
+                  Meet the passionate team behind the magic at <strong>HIVY Anniversary</strong>. Committed to crafting unforgettable anniversary experiences, our dedicated staff is here to ensure that every detail of your milestone celebration is perfect.
                 </p>
                 <p>
-                  From our talented chefs who bring culinary dreams to life, to our attentive servers who anticipate your every need, each member of our team is dedicated to creating moments of joy and romance for you and your loved one.
+                  From our talented chefs who bring culinary dreams to life, to our attentive servers who anticipate your every need, each member of our team is dedicated to creating moments of joy and romance for you and your partner on your special anniversary.
                 </p>
                 <p>
-                  Whether you're planning a <strong>candlelight dinner in Surat</strong>, a <strong>birthday surprise for your girlfriend</strong>, an <strong>anniversary celebration</strong>, or a <strong>romantic proposal</strong>, our team handles everything from setup to cleanup so you can focus on love.
+                  Whether you're planning a <strong>romantic anniversary dinner in Surat</strong>, a <strong>surprise anniversary party for your spouse</strong>, a <strong>silver jubilee celebration</strong>, or a <strong>golden anniversary dinner</strong>, our team handles everything from setup to cleanup so you can focus on celebrating your love.
                 </p>
                 <p className="font-medium text-purple-900">
-                  Join us and let us make your evening truly extraordinary.
+                  Join us and let us make your anniversary truly extraordinary.
                 </p>
               </div>
             </div>
@@ -178,8 +261,8 @@ export default function FFCAboutPage() {
                     <Award className="h-5 w-5 text-purple-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Custom Celebration Packages</h3>
-                    <p className="text-gray-600">Starting ₹4700, including mocktails, cakes, photographer, and themed decor for birthday surprises, anniversary celebrations, proposals, and more.</p>
+                    <h3 className="font-semibold text-lg mb-1">Custom Anniversary Packages</h3>
+                    <p className="text-gray-600">Starting ₹4700, including mocktails, anniversary cakes, photographer, and themed decor for first anniversaries, silver jubilees, golden anniversaries, and more.</p>
                   </div>
                 </div>
                 
@@ -223,6 +306,32 @@ export default function FFCAboutPage() {
         </div>
       </section>
 
+      {/* Our Anniversary Philosophy Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-purple-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-purple-700">Our Philosophy: Honoring Love's Milestones</h2>
+          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+            <p>Every anniversary represents another year of choosing each other – through challenges, celebrations, ordinary days, and extraordinary moments. At HIVY, we believe these milestones deserve more than a simple dinner; they deserve a celebration that honors the depth and resilience of your love story. From first anniversaries filled with newlywed excitement to golden jubilees celebrating five decades of partnership, we create experiences worthy of your journey.</p>
+            
+            <h3 className="text-2xl font-semibold text-purple-600">Understanding Milestone Significance</h3>
+            <p>Each anniversary carries its own significance. The nervous excitement of a first anniversary, the comfortable love of a tenth, the proud achievement of a silver jubilee, and the legendary status of a golden anniversary – each milestone has unique emotional texture. Our team understands these nuances and tailors celebrations to honor what each year represents. We don't just plan anniversary dinners; we create tributes to your unique journey.</p>
+            <p>The significance of each milestone informs every aspect of our planning. A first anniversary celebration might focus on recapturing the magic of your wedding day, while a silver jubilee calls for reflections on twenty-five years of shared memories. We take time to understand where you are in your journey, what this particular anniversary means to you, and how we can honor that significance through thoughtful decoration choices, music selections, and personalized touches.</p>
+            
+            <h3 className="text-2xl font-semibold text-purple-600">Rekindling Romance</h3>
+            <p>Anniversary celebrations at HIVY often serve as opportunities for couples to reconnect. In the midst of busy careers, family responsibilities, and daily routines, it's easy to lose touch with the romance that brought you together. Our intimate setting strips away distractions, returning you to a space where you can focus entirely on each other. Many couples leave HIVY feeling like they've fallen in love all over again.</p>
+            <p>The rekindling power of our anniversary experiences comes from intentional design. We create environments that encourage couples to slow down, make eye contact, and engage in meaningful conversation. Without phones buzzing, children calling, or work emails demanding attention, couples rediscover the connection that first drew them together. This rekindling effect is one of the most rewarding aspects of our work – seeing couples leave our venue with renewed appreciation for each other and reignited romance in their eyes.</p>
+            
+            <h3 className="text-2xl font-semibold text-purple-600">Celebrating Your Unique Story</h3>
+            <p>No two love stories are identical, and no two anniversary celebrations at HIVY look the same. We encourage couples to share their stories with us – how you met, your favorite memories, inside jokes, and meaningful symbols. These details inform our decoration choices, music selection, and special touches that transform a beautiful dinner into a deeply personal celebration of YOUR specific love story.</p>
+            <p>Personalization for anniversary celebrations goes beyond surface details. We incorporate elements that speak to your shared history – perhaps the flowers from your wedding bouquet, the song from your first dance, or colors that hold special meaning in your relationship. Some couples bring photos or mementos that we integrate into the setup, creating a space that visually tells the story of their years together. This level of personalization transforms an anniversary dinner into an immersive celebration of your unique journey.</p>
+            
+            <h3 className="text-2xl font-semibold text-purple-600">Creating New Chapters</h3>
+            <p>While anniversaries honor the past, they also mark the beginning of another year together. At HIVY, we create celebrations that look both backward and forward – acknowledging the journey you've shared while creating beautiful new memories to carry into your next year. These anniversary moments become part of your ongoing love story, referenced, and remembered for years to come.</p>
+            <p>Creating new chapters means designing experiences that become touchstones for your relationship going forward. When couples return after celebrating a previous anniversary with us, they often reference specific moments from that celebration – the song that played, the unexpected toast, the photograph that captured a genuine emotion. We design with this lasting impact in mind, knowing that what happens at HIVY becomes woven into your love story's ongoing narrative.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Google Reviews Slider Section */}
       <FFCReviewsSlider />
 
@@ -230,10 +339,10 @@ export default function FFCAboutPage() {
       <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Ready to Create Your Memory?
+            Ready to Celebrate Your Anniversary?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Book your candlelight dinner package today and surprise your partner with memories that last a lifetime.
+            Book your anniversary dinner package today and surprise your partner with memories that last a lifetime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`tel:${siteConfig.phoneTel}`}>
@@ -290,6 +399,27 @@ export default function FFCAboutPage() {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* About Page FAQs */}
+      <section className="py-16 bg-purple-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-purple-700">
+            Frequently Asked Questions About Anniversary Celebrations
+          </h2>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {aboutFaqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-purple-200">
+                <AccordionTrigger className="px-6 py-4 text-left font-semibold text-gray-800 hover:text-purple-700">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

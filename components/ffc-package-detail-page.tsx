@@ -156,7 +156,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
             <div className="mt-4 lg:mt-0">
               {/* Title & Tagline */}
               <Badge className="mb-3 md:mb-4 bg-purple-100 text-purple-900 border-purple-200">
-                <Heart className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" /> Couples Only Experience
+                <Heart className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" /> Anniversary Celebration Experience
               </Badge>
               
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 font-serif">
@@ -164,7 +164,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               </h1>
               
               <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Creating the perfect mood for <strong>Every Celebration & Love Story</strong> ✨
+                Creating the perfect mood for <strong>Every Anniversary Celebration & Milestone</strong> ✨
               </p>
 
               {/* Perfect For */}
@@ -178,7 +178,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               {/* Tagline */}
               <div className="bg-purple-50 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
                 <p className="text-purple-900 italic text-sm md:text-base">
-                  💍 {pkg.name} — where every occasion turns into a forever memory under the stars ✨🌙
+                  💍 {pkg.name} — where every anniversary turns into a forever memory under the stars ✨🌙
                 </p>
               </div>
 
@@ -228,7 +228,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               🍽️ Lunch / Dinner Menu
             </h2>
             <p className="text-gray-600 text-center mb-6 md:mb-8 text-sm md:text-base">
-              Curated Café-Style Delicacies Crafted for Romantic Dates & Private Celebrations
+              Curated Café-Style Delicacies Crafted for Anniversary Dinners & Milestone Celebrations
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
@@ -276,7 +276,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-slate-50 rounded-xl p-4 md:p-6 text-center">
                 <h4 className="font-bold text-lg md:text-xl text-purple-900 mb-2">⏰ 3 Mesmerizing Hours</h4>
-                <p className="text-gray-700 text-sm md:text-base">Three magical hours designed to create unforgettable memories</p>
+                <p className="text-gray-700 text-sm md:text-base">Three magical hours designed to create unforgettable anniversary memories</p>
               </div>
             </div>
           </div>
@@ -288,14 +288,14 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 font-serif text-center">
-              🏕️ Romantic Tent Decoration
+              🏕️ Romantic Anniversary Tent Decoration
             </h2>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               <div className="bg-white rounded-lg p-4 text-center shadow-sm">
                 <span className="text-3xl md:text-4xl mb-2 block">⛺</span>
                 <h4 className="font-semibold text-gray-800 text-sm md:text-base">Trending Tent Setup</h4>
-                <p className="text-gray-600 text-xs md:text-sm mt-1">Stylish tent for romantic evenings</p>
+                <p className="text-gray-600 text-xs md:text-sm mt-1">Stylish tent for anniversary evenings</p>
               </div>
               <div className="bg-white rounded-lg p-4 text-center shadow-sm">
                 <span className="text-3xl md:text-4xl mb-2 block">🌸</span>

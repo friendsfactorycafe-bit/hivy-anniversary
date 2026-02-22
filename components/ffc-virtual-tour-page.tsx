@@ -6,10 +6,34 @@ import Image from 'next/image';
 import { Camera, Play, Pause, ChevronRight, Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
 import { getVisiblePackages } from '@/lib/ffc-config';
+
+const virtualTourFaqs = [
+  { question: "What is HIVY's 360 virtual tour?", answer: "Our immersive virtual tour lets you explore HIVY's romantic venue from anywhere. Perfect for couples planning anniversary celebrations—preview the ambiance before your special day." },
+  { question: "How do I navigate the virtual tour?", answer: "Click to start, then use your mouse or touch screen to look around in 360 degrees. Explore every corner of our romantic celebration space." },
+  { question: "Can I see anniversary decoration setups?", answer: "The tour shows our venue spaces. For specific anniversary package setups with flowers, candles, and romantic decor, contact us for photos and videos." },
+  { question: "Is the venue exactly like the virtual tour?", answer: "Yes, it accurately represents our space. With your anniversary package decorations, candles, and personalized touches, the experience is even more magical." },
+  { question: "How can this help plan my anniversary?", answer: "Visualize where decorations will be placed, understand the intimate setting, and appreciate the ambiance that will make your anniversary memorable." },
+  { question: "Can we visit in person before our anniversary?", answer: "Yes! Couples are welcome to visit our venue. Contact us to schedule a tour and discuss your anniversary celebration plans in person." },
+  { question: "Is the venue private for anniversary celebrations?", answer: "Absolutely. You receive exclusive private access. The intimate space you see in the virtual tour is reserved entirely for your anniversary celebration." },
+  { question: "Can I show the virtual tour to my spouse?", answer: "If planning together, share it! If planning a surprise anniversary, keep it secret—we'll handle everything discretely for the surprise reveal." },
+  { question: "How does the venue look during evening celebrations?", answer: "Evening anniversary dinners are magical with candlelight, fairy lights, and romantic ambiance. The tour gives you a sense of the space that transforms beautifully at night." },
+  { question: "How do I book after viewing the virtual tour?", answer: "Contact us via WhatsApp (9727027278) or the booking form. Share your anniversary date, package preference, and any special requests. We'll confirm and guide you." }
+];
+
+const virtualTourFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": virtualTourFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+  }))
+};
 
 export default function FFCVirtualTourPage() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,7 +61,9 @@ export default function FFCVirtualTourPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(virtualTourFaqJsonLd) }} />
+      <div className="min-h-screen bg-white">
       <FFCHeader />
       
       {/* Hero Section */}
@@ -50,7 +76,7 @@ export default function FFCVirtualTourPage() {
             Virtual Tour
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Take a sneak peek into our romantic celebration spaces before you book
+            Take a sneak peek into our romantic anniversary celebration spaces before you book
           </p>
         </div>
       </section>
@@ -127,8 +153,8 @@ export default function FFCVirtualTourPage() {
       <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold font-serif mb-4">Our Setups Gallery</h2>
-            <p className="text-gray-600">Explore our 5 unique celebration spaces</p>
+            <h2 className="text-3xl font-bold font-serif mb-4">Our Anniversary Setups Gallery</h2>
+            <p className="text-gray-600">Explore our 5 unique anniversary celebration spaces</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
@@ -204,8 +230,96 @@ export default function FFCVirtualTourPage() {
         </div>
       </section>
 
+      {/* Rich SEO Content Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto prose prose-lg">
+            <h2 className="text-3xl font-bold text-center mb-8 font-serif text-purple-800">Discover Our Anniversary Celebration Venue</h2>
+            
+            <p className="text-gray-700 leading-relaxed">
+              Celebrating your anniversary deserves a venue as special as your love story. HIVY's 360-degree virtual tour offers couples an immersive preview of our romantic anniversary celebration venue in Surat. Whether you're commemorating your first anniversary or celebrating decades of togetherness, our virtual tour helps you visualize the intimate setting where your milestone celebration will unfold in elegance and romance.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Benefits of Virtual Tour Before Booking</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Planning an anniversary celebration becomes more meaningful when you can preview the venue together. Couples can explore HIVY's spaces side by side, discussing decoration preferences and envisioning their special evening. For those planning surprise anniversary celebrations, the virtual tour allows secret exploration and planning. Either way, this immersive preview helps you make confident decisions about your anniversary venue selection.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">What to Explore in the 360-Degree Tour</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Navigate through our anniversary venue to discover intimate seating arrangements perfect for couples, elegant spaces for photography, and areas where personalized anniversary decorations can be placed. Notice the romantic lighting possibilities, architectural details that photograph beautifully, and the overall ambiance that makes HIVY ideal for milestone celebrations. Pay attention to spaces where anniversary cakes can be presented and champagne toasts can be made.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Understanding the Romantic Ambiance</h3>
+            <p className="text-gray-700 leading-relaxed">
+              HIVY's venue embodies romance in every detail. The virtual tour showcases our carefully designed interiors featuring warm, inviting color palettes and elegant furnishings that create an atmosphere perfect for reflecting on your journey together. While exploring virtually, imagine soft music playing, candles flickering, and your partner's face illuminated by fairy lights. The ambiance you see virtually transforms into pure magic during your actual anniversary celebration.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Planning Decorations and Setup</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Use the virtual tour to plan memorable anniversary decorations. Identify perfect spots for displaying photographs from your wedding day, understand where anniversary banners will have maximum impact, and visualize flower arrangement positions. Some couples recreate elements from their wedding or engagement in our space—the virtual tour helps plan these personalized touches that make anniversary celebrations deeply emotional and memorable.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Privacy and Exclusivity for Your Milestone</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Anniversary celebrations deserve privacy and exclusivity. The virtual tour showcases spaces reserved entirely for your celebration. Unlike busy restaurants where other guests surround you, HIVY provides intimate settings where you can share private moments, exchange anniversary gifts, and reminisce about your journey together without interruption. The exclusive access ensures your milestone celebration receives the attention and privacy it deserves.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">How Virtual Tour Helps Surprise Anniversary Planning</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Planning a surprise anniversary celebration requires secrecy and careful coordination. The virtual tour enables one partner to explore the venue, plan every detail, and coordinate with our team—all without the other knowing. You can share screenshots with our team via WhatsApp, discuss decoration placement, and arrange personalized elements while maintaining complete surprise. The virtual tour becomes your secret planning tool for orchestrating an unforgettable anniversary surprise.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Venue Transformation for Anniversary Celebrations</h3>
+            <p className="text-gray-700 leading-relaxed">
+              While the virtual tour shows our elegant base venue, imagine the transformation for your anniversary. Our team creates romantic setups featuring abundant candles, fresh flowers in your preferred colors, fairy lights creating magical sparkle, and personalized elements like your wedding photographs, anniversary numbers, and custom messages. The sophisticated venue becomes a tribute to your love story, beautifully decorated to honor your milestone.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Why Couples Love Online Venue Preview</h3>
+            <p className="text-gray-700 leading-relaxed">
+              HIVY's virtual tour accommodates modern couples with busy schedules. Explore our anniversary venue during lunch breaks, late evenings, or weekend mornings. Couples in long-distance situations for work can explore together through video calls, contributing equally to anniversary planning decisions. The virtual tour democratizes venue exploration, making it accessible regardless of time constraints or physical location.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Scheduling In-Person Visits</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Many couples prefer supplementing the virtual tour with an in-person visit before their anniversary. Contact us to schedule a venue walkthrough where you can experience the ambiance firsthand, discuss menu preferences, and finalize decoration arrangements. In-person visits are particularly valuable for significant milestones like silver or golden anniversaries, where couples want every detail perfected.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-purple-700">Booking Your Anniversary Celebration</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Ready to book your anniversary celebration after exploring our virtual tour? Contact us via WhatsApp at 9727027278 or submit an inquiry through our booking form. Share your anniversary date, how many years you're celebrating, preferred package, and any special requests—whether that's recreating your wedding setup, incorporating specific flowers, or arranging a surprise element. Our team will confirm availability, provide a detailed quote, and help create an anniversary celebration that honors your unique love story beautifully.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-serif mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600">Everything you need to know about our virtual tour</p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
+              {virtualTourFaqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-purple-200 px-6">
+                  <AccordionTrigger className="text-left font-medium hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       <FFCFooter />
       <FFCWhatsAppFloat />
     </div>
+    </>
   );
 }
